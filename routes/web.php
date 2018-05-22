@@ -211,17 +211,17 @@ Route::group(['prefix' => '/account', 'middleware' => ['auth'], 'namespace' => '
         /**
          * List user languages
          */
-        Route::get('/index', 'UserLanguageindexController@index');
+        Route::get('/index', 'UserLanguageIndexController@index');
 
         /**
          * List languages
          */
-        Route::get('/list', 'UserLanguageindexController@languages');
+        Route::get('/list', 'UserLanguageIndexController@languages');
 
         /**
          * List levels
          */
-        Route::get('/levels', 'UserLanguageindexController@levels');
+        Route::get('/levels', 'UserLanguageIndexController@levels');
 
         /**
          * Toggle user language status

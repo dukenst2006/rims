@@ -187,8 +187,8 @@
                                             :dots-num="3"
                                             :color="'#ff1d5e'"
                                     />
+                                    <p>Please wait, saving changes...</p>
                                 </div>
-                                <p>Please wait, saving changes...</p>
                             </div>
                         </div>
                     </form>

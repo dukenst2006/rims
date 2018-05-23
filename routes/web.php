@@ -226,7 +226,7 @@ Route::group(['prefix' => '/account', 'middleware' => ['auth'], 'namespace' => '
         /**
          * Toggle user language status
          */
-        Route::put('/{id}/status', 'UserLanguagestatusController@toggleStatus');
+        Route::put('/{id}/status', 'UserLanguageStatusController@toggleStatus');
     });
 
     /**

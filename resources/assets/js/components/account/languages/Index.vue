@@ -118,7 +118,7 @@
 
                     <!-- Spinner -->
                     <div class="my-1"
-                         v-if="deleting.processing && deleting.id == skillset.id || status.processing && status.id == skillset.id">
+                         v-if="deleting.processing && deleting.id == lang.id || status.processing && status.id == lang.id">
                         <hollow-dots-spinner
                                 :animation-duration="1000"
                                 :dot-size="15"
@@ -126,9 +126,9 @@
                                 :color="'#ff1d5e'"
                         />
 
-                        <p v-if="deleting.id == skillset.id">Deleting...</p>
+                        <p v-if="deleting.id == lang.id">Deleting...</p>
 
-                        <p v-if="status.id == skillset.id">Updating status...</p>
+                        <p v-if="status.id == lang.id">Updating status...</p>
                     </div>
                 </template>
 
@@ -342,7 +342,7 @@
                 })
             },
             toggleStatus(lang) {
-                this.status.id = skillset.id
+                this.status.id = lang.id
                 this.status.processing = true
 
                 var usable = !lang.usable

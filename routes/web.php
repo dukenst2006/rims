@@ -245,6 +245,22 @@ Route::group(['prefix' => '/account', 'middleware' => ['auth'], 'namespace' => '
         Route::group(['prefix' => '/portfolios', 'as' => 'portfolios.'], function () {
 
             /**
+             * Skills Group Routes
+             */
+            Route::group(['prefix' => '/skills'], function () {
+
+                /**
+                 * List skills
+                 */
+                Route::get('/list', 'PortfolioSkillIndexController@skills');
+
+                /**
+                 * List levels
+                 */
+                Route::get('/levels', 'PortfolioSkillIndexController@levels');
+            });
+
+            /**
              * List user's portfolios
              */
             Route::get('/index', 'PortfolioIndexController@index');
@@ -253,6 +269,15 @@ Route::group(['prefix' => '/account', 'middleware' => ['auth'], 'namespace' => '
              * Portfolio Group Routes
              */
             Route::group(['prefix' => '/{portfolio}'], function () {
+
+                /**
+                 * Skills Resource Routes
+                 */
+                Route::resource('/skills', 'PortfolioSkillController', [
+                    'parameters' => [
+                        'skills' => 'portfolioSkill'
+                    ]
+                ])->only('index', 'store', 'update', 'destroy');
 
                 /**
                  * Uploads Resource Routes

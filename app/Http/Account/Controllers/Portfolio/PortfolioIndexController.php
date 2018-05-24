@@ -18,6 +18,13 @@ class PortfolioIndexController extends Controller
     {
         $portfolios = $request->user()->portfolios;
 
-        return new PortfolioCollection($portfolios->load('uploads'));
+        return new PortfolioCollection(
+            $portfolios->load(
+                'uploads',
+                'skills.level',
+                'skills.skillable',
+                'skills.skillable.ancestors'
+            )
+        );
     }
 }

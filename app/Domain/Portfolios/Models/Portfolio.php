@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 use Rims\App\Traits\HasApprovals;
+use Rims\Domain\Skills\Models\Skill;
 
 class Portfolio extends Model
 {
@@ -132,6 +133,17 @@ class Portfolio extends Model
             'live' => true,
             'approved' => true,
         ]);
+    }
+
+    /**
+     * Get uploads owned by portfolio.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function skills()
+    {
+        return $this->hasMany(PortfolioSkillable::class)
+            ->where('skillable_type', Skill::getActualClassNameForMorph(Skill::class));
     }
 
     /**

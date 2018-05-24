@@ -151,7 +151,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row" :class="{ 'has-error': editing.errors['skill_id']  }">
+                        <div class="form-group row" :class="{ 'has-error': editing.errors['level_id']  }">
                             <label for="edit_level_id" class="control-label col-md-4">Level</label>
                             <div class="col-md-4">
                                 <select id="edit_level_id"

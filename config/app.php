@@ -167,6 +167,7 @@ return [
         Rims\App\Providers\BladeServiceProvider::class,
         Rims\App\Providers\TwoFactorServiceProvider::class,
         Rims\App\Providers\TenantServiceProvider::class,
+        Rims\App\Providers\UrlSchemeServiceProvider::class,
 
     ],
 

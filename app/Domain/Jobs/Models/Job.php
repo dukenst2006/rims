@@ -7,6 +7,8 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Rims\App\Tenant\Manager;
+use Rims\App\Tenant\Scopes\TenantScope;
 use Rims\App\Tenant\Traits\ForTenants;
 use Rims\App\Traits\Eloquent\Ordering\OrderableTrait;
 use Rims\Domain\Areas\Models\Area;
@@ -28,6 +30,15 @@ class Job extends Model
      * @var string
      */
     protected $table = 'job';
+
+    /**
+     * The attributes that should be appended to the model.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'isReadyForCheckout'
+    ];
 
     /**
      * The attributes that are mass assignable.
@@ -71,7 +82,17 @@ class Job extends Model
     {
         parent::boot();
 
-        static::observe(JobObserver::class);
+        $manager = app(Manager::class);
+
+        if (null !== ($manager->getTenant())) {
+            static::addGlobalScope(
+                new TenantScope($manager->getTenant())
+            );
+
+            static::observe(
+                app(JobObserver::class)
+            );
+        }
     }
 
     /**
@@ -130,6 +151,33 @@ class Job extends Model
     public function scopePublished(Builder $builder)
     {
         return $builder->whereDate('published_at', '<=', Carbon::now()->toDateTimeString());
+    }
+
+    /**
+     * Return whether job is ready for checkout as a property.
+     *
+     * @return bool
+     */
+    public function getIsReadyForCheckoutAttribute()
+    {
+
+        if ($this->education->count() == 0) {
+            return false;
+        }
+
+        if ($this->skills->count() == 0) {
+            return false;
+        }
+
+        if ($this->languages->count() == 0) {
+            return false;
+        }
+
+        if ($this->requirements->count() == 0) {
+            return false;
+        }
+
+        return true;
     }
 
     /**

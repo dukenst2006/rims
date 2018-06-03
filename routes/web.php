@@ -60,6 +60,26 @@ Route::group(['namespace' => 'Auth\Controllers'], function () {
 });
 
 /**
+ * Education Route
+ */
+Route::get('/education', 'Education\Controllers\EducationController@index');
+
+/**
+ * Levels Route
+ */
+Route::get('/levels', 'Level\Controllers\LevelController@index');
+
+/**
+ * Skills Route
+ */
+Route::get('/skills', 'Skill\Controllers\SkillController@index');
+
+/**
+ * Languages Route
+ */
+Route::get('/languages', 'Language\Controllers\LanguageController@index');
+
+/**
  * Home Routes
  */
 Route::group(['namespace' => 'Home\Controllers'], function () {
@@ -72,6 +92,8 @@ Route::group(['namespace' => 'Home\Controllers'], function () {
  * Areas Routes
  */
 Route::group(['namespace' => 'Area\Controllers'], function () {
+
+    // todo: add index route
 
     /**
      * Change Area

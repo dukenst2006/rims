@@ -29,7 +29,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @if($user_companies->count())
                                 @foreach($user_companies as $company)
-                                    <a class="dropdown-item" href="{{ route('tenant.dashboard', $company) }}">
+                                    <a class="dropdown-item" href="{{ route('tenant.switch', $company) }}">
                                         {{ $company->name }}
                                     </a>
                                 @endforeach

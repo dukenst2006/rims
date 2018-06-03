@@ -18,7 +18,8 @@ class TenantMiddleware
     public function handle($request, Closure $next)
     {
         $tenant = $this->resolveTenant(
-            $request->company ?: session()->get('tenant')
+            $request->company ?:
+                auth()->check() ? auth()->user()->lastAccessedCompany->id : session()->get('tenant')
         );
 
         if (!auth()->user()->companies->contains('id', $tenant->id)) {

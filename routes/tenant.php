@@ -131,11 +131,16 @@ Route::group(['prefix' => '/company', 'as' => 'tenant.'], function () {
     Route::resource('/account', 'TenantAccountController')->only('index', 'store');
 
     /**
+     * Switch Tenant Route
+     */
+    Route::get('/{company}', 'TenantSwitchController@switch')->name('switch');
+
+    /**
      * --------------------------------------------------------------------------
      * Dashboard
      * --------------------------------------------------------------------------
      *
      * All other tenant routes should go above this one
      */
-    Route::get('/{company}', 'DashboardController@index')->name('dashboard');
+    Route::get('/', 'DashboardController@index')->name('dashboard');
 });

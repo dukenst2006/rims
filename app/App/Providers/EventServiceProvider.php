@@ -8,6 +8,7 @@ use Rims\Domain\Auth\Events\UserRequestedActivationEmail;
 use Rims\Domain\Auth\Events\UserSignedUp;
 use Rims\Domain\Auth\Listeners\CreateDefaultTeam;
 use Rims\Domain\Auth\Listeners\SendActivationEmail;
+use Rims\Domain\Company\Listeners\CompanyUserEventSubscriber;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -24,6 +25,15 @@ class EventServiceProvider extends ServiceProvider
         UserRequestedActivationEmail::class => [
             SendActivationEmail::class,
         ],
+    ];
+
+    /**
+     * The subscriber classes to register.
+     *
+     * @var array
+     */
+    protected $subscribe = [
+        CompanyUserEventSubscriber::class
     ];
 
     /**

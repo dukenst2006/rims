@@ -42,6 +42,7 @@ class User extends Authenticatable
      */
     protected $appends = [
         'name',
+        'lastAccessedCompany'
     ];
 
     /**
@@ -213,13 +214,24 @@ class User extends Authenticatable
     }
 
     /**
+     * Get user's last accessed company.
+     *
+     * @return mixed
+     */
+    public function getLastAccessedCompanyAttribute()
+    {
+        return $this->companies()->orderByDesc('last_login_at')->first();
+    }
+
+    /**
      * Get companies that user belongs to.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function companies()
     {
-        return $this->belongsToMany(Company::class, 'company_users');
+        return $this->belongsToMany(Company::class, 'company_users')
+            ->withPivot('last_login_at');
     }
 
     /**

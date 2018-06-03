@@ -1,8 +1,8 @@
 <!-- General Links -->
 <ul class="nav flex-column nav-pills">
     <li class="nav-item">
-        <a class="nav-link{{ return_if(on_page('tenant.dashboard', request()->tenant()->id), ' active') }}"
-           href="{{ route('tenant.dashboard', request()->tenant()->id) }}">
+        <a class="nav-link{{ return_if(on_page('tenant.dashboard'), ' active') }}"
+           href="{{ route('tenant.dashboard') }}">
             Dashboard
         </a>
     </li>

@@ -17,11 +17,97 @@
 |
 */
 Route::group(['prefix' => '/company', 'as' => 'tenant.'], function () {
+
+    Route::group(['prefix' => 'manage'], function () {
+
+        /**
+         * Job Namespace Routes
+         */
+        Route::group(['namespace' => 'Job'], function () {
+
+            /**
+             * Jobs Group Routes
+             */
+            Route::group(['prefix' => '/jobs', 'as' => 'jobs.'], function () {
+
+                /**
+                 * Jobs Route
+                 */
+                Route::get('/index', 'JobIndexController@index');
+
+                /**
+                 * Job Areas Route
+                 */
+                Route::get('/areas', 'JobIndexController@areas');
+
+                /**
+                 * Job Group Routes
+                 */
+                Route::group(['prefix' => '/{job}'], function () {
+
+                    /**
+                     * Requirements Routes
+                     */
+                    Route::resource('/requirements', 'JobRequirementController', [
+                        'parameters' => [
+                            'requirements' => 'jobRequirement'
+                        ]
+                    ])->except('show');
+
+                    /**
+                     * Languages Routes
+                     */
+                    Route::resource('/languages', 'JobLanguageController', [
+                        'parameters' => [
+                            'languages' => 'jobSkillable'
+                        ]
+                    ])->except('show');
+
+                    /**
+                     * Skills Routes
+                     */
+                    Route::resource('/skills', 'JobSkillController', [
+                        'parameters' => [
+                            'skills' => 'jobSkillable'
+                        ]
+                    ])->except('show');
+
+                    /**
+                     * Education Routes
+                     */
+                    Route::resource('/education', 'JobEducationController', [
+                        'parameters' => [
+                            'education' => 'jobEducation'
+                        ]
+                    ])->except('show');
+
+                    /**
+                     * Job Status Route
+                     */
+                    Route::post('/status', 'JobStatusController@toggleStatus');
+                });
+
+                /**
+                 * Job Store Route
+                 */
+                Route::post('/{job}', 'JobController@store')->name('job.store');
+            });
+
+            /**
+             * Jobs Main (Resource) Routes
+             */
+            Route::resource('/jobs', 'JobController')->except('store', 'edit');
+        });
+    });
+
     /**
      * Projects Main (Resource) Routes
      */
     Route::resource('/projects', 'ProjectController');
 
+    /**
+     * Tenant Account Routes
+     */
     Route::group(['prefix' => '/account', 'as' => 'account.'], function () {
         /**
          * Settings Routes

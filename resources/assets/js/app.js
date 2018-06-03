@@ -70,6 +70,11 @@ Vue.component(
     require('./components/account/avatar/AvatarUpload.vue')
 );
 
+Vue.component(
+    'tenant-job-index',
+    require('./components/tenant/jobs/Index.vue')
+);
+
 const app = new Vue({
     el: '#app'
 });

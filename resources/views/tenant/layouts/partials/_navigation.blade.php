@@ -12,8 +12,9 @@
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">
-            Internships
+        <a href="{{ route('tenant.jobs.index') }}"
+           class="nav-link{{ return_if(on_page('tenant.jobs.index'), ' active') }}">
+            Internships / Jobs
         </a>
     </li>
     <li class="nav-item">

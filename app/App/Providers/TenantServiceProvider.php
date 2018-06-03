@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 use Rims\App\Tenant\Manager;
 use Rims\App\Tenant\Observers\TenantObserver;
+use Rims\Domain\Jobs\Observers\JobObserver;
 
 class TenantServiceProvider extends ServiceProvider
 {
@@ -22,6 +23,10 @@ class TenantServiceProvider extends ServiceProvider
 
         $this->app->singleton(TenantObserver::class, function () {
             return new TenantObserver(app(Manager::class)->getTenant());
+        });
+
+        $this->app->singleton(JobObserver::class, function () {
+            return new JobObserver(app(Manager::class)->getTenant());
         });
 
         Request::macro('tenant', function () {

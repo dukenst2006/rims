@@ -99,6 +99,11 @@ Route::group(['prefix' => '/{area}'], function () {
     Route::group(['namespace' => 'Job\Controllers'], function () {
 
         /**
+         * Jobs Listings Route
+         */
+        Route::get('/jobs/listings', 'JobListingController@index')->name('jobs.listings');
+
+        /**
          * Job Main Routes
          */
         Route::resource('jobs', 'JobController')->only('index', 'show');

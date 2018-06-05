@@ -13,6 +13,7 @@ use Rims\App\Tenant\Traits\ForTenants;
 use Rims\App\Traits\Eloquent\Ordering\OrderableTrait;
 use Rims\Domain\Areas\Models\Area;
 use Rims\Domain\Company\Models\Company;
+use Rims\Domain\Jobs\Filters\JobFilters;
 use Rims\Domain\Jobs\Observers\JobObserver;
 use Rims\Domain\Languages\Models\Language;
 use Rims\Domain\Skills\Models\Skill;
@@ -209,6 +210,20 @@ class Job extends Model
     public function hasSkill(Skill $skill)
     {
         return $this->skills->where('skillable_id', $skill->id)->count();
+    }
+
+    /**
+     * Filters the result.
+     *
+     * @param Builder $builder
+     * @param $request
+     * @param array $filters
+     *
+     * @return Builder
+     */
+    public function scopeFilter(Builder $builder, $request, array $filters = [])
+    {
+        return (new JobFilters($request))->add($filters)->filter($builder);
     }
 
     /**

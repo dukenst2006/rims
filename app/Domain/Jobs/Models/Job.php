@@ -37,7 +37,9 @@ class Job extends Model
      * @var array
      */
     protected $appends = [
-        'isReadyForCheckout'
+        'isPublished',
+        'isReadyForCheckout',
+        'cost'
     ];
 
     /**
@@ -121,36 +123,43 @@ class Job extends Model
     }
 
     /**
-     * Get query for finished jobs.
-     *
-     * @param Builder $builder
-     * @return Builder
+     * Publish job.
      */
-    public function scopeFinished(Builder $builder)
+    public function publish()
     {
-        return $builder->where('finished', '=', true);
+        $this->update([
+            'live' => true,
+            'published_at' => Carbon::now()
+        ]);
     }
 
     /**
-     * Get query for live jobs.
+     * Return whether job is published.
      *
-     * @param Builder $builder
-     * @return Builder
+     * @return mixed
      */
-    public function scopeLive(Builder $builder)
+    public function getCostAttribute()
     {
-        return $builder->where('live', '=', true);
+        $cost = $this->skills->map(function ($skill, $key) {
+            return $skill->skillable->price;
+        })->sum();
+
+
+        return $cost;
     }
 
     /**
-     * Get query for published jobs.
+     * Return whether job is published.
      *
-     * @param Builder $builder
-     * @return Builder
+     * @return bool
      */
-    public function scopePublished(Builder $builder)
+    public function getIsPublishedAttribute()
     {
-        return $builder->whereDate('published_at', '<=', Carbon::now()->toDateTimeString());
+        if ($this->published_at == null) {
+            return false;
+        }
+
+        return true;
     }
 
     /**
@@ -200,6 +209,49 @@ class Job extends Model
     public function hasSkill(Skill $skill)
     {
         return $this->skills->where('skillable_id', $skill->id)->count();
+    }
+
+    /**
+     * Get query for finished jobs.
+     *
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeFinished(Builder $builder)
+    {
+        return $builder->where('finished', '=', true);
+    }
+
+    /**
+     * Get query for live jobs.
+     *
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeLive(Builder $builder)
+    {
+        return $builder->where('live', '=', true);
+    }
+
+    /**
+     * Get query for published jobs.
+     *
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopePublished(Builder $builder)
+    {
+        return $builder->whereDate('published_at', '<=', Carbon::now()->toDateTimeString());
+    }
+
+    /**
+     * Get job sales.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function sales()
+    {
+        return $this->hasMany(JobSale::class);
     }
 
     /**

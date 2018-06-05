@@ -80,6 +80,11 @@ Route::get('/skills', 'Skill\Controllers\SkillController@index');
 Route::get('/languages', 'Language\Controllers\LanguageController@index');
 
 /**
+ * Jobs Filters Route
+ */
+Route::get('/jobs/filters', 'Job\Controllers\JobListingController@filters')->name('jobs.filters');
+
+/**
  * Home Routes
  */
 Route::group(['namespace' => 'Home\Controllers'], function () {

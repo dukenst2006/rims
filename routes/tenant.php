@@ -18,7 +18,7 @@
 */
 Route::group(['prefix' => '/company', 'as' => 'tenant.'], function () {
 
-    Route::group(['prefix' => 'manage'], function () {
+    Route::group(['prefix' => '/manage'], function () {
 
         /**
          * Job Namespace Routes
@@ -44,6 +44,11 @@ Route::group(['prefix' => '/company', 'as' => 'tenant.'], function () {
                  * Job Group Routes
                  */
                 Route::group(['prefix' => '/{job}'], function () {
+
+                    /**
+                     * Job Checkout Routes
+                     */
+                    Route::resource('/checkout', 'JobCheckoutController')->only('index', 'store');
 
                     /**
                      * Requirements Routes

@@ -114,7 +114,7 @@ Route::group(['prefix' => '/{area}'], function () {
         /**
          * Job Main Routes
          */
-        Route::resource('jobs', 'JobController')->only('index');
+        Route::resource('jobs', 'JobController')->only('index', 'show');
     });
 });
 

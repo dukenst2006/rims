@@ -9,6 +9,8 @@ use Rims\Domain\Auth\Events\UserSignedUp;
 use Rims\Domain\Auth\Listeners\CreateDefaultTeam;
 use Rims\Domain\Auth\Listeners\SendActivationEmail;
 use Rims\Domain\Company\Listeners\CompanyUserEventSubscriber;
+use Rims\Domain\Jobs\Events\JobSaleCreated;
+use Rims\Domain\Jobs\Listeners\SendEmailToUser;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -24,6 +26,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         UserRequestedActivationEmail::class => [
             SendActivationEmail::class,
+        ],
+        JobSaleCreated::class => [
+            SendEmailToUser::class,
         ],
     ];
 

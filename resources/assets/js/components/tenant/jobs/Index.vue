@@ -363,6 +363,21 @@
                                     </b-nav-item>
                                 </b-nav>
                             </div>
+
+                            <!-- Job Payment Link -->
+                            <div class="my-2" v-if="job.isReadyForCheckout && !job.isPublished">
+                                <b-button :href="endpoint + '/' + job.slug + '/checkout'" variant="primary">
+                                    Proceed to payment
+                                </b-button>
+                            </div>
+
+                            <!-- Job Publish Date -->
+                            <div class="my-1" v-else>
+                                Posted on
+                                {{ job.published_at }} |
+                                <timeago :since="job.published_at"
+                                         :auto-update="60"></timeago>
+                            </div>
                         </template>
 
                         <!-- Job Edit Form -->
@@ -582,7 +597,8 @@
                     <p>
                         <b-link href="#" @click.prevent="getJobs">
                             <i class="icon-refresh"></i> Refresh jobs
-                        </b-link> or
+                        </b-link>
+                        or
                         <b-link href="#" @click.prevent="create" v-if="!creating.start || creating.job == null">
                             {{ creating.active ? 'Cancel' : 'Add new' }}
                         </b-link>

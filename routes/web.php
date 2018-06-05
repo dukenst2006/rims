@@ -89,20 +89,7 @@ Route::group(['namespace' => 'Home\Controllers'], function () {
 });
 
 /**
- * Areas Routes
- */
-Route::group(['namespace' => 'Area\Controllers'], function () {
-
-    // todo: add index route
-
-    /**
-     * Change Area
-     */
-    Route::get('areas/{area}', 'AreaController@change')->name('areas.change');
-});
-
-/**
- * Areas Routes
+ * Area Group Routes
  */
 Route::group(['prefix' => '/{area}'], function () {
 
@@ -116,6 +103,22 @@ Route::group(['prefix' => '/{area}'], function () {
          */
         Route::resource('jobs', 'JobController')->only('index', 'show');
     });
+});
+
+/**
+ * Areas Routes
+ */
+Route::group(['namespace' => 'Area\Controllers'], function () {
+
+    /**
+     * Change Area
+     */
+    Route::get('/areas/{area}', 'AreaController@change')->name('areas.change');
+
+    /**
+     * Areas Index Routes
+     */
+    Route::get('/areas', 'AreaController@index')->name('areas.index');
 });
 
 /**

@@ -134,7 +134,7 @@ class Job extends Model
     }
 
     /**
-     * Return whether job is published.
+     * Return job cost.
      *
      * @return mixed
      */
@@ -212,6 +212,20 @@ class Job extends Model
     }
 
     /**
+     * Get query for jobs in given area.
+     *
+     * @param Area $area
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeInArea(Builder $builder, Area $area)
+    {
+        $areas = $area->descendants->pluck('id')->push($area->id);
+
+        return $builder->whereIn('area_id', $areas);
+    }
+
+    /**
      * Get query for finished jobs.
      *
      * @param Builder $builder
@@ -242,6 +256,18 @@ class Job extends Model
     public function scopePublished(Builder $builder)
     {
         return $builder->whereDate('published_at', '<=', Carbon::now()->toDateTimeString());
+    }
+
+    /**
+     * Get query for jobs that are not past deadline.
+     *
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeIsOpen(Builder $builder)
+    {
+        return $builder->whereNull('closed_at')
+            ->orWhereDate('closed_at', '>', Carbon::now()->toDateTimeString());
     }
 
     /**

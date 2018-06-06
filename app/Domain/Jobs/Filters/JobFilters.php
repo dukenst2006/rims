@@ -20,6 +20,8 @@ class JobFilters extends FiltersAbstract
         'applicants' => ApplicantsFilter::class,
         'type' => TypeFilter::class,
         'location' => LocationFilter::class,
+        'salary_min' => SalaryMinFilter::class,
+        'salary_max' => SalaryMaxFilter::class,
     ];
 
     protected $defaultFilters = [

@@ -4,21 +4,22 @@ namespace Rims\Domain\Jobs\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Rims\Domain\Levels\Models\Level;
+use Rims\Domain\Skills\Models\Skill;
 
-class JobSkillable extends Model
+class JobSkill extends Model
 {
     protected $fillable = [
         'details'
     ];
 
     /**
-     * Get all of the owning skillable models.
+     * Get skill that job belongs to.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function skillable()
+    public function skill()
     {
-        return $this->morphTo();
+        return $this->belongsTo(Skill::class);
     }
 
     /**

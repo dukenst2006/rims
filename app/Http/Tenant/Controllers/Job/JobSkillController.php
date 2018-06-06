@@ -2,7 +2,7 @@
 
 namespace Rims\Http\Tenant\Controllers\Job;
 
-use Rims\Domain\Jobs\Models\JobSkillable;
+use Rims\Domain\Jobs\Models\JobSkill;
 use Rims\Domain\Jobs\Models\Job;
 use Illuminate\Http\Request;
 use Rims\App\Controllers\Controller;
@@ -21,7 +21,7 @@ class JobSkillController extends Controller
      */
     public function index(Job $job)
     {
-        $skills = $job->skills()->with('level', 'skillable.ancestors')->get();
+        $skills = $job->skills()->with('level', 'skill.ancestors')->get();
 
         return new JobSkillCollection($skills);
     }
@@ -45,25 +45,25 @@ class JobSkillController extends Controller
             ], 403);
         }
 
-        $jobSkillable = new JobSkillable;
-        $jobSkillable->fill($request->only('details'));
+        $jobSkill = new JobSkill;
+        $jobSkill->fill($request->only('details'));
 
-        $jobSkillable->skillable()->associate($skill);
-        $jobSkillable->job()->associate($job);
+        $jobSkill->skill()->associate($skill);
+        $jobSkill->job()->associate($job);
 
-        $jobSkillable->save();
+        $jobSkill->save();
 
-        return new JobSkillResource($jobSkillable->loadMissing('level', 'skillable.ancestors'));
+        return new JobSkillResource($jobSkill->loadMissing('level', 'skill.ancestors'));
     }
 
     /**
      * Display the specified resource.
      *
      * @param  \Rims\Domain\Jobs\Models\Job $job
-     * @param  \Rims\Domain\Jobs\Models\JobSkillable $jobSkillable
+     * @param  \Rims\Domain\Jobs\Models\JobSkill $jobSkillable
      * @return \Illuminate\Http\Response
      */
-    public function show(Job $job, JobSkillable $jobSkillable)
+    public function show(Job $job, JobSkill $jobSkillable)
     {
         //
     }
@@ -73,34 +73,34 @@ class JobSkillController extends Controller
      *
      * @param JobSkillStoreRequest $request
      * @param  \Rims\Domain\Jobs\Models\Job $job
-     * @param  \Rims\Domain\Jobs\Models\JobSkillable $jobSkillable
+     * @param  \Rims\Domain\Jobs\Models\JobSkill $jobSkill
      * @return JobSkillResource
      */
-    public function update(JobSkillStoreRequest $request, Job $job, JobSkillable $jobSkillable)
+    public function update(JobSkillStoreRequest $request, Job $job, JobSkill $jobSkill)
     {
         $skill = Skill::find($request->skill_id);
 
         $exists = $job->hasSkill($skill);
 
         if ($exists == 0) {
-            $jobSkillable->skillable()->associate($skill);
+            $jobSkill->skill()->associate($skill);
         }
 
-        $jobSkillable->fill($request->only('details'));
-        $jobSkillable->save();
+        $jobSkill->fill($request->only('details'));
+        $jobSkill->save();
 
-        return new JobSkillResource($jobSkillable->loadMissing('level', 'skillable.ancestors'));
+        return new JobSkillResource($jobSkill->loadMissing('level', 'skill.ancestors'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  \Rims\Domain\Jobs\Models\Job $job
-     * @param  \Rims\Domain\Jobs\Models\JobSkillable $jobSkillable
+     * @param  \Rims\Domain\Jobs\Models\JobSkill $jobSkill
      * @return \Illuminate\Http\Response
      * @throws \Exception
      */
-    public function destroy(Job $job, JobSkillable $jobSkillable)
+    public function destroy(Job $job, JobSkill $jobSkill)
     {
         if ($job->skills->count() == 1) {
             return response()->json([
@@ -108,7 +108,7 @@ class JobSkillController extends Controller
             ], 403);
         }
 
-        $jobSkillable->delete();
+        $jobSkill->delete();
 
         return response()->json(null, 204);
     }

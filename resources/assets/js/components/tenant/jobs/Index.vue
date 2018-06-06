@@ -301,7 +301,7 @@
                                         <b-nav-item @click.prevent="deleteJob(job)">Delete</b-nav-item>
                                     </template>
 
-                                    <b-nav-item @click.prevent="toggleStatus(job)">
+                                    <b-nav-item @click.prevent="toggleStatus(job)" v-if="job.isPublished">
                                         {{ job.live == true ? 'Disable' : 'Make live' }}
                                     </b-nav-item>
 
@@ -354,9 +354,6 @@
                                     </b-nav-item>
                                     <b-nav-item @click.prevent="toggleJobOption('skillset', job)">
                                         Skills
-                                    </b-nav-item>
-                                    <b-nav-item @click.prevent="toggleJobOption('languages', job)">
-                                        Languages
                                     </b-nav-item>
                                     <b-nav-item @click.prevent="toggleJobOption('requirements', job)">
                                         Requirements
@@ -576,13 +573,6 @@
                                 :job="job"
                                 v-bind:skills="skills"
                                 v-if="skillset.id == job.id && skillset.active"></job-skills>
-
-                    <!-- Languages -->
-                    <job-languages :endpoint="endpoint"
-                                   :job="job"
-                                   v-bind:languages="languages"
-                                   v-bind:levels="levels"
-                                   v-if="langs.id == job.id && langs.active"></job-languages>
 
                     <!-- Requirements -->
                     <job-requirements :endpoint="endpoint"

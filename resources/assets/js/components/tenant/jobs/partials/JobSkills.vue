@@ -34,10 +34,10 @@
                 <template v-if="skillset.id != editing.id">
                     <div class="d-flex justify-content-between align-content-center">
                         <h5>
-                            <b-badge v-for="ancestor in skillset.skillable.ancestors" :key="ancestor.id">
+                            <b-badge v-for="ancestor in skillset.skill.ancestors" :key="ancestor.id">
                                 {{ ancestor.name }}
                             </b-badge>
-                            {{ skillset.skillable.name }}
+                            {{ skillset.skill.name }}
                         </h5>
 
                         <b-nav v-if="skillset.id != deleting.id">
@@ -70,7 +70,7 @@
 
                 <!-- Edit Skill Form -->
                 <b-form action="#" @submit.prevent="update(skillset)" v-else>
-                    <h5>Editing {{ skillset.skillable.name }}</h5>
+                    <h5>Editing {{ skillset.skill.name }}</h5>
 
                     <!-- Skills -->
                     <b-form-group horizontal
@@ -81,7 +81,7 @@
                                   :invalid-feedback="invalidFeedback('editing', 'skill_id')">
                         <treeselect :flat="true"
                                     :options="tree"
-                                    v-model="editing.form.skill_id = skillset.skillable.id"
+                                    v-model="editing.form.skill_id = skillset.skill.id"
                                     :normalizer="normalizer"
                                     :disable-branch-nodes="true"
                                     :show-count="true"
@@ -334,7 +334,7 @@
                     })
 
                     toastr.success(
-                        skillset.skillable.name + ' skill removed successfully.',
+                        skillset.skill.name + ' skill removed successfully.',
                         this.job.title
                     )
                 }).catch((error) => {

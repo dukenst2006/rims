@@ -130,6 +130,7 @@ class Job extends Model
     {
         $this->update([
             'live' => true,
+            'approved' => true,
             'published_at' => Carbon::now()
         ]);
     }
@@ -142,7 +143,7 @@ class Job extends Model
     public function getCostAttribute()
     {
         $cost = $this->skills->map(function ($skill, $key) {
-            return $skill->skillable->price;
+            return $skill->skill->price;
         })->sum();
 
 
@@ -179,10 +180,6 @@ class Job extends Model
             return false;
         }
 
-        if ($this->languages->count() == 0) {
-            return false;
-        }
-
         if ($this->requirements->count() == 0) {
             return false;
         }
@@ -193,23 +190,12 @@ class Job extends Model
     /**
      * Check if job has a given skill.
      *
-     * @param Language $language
-     * @return int
-     */
-    public function hasLanguage(Language $language)
-    {
-        return $this->languages->where('skillable_id', $language->id)->count();
-    }
-
-    /**
-     * Check if job has a given skill.
-     *
      * @param Skill $skill
      * @return int
      */
     public function hasSkill(Skill $skill)
     {
-        return $this->skills->where('skillable_id', $skill->id)->count();
+        return $this->skills->where('skill_id', $skill->id)->count();
     }
 
     /**
@@ -306,25 +292,13 @@ class Job extends Model
     }
 
     /**
-     * Get job language requirements.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function languages()
-    {
-        return $this->hasMany(JobSkillable::class)
-            ->where('skillable_type', Skill::getActualClassNameForMorph(Language::class));
-    }
-
-    /**
      * Get job skills requirements.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function skills()
     {
-        return $this->hasMany(JobSkillable::class)
-            ->where('skillable_type', Skill::getActualClassNameForMorph(Skill::class));
+        return $this->hasMany(JobSkill::class);
     }
 
     /**

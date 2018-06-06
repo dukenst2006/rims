@@ -23,7 +23,7 @@ class JobCheckoutController extends Controller
             return back();
         }
 
-        $job->loadMissing('area.ancestors', 'skills.skillable');
+        $job->loadMissing('area.ancestors', 'skills.skill.ancestors');
 
         return view('tenant.jobs.checkout.index', compact('job'));
     }

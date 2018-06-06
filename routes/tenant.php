@@ -73,7 +73,7 @@ Route::group(['prefix' => '/company', 'as' => 'tenant.'], function () {
                      */
                     Route::resource('/skills', 'JobSkillController', [
                         'parameters' => [
-                            'skills' => 'jobSkillable'
+                            'skills' => 'jobSkill'
                         ]
                     ])->except('show');
 

@@ -23,8 +23,7 @@ class JobListingController extends Controller
         $jobs = Job::withoutForTenants()->with(
             'area.ancestors',
             'education.education',
-            'skills.skillable.ancestors',
-            'languages.skillable.ancestors',
+            'skills.skill.ancestors',
             'company'
         )->inArea($area)->filter($request)->finished()->live()->published()->isOpen()->paginate();
 

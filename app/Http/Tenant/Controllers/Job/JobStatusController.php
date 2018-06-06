@@ -31,15 +31,15 @@ class JobStatusController extends Controller
             ], 403);
         }
 
-        if ($job->languages->count() == 0) {
-            return response()->json([
-                'message' => 'Job must have at least one language.'
-            ], 403);
-        }
-
         if($job->requirements->count() == 0) {
             return response()->json([
                 'message' => 'Job must have at least one requirement.'
+            ], 403);
+        }
+
+        if($job->isPublished == false) {
+            return response()->json([
+                'message' => 'Job must be checked out first to toggle status.'
             ], 403);
         }
 

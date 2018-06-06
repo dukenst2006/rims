@@ -4,17 +4,18 @@ namespace Rims\Domain\Portfolios\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Rims\Domain\Levels\Models\Level;
+use Rims\Domain\Skills\Models\Skill;
 
-class PortfolioSkillable extends Model
+class PortfolioSkill extends Model
 {
     /**
-     * Get all of the owning skillable models.
+     * Get the skill that portfolio belongs to.
      * 
-     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function skillable()
+    public function skill()
     {
-        return $this->morphTo();
+        return $this->belongsTo(Skill::class);
     }
 
     /**

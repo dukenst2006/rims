@@ -142,8 +142,7 @@ class Portfolio extends Model
      */
     public function skills()
     {
-        return $this->hasMany(PortfolioSkillable::class)
-            ->where('skillable_type', Skill::getActualClassNameForMorph(Skill::class));
+        return $this->hasMany(PortfolioSkill::class);
     }
 
     /**

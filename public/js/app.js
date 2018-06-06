@@ -100507,7 +100507,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -101183,6 +101183,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.skillables.errors = [];
 
             this.skillStore(this.skillables.portfolio).then(function (response) {
+
+                var index = _this6.portfolios.indexOf(_this6.skillables.portfolio);
+
+                // add skill to portfolio skills
+                _this6.portfolios[index].skills.push(response.data.data);
+
                 // clear form
                 _this6.skillables.form = {};
 
@@ -101194,9 +101200,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
                 // show toast
                 __WEBPACK_IMPORTED_MODULE_4_toastr___default.a.success(response.data.data.skillable.name + ': Skill successfully added.', _this6.skillables.portfolio.title);
-
-                // add skill to portfolio skills
-                _this6.skillables.portfolio.skills.push(response.data.data);
             }).catch(function (error) {
                 if (error.response && error.response.status === 422) {
                     _this6.skillables.errors = error.response.data.errors;
@@ -101225,7 +101228,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 // update skill
                 _this7.portfolios[index].skills[skillIndex] = response.data.data;
 
-                __WEBPACK_IMPORTED_MODULE_4_toastr___default.a.success(_this7.skillables.skillset.skillable.name + ': Skill successfully updated.', _this7.skillables.portfolio.title);
+                __WEBPACK_IMPORTED_MODULE_4_toastr___default.a.success(_this7.skillables.skillset.skill.name + ': Skill successfully updated.', _this7.skillables.portfolio.title);
 
                 // clear editing
                 _this7.cancelSkillableEditing();
@@ -101254,11 +101257,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     return skill.id !== skillset.id;
                 });
 
-                __WEBPACK_IMPORTED_MODULE_4_toastr___default.a.success(skillset.skillable.name + ': Skill successfully deleted.', portfolio.title);
+                __WEBPACK_IMPORTED_MODULE_4_toastr___default.a.success(skillset.skill.name + ': Skill successfully deleted.', portfolio.title);
             }).catch(function (error) {
                 // log: error.response.data
 
-                __WEBPACK_IMPORTED_MODULE_4_toastr___default.a.error(skillset.skillable.name + ': Failed deleting skill.', portfolio.title);
+                __WEBPACK_IMPORTED_MODULE_4_toastr___default.a.error(skillset.skill.name + ': Failed deleting skill.', portfolio.title);
             }).finally(function () {
                 _this8.skillables.deleting.processing = false;
             });
@@ -103187,25 +103190,20 @@ var render = function() {
                                             [
                                               _vm._v(
                                                 "\n                                " +
-                                                  _vm._s(
-                                                    skillset.skillable.name
-                                                  ) +
+                                                  _vm._s(skillset.skill.name) +
                                                   "\n                                "
                                               ),
-                                              skillset.skillable.ancestors
-                                                .length
+                                              skillset.skill.ancestors.length
                                                 ? [
                                                     _vm._v(
                                                       "\n                                    (\n                                    "
                                                     ),
                                                     _vm._l(
-                                                      skillset.skillable
-                                                        .ancestors,
+                                                      skillset.skill.ancestors,
                                                       function(ancestor) {
-                                                        return skillset
-                                                          .skillable
+                                                        return skillset.skill
                                                           .ancestors &&
-                                                          skillset.skillable
+                                                          skillset.skill
                                                             .ancestors.length >
                                                             1
                                                           ? _c("span", [
@@ -103218,7 +103216,7 @@ var render = function() {
                                                               )
                                                             ])
                                                           : _vm._l(
-                                                              skillset.skillable
+                                                              skillset.skill
                                                                 .ancestors,
                                                               function(
                                                                 ancestor
@@ -103352,7 +103350,7 @@ var render = function() {
                                         _c("h5", [
                                           _vm._v(
                                             "Editing " +
-                                              _vm._s(skillset.skillable.name)
+                                              _vm._s(skillset.skill.name)
                                           )
                                         ]),
                                         _vm._v(" "),
@@ -103388,9 +103386,9 @@ var render = function() {
                                                       name: "model",
                                                       rawName: "v-model",
                                                       value:
-                                                        skillset.skillable.name,
+                                                        skillset.skill.name,
                                                       expression:
-                                                        "skillset.skillable.name"
+                                                        "skillset.skill.name"
                                                     }
                                                   ],
                                                   staticClass:
@@ -103407,8 +103405,7 @@ var render = function() {
                                                     id: "edit_skill_id"
                                                   },
                                                   domProps: {
-                                                    value:
-                                                      skillset.skillable.name
+                                                    value: skillset.skill.name
                                                   },
                                                   on: {
                                                     input: function($event) {
@@ -103418,7 +103415,7 @@ var render = function() {
                                                         return
                                                       }
                                                       _vm.$set(
-                                                        skillset.skillable,
+                                                        skillset.skill,
                                                         "name",
                                                         $event.target.value
                                                       )

@@ -300,14 +300,14 @@
                         <template v-if="skillables.editing.id != skillset.id">
                             <div class="d-flex justify-content-between align-content-center">
                                 <h5>
-                                    {{ skillset.skillable.name }}
-                                    <template v-if="skillset.skillable.ancestors.length">
+                                    {{ skillset.skill.name }}
+                                    <template v-if="skillset.skill.ancestors.length">
                                         (
-                                        <span v-for="ancestor in skillset.skillable.ancestors"
-                                              v-if="skillset.skillable.ancestors && skillset.skillable.ancestors.length > 1">
+                                        <span v-for="ancestor in skillset.skill.ancestors"
+                                              v-if="skillset.skill.ancestors && skillset.skill.ancestors.length > 1">
                                         {{ ancestor.name }} /
                                     </span>
-                                        <span v-for="ancestor in skillset.skillable.ancestors" v-else>
+                                        <span v-for="ancestor in skillset.skill.ancestors" v-else>
                                         {{ ancestor.name }}
                                     </span>
                                         )
@@ -347,7 +347,7 @@
                         <form action="#"
                               @submit.prevent="updatePortfolioSkill"
                               v-else>
-                            <h5>Editing {{ skillset.skillable.name }}</h5>
+                            <h5>Editing {{ skillset.skill.name }}</h5>
 
                             <div class="form-group row" :class="{ 'has-error': skillables.errors['skill_id']  }">
                                 <label for="edit_skill_id" class="control-label col-md-4">Skill</label>
@@ -355,7 +355,7 @@
                                     <input type="text" readonly
                                            class="form-control-plaintext" id="edit_skill_id"
                                            :class="{ 'is-invalid': skillables.errors['skill_id']  }"
-                                           v-model="skillset.skillable.name">
+                                           v-model="skillset.skill.name">
                                     <input type="hidden" v-model="skillables.form.skill_id">
 
                                     <div class="invalid-feedback" v-if="skillables.errors['skill_id']">
@@ -644,6 +644,12 @@
                 this.skillables.errors = []
 
                 this.skillStore(this.skillables.portfolio).then((response) => {
+
+                    var index = this.portfolios.indexOf(this.skillables.portfolio)
+
+                    // add skill to portfolio skills
+                    this.portfolios[index].skills.push(response.data.data)
+
                     // clear form
                     this.skillables.form = {}
 
@@ -658,9 +664,6 @@
                         response.data.data.skillable.name + ': Skill successfully added.',
                         this.skillables.portfolio.title
                     )
-
-                    // add skill to portfolio skills
-                    this.skillables.portfolio.skills.push(response.data.data)
 
                 }).catch((error) => {
                     if (error.response && error.response.status === 422) {
@@ -692,7 +695,7 @@
                     this.portfolios[index].skills[skillIndex] = response.data.data
 
                     toastr.success(
-                        this.skillables.skillset.skillable.name + ': Skill successfully updated.',
+                        this.skillables.skillset.skill.name + ': Skill successfully updated.',
                         this.skillables.portfolio.title
                     )
 
@@ -721,11 +724,11 @@
                         return skill.id !== skillset.id
                     })
 
-                    toastr.success(skillset.skillable.name + ': Skill successfully deleted.', portfolio.title)
+                    toastr.success(skillset.skill.name + ': Skill successfully deleted.', portfolio.title)
                 }).catch((error) => {
                     // log: error.response.data
 
-                    toastr.error(skillset.skillable.name + ': Failed deleting skill.', portfolio.title)
+                    toastr.error(skillset.skill.name + ': Failed deleting skill.', portfolio.title)
                 }).finally(() => {
                     this.skillables.deleting.processing = false
                 })

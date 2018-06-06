@@ -22,8 +22,7 @@ class PortfolioIndexController extends Controller
             $portfolios->load(
                 'uploads',
                 'skills.level',
-                'skills.skillable',
-                'skills.skillable.ancestors'
+                'skills.skill.ancestors'
             )
         );
     }

@@ -4,7 +4,7 @@ namespace Rims\Domain\Portfolios\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PortfolioSkillableResource extends JsonResource
+class PortfolioSkillResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

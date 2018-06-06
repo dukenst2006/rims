@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJobSkillablesTable extends Migration
+class CreatePortfolioSkillsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateJobSkillablesTable extends Migration
      */
     public function up()
     {
-        Schema::create('job_skillables', function (Blueprint $table) {
+        Schema::create('portfolio_skills', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('job_id')->unsigned()->index();
+            $table->integer('portfolio_id')->unsigned()->index();
+            $table->integer('skill_id')->unsigned()->index();
             $table->integer('level_id')->unsigned()->index()->nullable();
-            $table->morphs('skillable');
-            $table->string('details')->nullable();
             $table->timestamps();
 
-            $table->foreign('job_id')->references('id')->on('job')->onDelete('cascade');
+            $table->foreign('portfolio_id')->references('id')->on('portfolios')->onDelete('cascade');
+            $table->foreign('skill_id')->references('id')->on('skills')->onDelete('cascade');
             $table->foreign('level_id')->references('id')->on('levels')->onDelete('set null');
         });
     }
@@ -33,6 +33,6 @@ class CreateJobSkillablesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('job_skillables');
+        Schema::dropIfExists('portfolio_skills');
     }
 }

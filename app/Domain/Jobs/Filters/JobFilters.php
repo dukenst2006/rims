@@ -9,8 +9,10 @@
 namespace Rims\Domain\Jobs\Filters;
 
 use Rims\App\Filters\FiltersAbstract;
+use Rims\Domain\Education\Filters\EducationFilter;
 use Rims\Domain\Jobs\Filters\Ordering\DeadlineOrder;
 use Rims\Domain\Jobs\Filters\Ordering\PublishedOrder;
+use Rims\Domain\Skills\Filters\SkillFilter;
 
 class JobFilters extends FiltersAbstract
 {
@@ -22,6 +24,8 @@ class JobFilters extends FiltersAbstract
         'location' => LocationFilter::class,
         'salary_min' => SalaryMinFilter::class,
         'salary_max' => SalaryMaxFilter::class,
+        'education' => EducationFilter::class,
+        'skills' => SkillFilter::class,
     ];
 
     protected $defaultFilters = [

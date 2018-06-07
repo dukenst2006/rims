@@ -33,12 +33,12 @@ class SkillFilter extends FilterAbstract
         $skills = Skill::with(['descendants'])
             ->whereIn('slug', $values)->get();
 
-        $skills = $skills->map(function ($skill, $key) {
+        $ids = $skills->map(function ($skill) {
             return $skill->descendants->pluck('id')->prepend($skill->id);
-        })->toArray();
+        })->flatten();
 
-        return $builder->whereHas('skills', function (Builder $builder) use ($skills) {
-            $builder->whereIn('skill_id', $skills);
+        return $builder->whereHas('skills', function (Builder $builder) use ($ids) {
+            $builder->whereIn('skill_id', $ids);
         });
     }
 }

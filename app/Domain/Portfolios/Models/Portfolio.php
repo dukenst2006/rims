@@ -91,12 +91,16 @@ class Portfolio extends Model
      */
     public function getImageAttribute($value)
     {
+        if(!isset($value)) {
+            return null;
+        }
+
         if ($this->fileable()->getModel()->getTable() === 'users') {
-            return Storage::url("users/{$this->fileable->id}/portfolios/{$this->identifier}/image/{$value}");
+            return Storage::url("users/{$this->fileable->id}/portfolios/{$this->identifier}/{$value}");
         }
 
         if ($this->fileable()->getModel()->getTable() === 'companies') {
-            return Storage::url("companies/{$this->fileable->id}/portfolios/{$this->identifier}/image/{$value}");
+            return Storage::url("companies/{$this->fileable->id}/portfolios/{$this->identifier}/{$value}");
         }
 
         return $value;  // return default image

@@ -107094,7 +107094,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 id: upload.id || null // fetch id or set null
             };
 
-            var url = upload.path;
+            var url = upload.fullPath;
 
             this.$refs.portfolioDropzone.manuallyAddFile(file, url);
         },

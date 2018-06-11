@@ -9,11 +9,7 @@
                 <avatar-upload
                         send-as="image"
                         endpoint="{{ route('account.avatar.upload.store') }}"
-                        current-image="placeholder.jpg"></avatar-upload>
-
-                {{--<div class="form-group">--}}
-                    {{--<button type="submit" class="btn btn-primary">Save</button>--}}
-                {{--</div>--}}
+                        current-avatar="{{ auth()->user()->avatar ?: asset('img/avatars/default_avatar.png') }}"></avatar-upload>
             </form>
         </div><!-- /.card-body -->
     </div><!-- /.card -->

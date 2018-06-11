@@ -10,6 +10,9 @@ require('./app/custom');
 
 window.Vue = require('vue');
 
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
 import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue);
 
@@ -24,11 +27,31 @@ Vue.use(VueTimeago, {
     }
 });
 
+var VueScrollTo = require('vue-scrollto');
+Vue.use(VueScrollTo)
+
+import JobsIndex from './components/jobs/Index.vue';
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
+Vue.component('jobs-index', JobsIndex);
+
+const routes = [
+    {
+        path: '/jobs/listings',
+        name: 'jobs.index',
+        component: JobsIndex
+    }
+];
+
+const router = new VueRouter({
+    mode: 'history',
+    routes
+});
 
 Vue.component(
     'passport-clients',
@@ -76,5 +99,6 @@ Vue.component(
 );
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });

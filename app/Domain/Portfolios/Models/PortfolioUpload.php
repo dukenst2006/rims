@@ -36,21 +36,6 @@ class PortfolioUpload extends Model
     ];
 
     /**
-     * Get the full file url.
-     *
-     * @param $value
-     * @return string
-     */
-    public function getPathAttribute($value)
-    {
-        if ($this->uploadable()->getModel()->getTable() === 'users') {
-            return Storage::url("users/{$this->uploadable->id}/{$this->portfolio->identifier}/{$value}");
-        }
-
-        return $value;
-    }
-
-    /**
      * Get the full file upload path.
      *
      * @return string
@@ -58,7 +43,7 @@ class PortfolioUpload extends Model
     public function getFullPathAttribute()
     {
         if ($this->uploadable()->getModel()->getTable() === 'users') {
-            return storage_path("users/{$this->uploadable->id}/{$this->portfolio->identifier}/{$this->path}");
+            return Storage::url("users/{$this->uploadable->id}/{$this->portfolio->identifier}/{$this->filename}");
         }
 
         return null;

@@ -106984,7 +106984,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n#portfolio-uploads-dropzone .dz-preview[data-v-0c103258] {\n    background-color: #607d8b;\n}\n", ""]);
+exports.push([module.i, "\n#portfolio-uploads-dropzone[data-v-0c103258] {\n    background-color: #e0e0e0;\n}\n", ""]);
 
 // exports
 
@@ -106999,6 +106999,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue2_dropzone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue2_dropzone__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue2_dropzone_dist_vue2Dropzone_min_css__ = __webpack_require__(531);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue2_dropzone_dist_vue2Dropzone_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue2_dropzone_dist_vue2Dropzone_min_css__);
+//
+//
+//
+//
 //
 //
 //
@@ -107040,9 +107044,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             refreshButton: false,
             dropzoneOptions: {
                 url: this.endpoint,
-                createImageThumbnails: false,
+                createImageThumbnails: true,
+                thumbnailWidth: 100, // px
+                thumbnailHeight: 100,
                 addRemoveLinks: true,
-                dictDefaultMessage: "<i class='fa fa-cloud-upload'></i> CLICK or DRAG N DROP A FILE TO UPLOAD",
+                previewTemplate: this.template(),
+                dictDefaultMessage: "<i class='fa fa-cloud-upload'></i> Drop files here to upload",
                 headers: {
                     'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content
                 }
@@ -107121,6 +107128,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         removeAllUploads: function removeAllUploads() {
             this.$refs.portfolioDropzone.removeAllFiles();
+        },
+        template: function template() {
+            return '<div class="dz-preview dz-file-preview">\n                        <div class="dz-image">\n                            <div data-dz-thumbnail-bg></div>\n                        </div>\n                        <div class="dz-details">\n                            <div class="dz-size"><span data-dz-size></span></div>\n                            <div class="dz-filename"><span data-dz-name></span></div>\n                        </div>\n                        <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>\n                        <div class="dz-error-message"><span data-dz-errormessage></span></div>\n                        <div class="dz-success-mark"><i class="fa fa-check"></i></div>\n                        <div class="dz-error-mark"><i class="fa fa-close"></i></div>\n                    </div>';
         }
     }
 });
@@ -107199,19 +107209,28 @@ var render = function() {
     _vm.refreshButton || !_vm.uploads.length
       ? _c("div", { staticClass: "my-1" }, [
           _vm.refreshButton
-            ? _c("p", [_vm._v("Whoops! Some error occurred.")])
+            ? _c("p", [_vm._v("Mmmh! Looks like portfolio has no uploads.")])
             : _vm._e(),
           _vm._v(" "),
           _c(
-            "button",
-            {
-              staticClass: "btn btn-primary",
-              on: { click: _vm.getPortfolioUploads }
-            },
+            "p",
             [
-              _c("i", { staticClass: "icon-refresh" }),
-              _vm._v(" Refresh if uploads not loaded\n        ")
-            ]
+              _c(
+                "b-button",
+                {
+                  attrs: { variant: "link" },
+                  on: { click: _vm.getPortfolioUploads }
+                },
+                [
+                  _c("i", { staticClass: "icon-refresh" }),
+                  _vm._v(" Refresh\n            ")
+                ]
+              ),
+              _vm._v(
+                " to load files already uploaded or drop files below to start uploading.\n        "
+              )
+            ],
+            1
           )
         ])
       : _vm._e(),
@@ -107224,7 +107243,9 @@ var render = function() {
           ref: "portfolioDropzone",
           attrs: {
             id: "portfolio-uploads-dropzone",
-            options: _vm.dropzoneOptions
+            destroyDropzone: false,
+            options: _vm.dropzoneOptions,
+            "include-styling": false
           },
           on: {
             "vdropzone-success": _vm.uploadSuccess,

@@ -6,17 +6,21 @@
         </label>
 
         <div class="my-1" v-if="refreshButton || !uploads.length">
-            <p v-if="refreshButton">Whoops! Some error occurred.</p>
+            <p v-if="refreshButton">Mmmh! Looks like portfolio has no uploads.</p>
 
-            <button class="btn btn-primary" @click="getPortfolioUploads">
-                <i class="icon-refresh"></i> Refresh if uploads not loaded
-            </button>
+            <p>
+                <b-button variant="link" @click="getPortfolioUploads">
+                    <i class="icon-refresh"></i> Refresh
+                </b-button> to load files already uploaded or drop files below to start uploading.
+            </p>
         </div>
 
         <div class="mb-3">
             <vue-dropzone ref="portfolioDropzone"
                           id="portfolio-uploads-dropzone"
+                          :destroyDropzone="false"
                           :options="dropzoneOptions"
+                          :include-styling="false"
                           @vdropzone-success="uploadSuccess"
                           @vdropzone-removed-file="destroy"></vue-dropzone>
         </div>
@@ -42,9 +46,12 @@
                 refreshButton: false,
                 dropzoneOptions: {
                     url: this.endpoint,
-                    createImageThumbnails: false,
+                    createImageThumbnails: true,
+                    thumbnailWidth: 100, // px
+                    thumbnailHeight: 100,
                     addRemoveLinks: true,
-                    dictDefaultMessage: "<i class='fa fa-cloud-upload'></i> CLICK or DRAG N DROP A FILE TO UPLOAD",
+                    previewTemplate: this.template(),
+                    dictDefaultMessage: "<i class='fa fa-cloud-upload'></i> Drop files here to upload",
                     headers: {
                         'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content
                     }
@@ -119,13 +126,28 @@
             },
             removeAllUploads() {
                 this.$refs.portfolioDropzone.removeAllFiles()
+            },
+            template() {
+                return `<div class="dz-preview dz-file-preview">
+                            <div class="dz-image">
+                                <div data-dz-thumbnail-bg></div>
+                            </div>
+                            <div class="dz-details">
+                                <div class="dz-size"><span data-dz-size></span></div>
+                                <div class="dz-filename"><span data-dz-name></span></div>
+                            </div>
+                            <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+                            <div class="dz-error-message"><span data-dz-errormessage></span></div>
+                            <div class="dz-success-mark"><i class="fa fa-check"></i></div>
+                            <div class="dz-error-mark"><i class="fa fa-close"></i></div>
+                        </div>`;
             }
         }
     }
 </script>
 
 <style scoped>
-    #portfolio-uploads-dropzone .dz-preview {
-        background-color: #607d8b;
+    #portfolio-uploads-dropzone {
+        background-color: #e0e0e0;
     }
 </style>

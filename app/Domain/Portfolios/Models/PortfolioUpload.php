@@ -42,8 +42,10 @@ class PortfolioUpload extends Model
      */
     public function getFullPathAttribute()
     {
+        $uploadPath = "{$this->uploadable->id}/portfolios/{$this->portfolio->identifier}/{$this->filename}";
+
         if ($this->uploadable()->getModel()->getTable() === 'users') {
-            return Storage::url("users/{$this->uploadable->id}/{$this->portfolio->identifier}/{$this->filename}");
+            return Storage::url("users/{$uploadPath}");
         }
 
         return null;

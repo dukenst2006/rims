@@ -5,9 +5,13 @@
                 <div class="d-flex justify-content-between align-content-center">
                     <h4>My Portfolios</h4>
 
-                    <a href="#" class="pull-right ml-auto" @click.prevent="initPortfolio" v-if="!startCreating">
-                        {{ creating.active ? 'Cancel' : 'Add new' }}
-                    </a>
+                    <div>
+                        <b-link @click.prevent="getPortfolios">Refresh</b-link>
+
+                        <b-link @click.prevent="initPortfolio" v-if="!startCreating">
+                            {{ creating.active ? 'Cancel' : 'Add new' }}
+                        </b-link>
+                    </div>
                 </div>
             </div>
 
@@ -108,7 +112,7 @@
         </div><!-- /.card-body -->
 
         <!-- Portfolios -->
-        <b-list-group flush v-if="portfolios.length">
+        <b-list-group flush>
 
             <!-- Spinner -->
             <b-list-group-item v-if="fetching">
@@ -410,6 +414,10 @@
                 </b-list-group>
             </template>
 
+            <!-- No portfolios alert -->
+            <b-list-group-item v-if="!fetching && portfolios.length == 0">
+                <p>No portfolios found. Try refreshing to reload or add a new one.</p>
+            </b-list-group-item>
         </b-list-group>
 
         <b-modal size="lg"

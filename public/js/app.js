@@ -105621,7 +105621,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -105640,6 +105640,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_epic_spinners__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_toastr__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_toastr__);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -106999,6 +107007,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue2_dropzone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue2_dropzone__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue2_dropzone_dist_vue2Dropzone_min_css__ = __webpack_require__(531);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue2_dropzone_dist_vue2Dropzone_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue2_dropzone_dist_vue2Dropzone_min_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_epic_spinners__ = __webpack_require__(13);
 //
 //
 //
@@ -107028,6 +107037,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -107036,19 +107055,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     name: "portfolio-uploads",
     props: ['endpoint', 'portfolio'],
     components: {
+        HollowDotsSpinner: __WEBPACK_IMPORTED_MODULE_2_epic_spinners__["a" /* HollowDotsSpinner */],
         vueDropzone: __WEBPACK_IMPORTED_MODULE_0_vue2_dropzone___default.a
     },
     data: function data() {
         return {
             uploads: [],
-            refreshButton: false,
+            refreshButton: true,
             dropzoneOptions: {
                 url: this.endpoint,
                 createImageThumbnails: true,
-                thumbnailWidth: 100, // px
-                thumbnailHeight: 100,
+                thumbnailWidth: 150, // px
+                thumbnailHeight: 150,
                 addRemoveLinks: true,
-                previewTemplate: this.template(),
                 dictDefaultMessage: "<i class='fa fa-cloud-upload'></i> Drop files here to upload",
                 headers: {
                     'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content
@@ -107071,14 +107090,38 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.refreshButton = false;
 
             axios.get(this.endpoint).then(function (response) {
-                _this.uploads = response.data.data;
+                var oldUploads = _this.uploads;
 
-                _this.addUploads(_this.uploads);
+                var newUploads = response.data.data;
+
+                var removeUploadIfExists = function removeUploadIfExists(newUpload) {
+                    var exists = oldUploads.filter(function (oldUpload) {
+                        return newUpload.id == oldUpload.id;
+                    });
+
+                    if (exists.length == 1) {
+                        _.unset(newUploads, newUploads.indexOf(newUpload));
+                    }
+                };
+
+                var pushToUploads = function pushToUploads(upload) {
+                    oldUploads.push(upload);
+                };
+
+                // filter new uploads
+                newUploads = _.each(newUploads, removeUploadIfExists);
+
+                // push new uploads to uploads array
+                newUploads.forEach(pushToUploads);
+                _this.uploads = oldUploads;
+
+                // add new uploads to dropzone
+                _this.addUploads(newUploads);
             }).catch(function (error) {
-                _this.refreshButton = true;
-
                 // log error to a file or webhook
                 console.log(error);
+            }).finally(function () {
+                _this.refreshButton = true;
             });
         },
         uploadSuccess: function uploadSuccess(upload, response) {
@@ -107206,34 +107249,42 @@ var render = function() {
       [_vm._v("\n        Upload more images\n    ")]
     ),
     _vm._v(" "),
-    _vm.refreshButton || !_vm.uploads.length
-      ? _c("div", { staticClass: "my-1" }, [
-          _vm.refreshButton
-            ? _c("p", [_vm._v("Mmmh! Looks like portfolio has no uploads.")])
-            : _vm._e(),
-          _vm._v(" "),
-          _c(
+    _c("div", { staticClass: "my-1" }, [
+      _vm.uploads.length == 0
+        ? _c("p", [_vm._v("Mmmh! Looks like portfolio has no uploads.")])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.refreshButton
+        ? _c(
             "p",
             [
-              _c(
-                "b-button",
-                {
-                  attrs: { variant: "link" },
-                  on: { click: _vm.getPortfolioUploads }
-                },
-                [
-                  _c("i", { staticClass: "icon-refresh" }),
-                  _vm._v(" Refresh\n            ")
-                ]
-              ),
+              _vm._v("Can't see your uploaded files? Hit\n            "),
+              _c("b-link", { on: { click: _vm.getPortfolioUploads } }, [
+                _vm._v("Refresh")
+              ]),
               _vm._v(
-                " to load files already uploaded or drop files below to start uploading.\n        "
+                "\n            to reload them.\n\n            Or just drop files below to start uploading new ones.\n        "
               )
             ],
             1
           )
-        ])
-      : _vm._e(),
+        : _c(
+            "div",
+            [
+              _c("hollow-dots-spinner", {
+                attrs: {
+                  "animation-duration": 1000,
+                  "dot-size": 15,
+                  "dots-num": 3,
+                  color: "#ff1d5e"
+                }
+              }),
+              _vm._v(" "),
+              _c("p", [_vm._v("Fetching uploaded files...")])
+            ],
+            1
+          )
+    ]),
     _vm._v(" "),
     _c(
       "div",
@@ -107244,8 +107295,7 @@ var render = function() {
           attrs: {
             id: "portfolio-uploads-dropzone",
             destroyDropzone: false,
-            options: _vm.dropzoneOptions,
-            "include-styling": false
+            options: _vm.dropzoneOptions
           },
           on: {
             "vdropzone-success": _vm.uploadSuccess,
@@ -107289,28 +107339,47 @@ var render = function() {
             [
               _c("h4", [_vm._v("My Portfolios")]),
               _vm._v(" "),
-              !_vm.startCreating
-                ? _c(
-                    "a",
+              _c(
+                "div",
+                [
+                  _c(
+                    "b-link",
                     {
-                      staticClass: "pull-right ml-auto",
-                      attrs: { href: "#" },
                       on: {
                         click: function($event) {
                           $event.preventDefault()
-                          _vm.initPortfolio($event)
+                          _vm.getPortfolios($event)
                         }
                       }
                     },
-                    [
-                      _vm._v(
-                        "\n                    " +
-                          _vm._s(_vm.creating.active ? "Cancel" : "Add new") +
-                          "\n                "
+                    [_vm._v("Refresh")]
+                  ),
+                  _vm._v(" "),
+                  !_vm.startCreating
+                    ? _c(
+                        "b-link",
+                        {
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.initPortfolio($event)
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n                        " +
+                              _vm._s(
+                                _vm.creating.active ? "Cancel" : "Add new"
+                              ) +
+                              "\n                    "
+                          )
+                        ]
                       )
-                    ]
-                  )
-                : _vm._e()
+                    : _vm._e()
+                ],
+                1
+              )
             ]
           )
         ]),
@@ -107633,1224 +107702,1166 @@ var render = function() {
           : _vm._e()
       ]),
       _vm._v(" "),
-      _vm.portfolios.length
-        ? _c(
-            "b-list-group",
-            { attrs: { flush: "" } },
-            [
-              _vm.fetching
-                ? _c(
-                    "b-list-group-item",
-                    [
-                      _c("hollow-dots-spinner", {
-                        attrs: {
-                          "animation-duration": 1000,
-                          "dot-size": 15,
-                          "dots-num": 3,
-                          color: "#ff1d5e"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("p", [_vm._v("Fetching...")])
-                    ],
-                    1
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm._l(_vm.portfolios, function(portfolio) {
-                return [
-                  _c(
-                    "b-list-group-item",
-                    [
-                      _vm.editing.id !== portfolio.identifier
-                        ? [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "d-flex justify-content-between align-content-center"
-                              },
-                              [
-                                _c("h4", [_vm._v(_vm._s(portfolio.title))]),
-                                _vm._v(" "),
-                                _c("div", [
-                                  _c(
-                                    "a",
-                                    {
-                                      attrs: { href: "#" },
-                                      on: {
-                                        click: function($event) {
-                                          $event.preventDefault()
-                                        }
-                                      }
-                                    },
-                                    [_vm._v("Preview")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      attrs: { href: "#" },
-                                      on: {
-                                        click: function($event) {
-                                          $event.preventDefault()
-                                          _vm.togglePortfolioStatus(portfolio)
-                                        }
-                                      }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                " +
-                                          _vm._s(
-                                            portfolio.live
-                                              ? "Disable"
-                                              : "Enable"
-                                          ) +
-                                          "\n                            "
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      attrs: { href: "#" },
-                                      on: {
-                                        click: function($event) {
-                                          $event.preventDefault()
-                                          _vm.edit(portfolio)
-                                        }
-                                      }
-                                    },
-                                    [_vm._v("Edit")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      attrs: { href: "#" },
-                                      on: {
-                                        click: function($event) {
-                                          $event.preventDefault()
-                                          _vm.destroyPortfolio(portfolio)
-                                        }
-                                      }
-                                    },
-                                    [_vm._v("Delete")]
-                                  )
-                                ])
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("p", { staticClass: "card-text" }, [
-                              _vm._v(_vm._s(portfolio.overview_short))
-                            ]),
-                            _vm._v(" "),
-                            _vm.skillables.portfolio.identifier !==
-                            portfolio.identifier
-                              ? _c(
-                                  "p",
-                                  [
-                                    _c(
-                                      "b-link",
-                                      {
-                                        attrs: { href: "#" },
-                                        on: {
-                                          click: function($event) {
-                                            $event.preventDefault()
-                                            _vm.skillables.portfolio = portfolio
-                                          }
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                            Skills\n                        "
-                                        )
-                                      ]
-                                    )
-                                  ],
-                                  1
-                                )
-                              : _vm._e(),
-                            _vm._v(" "),
-                            (_vm.deleting.processing &&
-                              _vm.deleting.id === portfolio.identifier) ||
-                            (_vm.status.processing &&
-                              _vm.status.id === portfolio.identifier)
-                              ? _c(
-                                  "div",
-                                  { staticClass: "my-1" },
-                                  [
-                                    _c("hollow-dots-spinner", {
-                                      attrs: {
-                                        "animation-duration": 1000,
-                                        "dot-size": 15,
-                                        "dots-num": 3,
-                                        color: "#ff1d5e"
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _vm.deleting.id === portfolio.identifier
-                                      ? _c("p", [_vm._v("Deleting...")])
-                                      : _vm._e(),
-                                    _vm._v(" "),
-                                    _vm.status.id === portfolio.identifier
-                                      ? _c("p", [_vm._v("Updating status...")])
-                                      : _vm._e()
-                                  ],
-                                  1
-                                )
-                              : _vm._e()
-                          ]
-                        : _c(
-                            "form",
-                            {
-                              attrs: { action: "#" },
-                              on: {
-                                submit: function($event) {
-                                  $event.preventDefault()
-                                  _vm.updatePortfolio($event)
-                                }
-                              }
-                            },
-                            [
-                              _c("h4", [
-                                _vm._v("Edit " + _vm._s(portfolio.title))
-                              ]),
-                              _vm._v(" "),
-                              _c("portfolio-image", {
-                                attrs: {
-                                  "send-as": "image",
-                                  endpoint:
-                                    _vm.endpoint +
-                                    "/" +
-                                    portfolio.identifier +
-                                    "/image",
-                                  "current-image": portfolio.image
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("portfolio-uploads", {
-                                attrs: {
-                                  portfolio: portfolio,
-                                  endpoint:
-                                    _vm.endpoint +
-                                    "/" +
-                                    portfolio.identifier +
-                                    "/uploads"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "form-group row",
-                                  class: {
-                                    "has-error": _vm.editing.errors["title"]
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "label",
-                                    {
-                                      staticClass: "control-label col-md-4",
-                                      attrs: {
-                                        for: "title_" + portfolio.identifier
-                                      }
-                                    },
-                                    [_vm._v("Title")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-md-6" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
-                                          value: (_vm.editing.form.title =
-                                            portfolio.title),
-                                          expression:
-                                            "editing.form.title = portfolio.title"
-                                        }
-                                      ],
-                                      staticClass: "form-control",
-                                      class: {
-                                        "is-invalid":
-                                          _vm.editing.errors["title"]
-                                      },
-                                      attrs: {
-                                        type: "text",
-                                        id: "title_" + portfolio.identifier,
-                                        placeholder: "Title"
-                                      },
-                                      domProps: {
-                                        value: (_vm.editing.form.title =
-                                          portfolio.title)
-                                      },
-                                      on: {
-                                        input: function($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            (_vm.editing.form.title = portfolio),
-                                            "title",
-                                            $event.target.value
-                                          )
-                                        }
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _vm.editing.errors["title"]
-                                      ? _c(
-                                          "div",
-                                          { staticClass: "invalid-feedback" },
-                                          [
-                                            _c("strong", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.editing.errors["title"][0]
-                                                )
-                                              )
-                                            ])
-                                          ]
-                                        )
-                                      : _vm._e()
-                                  ])
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "form-group row",
-                                  class: {
-                                    "has-error":
-                                      _vm.editing.errors["overview_short"]
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "label",
-                                    {
-                                      staticClass: "control-label col-md-4",
-                                      attrs: {
-                                        for:
-                                          "overview_short_" +
-                                          portfolio.identifier
-                                      }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                            Short overview\n                        "
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-md-6" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
-                                          value: (_vm.editing.form.overview_short =
-                                            portfolio.overview_short),
-                                          expression:
-                                            "editing.form.overview_short = portfolio.overview_short"
-                                        }
-                                      ],
-                                      staticClass: "form-control",
-                                      class: {
-                                        "is-invalid":
-                                          _vm.editing.errors["overview_short"]
-                                      },
-                                      attrs: {
-                                        type: "text",
-                                        id:
-                                          "overview_short_" +
-                                          portfolio.identifier,
-                                        placeholder: "Short overview"
-                                      },
-                                      domProps: {
-                                        value: (_vm.editing.form.overview_short =
-                                          portfolio.overview_short)
-                                      },
-                                      on: {
-                                        input: function($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            (_vm.editing.form.overview_short = portfolio),
-                                            "overview_short",
-                                            $event.target.value
-                                          )
-                                        }
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _vm.editing.errors["overview_short"]
-                                      ? _c(
-                                          "div",
-                                          { staticClass: "invalid-feedback" },
-                                          [
-                                            _c("strong", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.editing.errors[
-                                                    "overview_short"
-                                                  ][0]
-                                                )
-                                              )
-                                            ])
-                                          ]
-                                        )
-                                      : _vm._e()
-                                  ])
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "form-group row d-none",
-                                  class: {
-                                    "has-error": _vm.editing.errors["price"]
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "label",
-                                    {
-                                      staticClass: "control-label col-md-4",
-                                      attrs: {
-                                        for: "price_" + portfolio.identifier
-                                      }
-                                    },
-                                    [_vm._v("Price")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-md-6" }, [
-                                    _c("input", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
-                                          value: (_vm.editing.form.price =
-                                            portfolio.price),
-                                          expression:
-                                            "editing.form.price = portfolio.price"
-                                        }
-                                      ],
-                                      staticClass: "form-control",
-                                      class: {
-                                        "is-invalid":
-                                          _vm.editing.errors["price"]
-                                      },
-                                      attrs: {
-                                        type: "text",
-                                        id: "price_" + portfolio.identifier,
-                                        placeholder: "Price"
-                                      },
-                                      domProps: {
-                                        value: (_vm.editing.form.price =
-                                          portfolio.price)
-                                      },
-                                      on: {
-                                        input: function($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            (_vm.editing.form.price = portfolio),
-                                            "price",
-                                            $event.target.value
-                                          )
-                                        }
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _vm.editing.errors["price"]
-                                      ? _c(
-                                          "div",
-                                          { staticClass: "invalid-feedback" },
-                                          [
-                                            _c("strong", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.editing.errors["price"][0]
-                                                )
-                                              )
-                                            ])
-                                          ]
-                                        )
-                                      : _vm._e()
-                                  ])
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass: "form-group row",
-                                  class: {
-                                    "has-error": _vm.editing.errors["overview"]
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "label",
-                                    {
-                                      staticClass: "control-label col-md-4",
-                                      attrs: {
-                                        for: "overview_" + portfolio.identifier
-                                      }
-                                    },
-                                    [_vm._v("Overview")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-md-6" }, [
-                                    _c("textarea", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
-                                          value: (_vm.editing.form.overview =
-                                            portfolio.overview),
-                                          expression:
-                                            "editing.form.overview = portfolio.overview"
-                                        }
-                                      ],
-                                      staticClass: "form-control",
-                                      class: {
-                                        "is-invalid":
-                                          _vm.editing.errors["overview"]
-                                      },
-                                      attrs: {
-                                        id: "overview_" + portfolio.identifier,
-                                        placeholder: "Overview"
-                                      },
-                                      domProps: {
-                                        value: (_vm.editing.form.overview =
-                                          portfolio.overview)
-                                      },
-                                      on: {
-                                        input: function($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            (_vm.editing.form.overview = portfolio),
-                                            "overview",
-                                            $event.target.value
-                                          )
-                                        }
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _vm.editing.errors["overview"]
-                                      ? _c(
-                                          "div",
-                                          { staticClass: "invalid-feedback" },
-                                          [
-                                            _c("strong", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.editing.errors[
-                                                    "overview"
-                                                  ][0]
-                                                )
-                                              )
-                                            ])
-                                          ]
-                                        )
-                                      : _vm._e()
-                                  ])
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "form-group row" }, [
-                                _c(
-                                  "div",
-                                  { staticClass: "col-md-6 offset-md-4" },
-                                  [
-                                    _c(
-                                      "button",
-                                      {
-                                        staticClass: "btn btn-primary",
-                                        attrs: { type: "submit" }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                                Save changes\n                            "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "button",
-                                      {
-                                        staticClass: "btn btn-secondary",
-                                        attrs: { type: "button" },
-                                        on: {
-                                          click: function($event) {
-                                            _vm.editing.id = null
-                                          }
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                                Cancel\n                            "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _vm.editing.processing
-                                      ? _c(
-                                          "div",
-                                          { staticClass: "my-1" },
-                                          [
-                                            _c("hollow-dots-spinner", {
-                                              attrs: {
-                                                "animation-duration": 1000,
-                                                "dot-size": 15,
-                                                "dots-num": 3,
-                                                color: "#ff1d5e"
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        )
-                                      : _vm._e()
-                                  ]
-                                )
-                              ])
-                            ],
-                            1
-                          )
-                    ],
-                    2
-                  ),
+      _c(
+        "b-list-group",
+        { attrs: { flush: "" } },
+        [
+          _vm.fetching
+            ? _c(
+                "b-list-group-item",
+                [
+                  _c("hollow-dots-spinner", {
+                    attrs: {
+                      "animation-duration": 1000,
+                      "dot-size": 15,
+                      "dots-num": 3,
+                      color: "#ff1d5e"
+                    }
+                  }),
                   _vm._v(" "),
-                  _vm.skillables.portfolio.identifier === portfolio.identifier
-                    ? _c(
-                        "b-list-group",
-                        { attrs: { flush: "" } },
-                        [
-                          _c("b-list-group-item", [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "d-flex justify-content-between align-content-center"
-                              },
+                  _c("p", [_vm._v("Fetching...")])
+                ],
+                1
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm._l(_vm.portfolios, function(portfolio) {
+            return [
+              _c(
+                "b-list-group-item",
+                [
+                  _vm.editing.id !== portfolio.identifier
+                    ? [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "d-flex justify-content-between align-content-center"
+                          },
+                          [
+                            _c("h4", [_vm._v(_vm._s(portfolio.title))]),
+                            _vm._v(" "),
+                            _c("div", [
+                              _c(
+                                "a",
+                                {
+                                  attrs: { href: "#" },
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                    }
+                                  }
+                                },
+                                [_vm._v("Preview")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  attrs: { href: "#" },
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      _vm.togglePortfolioStatus(portfolio)
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                " +
+                                      _vm._s(
+                                        portfolio.live ? "Disable" : "Enable"
+                                      ) +
+                                      "\n                            "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  attrs: { href: "#" },
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      _vm.edit(portfolio)
+                                    }
+                                  }
+                                },
+                                [_vm._v("Edit")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  attrs: { href: "#" },
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      _vm.destroyPortfolio(portfolio)
+                                    }
+                                  }
+                                },
+                                [_vm._v("Delete")]
+                              )
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text" }, [
+                          _vm._v(_vm._s(portfolio.overview_short))
+                        ]),
+                        _vm._v(" "),
+                        _vm.skillables.portfolio.identifier !==
+                        portfolio.identifier
+                          ? _c(
+                              "p",
                               [
-                                _c("h5", [
-                                  _vm._v(_vm._s(portfolio.title) + " Skills")
-                                ]),
-                                _vm._v(" "),
                                 _c(
-                                  "b-nav",
+                                  "b-link",
+                                  {
+                                    attrs: { href: "#" },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        _vm.skillables.portfolio = portfolio
+                                      }
+                                    }
+                                  },
                                   [
-                                    _c(
-                                      "b-nav-item",
-                                      {
-                                        directives: [
-                                          {
-                                            name: "b-modal",
-                                            rawName: "v-b-modal",
-                                            value:
-                                              "portfolio-skills-create-modal",
-                                            expression:
-                                              "'portfolio-skills-create-modal'"
-                                          }
-                                        ],
-                                        attrs: { href: "#" },
-                                        on: {
-                                          click: function($event) {
-                                            $event.preventDefault()
-                                            _vm.skillables.active = true
-                                          }
-                                        }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                                Add new skill\n                            "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "b-nav-item",
-                                      {
-                                        attrs: { href: "#" },
-                                        on: {
-                                          click: function($event) {
-                                            $event.preventDefault()
-                                            _vm.closeSkillables($event)
-                                          }
-                                        }
-                                      },
-                                      [
-                                        _c("i", { staticClass: "fa fa-close" }),
-                                        _vm._v(
-                                          " Close\n                            "
-                                        )
-                                      ]
+                                    _vm._v(
+                                      "\n                            Skills\n                        "
                                     )
-                                  ],
-                                  1
+                                  ]
                                 )
                               ],
                               1
                             )
-                          ]),
-                          _vm._v(" "),
-                          _vm._l(portfolio.skills, function(skillset) {
-                            return _c(
-                              "b-list-group-item",
-                              { key: skillset.id },
+                          : _vm._e(),
+                        _vm._v(" "),
+                        (_vm.deleting.processing &&
+                          _vm.deleting.id === portfolio.identifier) ||
+                        (_vm.status.processing &&
+                          _vm.status.id === portfolio.identifier)
+                          ? _c(
+                              "div",
+                              { staticClass: "my-1" },
                               [
-                                _vm.skillables.editing.id != skillset.id
-                                  ? [
+                                _c("hollow-dots-spinner", {
+                                  attrs: {
+                                    "animation-duration": 1000,
+                                    "dot-size": 15,
+                                    "dots-num": 3,
+                                    color: "#ff1d5e"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _vm.deleting.id === portfolio.identifier
+                                  ? _c("p", [_vm._v("Deleting...")])
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm.status.id === portfolio.identifier
+                                  ? _c("p", [_vm._v("Updating status...")])
+                                  : _vm._e()
+                              ],
+                              1
+                            )
+                          : _vm._e()
+                      ]
+                    : _c(
+                        "form",
+                        {
+                          attrs: { action: "#" },
+                          on: {
+                            submit: function($event) {
+                              $event.preventDefault()
+                              _vm.updatePortfolio($event)
+                            }
+                          }
+                        },
+                        [
+                          _c("h4", [_vm._v("Edit " + _vm._s(portfolio.title))]),
+                          _vm._v(" "),
+                          _c("portfolio-image", {
+                            attrs: {
+                              "send-as": "image",
+                              endpoint:
+                                _vm.endpoint +
+                                "/" +
+                                portfolio.identifier +
+                                "/image",
+                              "current-image": portfolio.image
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("portfolio-uploads", {
+                            attrs: {
+                              portfolio: portfolio,
+                              endpoint:
+                                _vm.endpoint +
+                                "/" +
+                                portfolio.identifier +
+                                "/uploads"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "form-group row",
+                              class: {
+                                "has-error": _vm.editing.errors["title"]
+                              }
+                            },
+                            [
+                              _c(
+                                "label",
+                                {
+                                  staticClass: "control-label col-md-4",
+                                  attrs: {
+                                    for: "title_" + portfolio.identifier
+                                  }
+                                },
+                                [_vm._v("Title")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-md-6" }, [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: (_vm.editing.form.title =
+                                        portfolio.title),
+                                      expression:
+                                        "editing.form.title = portfolio.title"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  class: {
+                                    "is-invalid": _vm.editing.errors["title"]
+                                  },
+                                  attrs: {
+                                    type: "text",
+                                    id: "title_" + portfolio.identifier,
+                                    placeholder: "Title"
+                                  },
+                                  domProps: {
+                                    value: (_vm.editing.form.title =
+                                      portfolio.title)
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        (_vm.editing.form.title = portfolio),
+                                        "title",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _vm.editing.errors["title"]
+                                  ? _c(
+                                      "div",
+                                      { staticClass: "invalid-feedback" },
+                                      [
+                                        _c("strong", [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.editing.errors["title"][0]
+                                            )
+                                          )
+                                        ])
+                                      ]
+                                    )
+                                  : _vm._e()
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "form-group row",
+                              class: {
+                                "has-error":
+                                  _vm.editing.errors["overview_short"]
+                              }
+                            },
+                            [
+                              _c(
+                                "label",
+                                {
+                                  staticClass: "control-label col-md-4",
+                                  attrs: {
+                                    for:
+                                      "overview_short_" + portfolio.identifier
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                            Short overview\n                        "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-md-6" }, [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: (_vm.editing.form.overview_short =
+                                        portfolio.overview_short),
+                                      expression:
+                                        "editing.form.overview_short = portfolio.overview_short"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  class: {
+                                    "is-invalid":
+                                      _vm.editing.errors["overview_short"]
+                                  },
+                                  attrs: {
+                                    type: "text",
+                                    id:
+                                      "overview_short_" + portfolio.identifier,
+                                    placeholder: "Short overview"
+                                  },
+                                  domProps: {
+                                    value: (_vm.editing.form.overview_short =
+                                      portfolio.overview_short)
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        (_vm.editing.form.overview_short = portfolio),
+                                        "overview_short",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _vm.editing.errors["overview_short"]
+                                  ? _c(
+                                      "div",
+                                      { staticClass: "invalid-feedback" },
+                                      [
+                                        _c("strong", [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.editing.errors[
+                                                "overview_short"
+                                              ][0]
+                                            )
+                                          )
+                                        ])
+                                      ]
+                                    )
+                                  : _vm._e()
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "form-group row d-none",
+                              class: {
+                                "has-error": _vm.editing.errors["price"]
+                              }
+                            },
+                            [
+                              _c(
+                                "label",
+                                {
+                                  staticClass: "control-label col-md-4",
+                                  attrs: {
+                                    for: "price_" + portfolio.identifier
+                                  }
+                                },
+                                [_vm._v("Price")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-md-6" }, [
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: (_vm.editing.form.price =
+                                        portfolio.price),
+                                      expression:
+                                        "editing.form.price = portfolio.price"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  class: {
+                                    "is-invalid": _vm.editing.errors["price"]
+                                  },
+                                  attrs: {
+                                    type: "text",
+                                    id: "price_" + portfolio.identifier,
+                                    placeholder: "Price"
+                                  },
+                                  domProps: {
+                                    value: (_vm.editing.form.price =
+                                      portfolio.price)
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        (_vm.editing.form.price = portfolio),
+                                        "price",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _vm.editing.errors["price"]
+                                  ? _c(
+                                      "div",
+                                      { staticClass: "invalid-feedback" },
+                                      [
+                                        _c("strong", [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.editing.errors["price"][0]
+                                            )
+                                          )
+                                        ])
+                                      ]
+                                    )
+                                  : _vm._e()
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "form-group row",
+                              class: {
+                                "has-error": _vm.editing.errors["overview"]
+                              }
+                            },
+                            [
+                              _c(
+                                "label",
+                                {
+                                  staticClass: "control-label col-md-4",
+                                  attrs: {
+                                    for: "overview_" + portfolio.identifier
+                                  }
+                                },
+                                [_vm._v("Overview")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-md-6" }, [
+                                _c("textarea", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: (_vm.editing.form.overview =
+                                        portfolio.overview),
+                                      expression:
+                                        "editing.form.overview = portfolio.overview"
+                                    }
+                                  ],
+                                  staticClass: "form-control",
+                                  class: {
+                                    "is-invalid": _vm.editing.errors["overview"]
+                                  },
+                                  attrs: {
+                                    id: "overview_" + portfolio.identifier,
+                                    placeholder: "Overview"
+                                  },
+                                  domProps: {
+                                    value: (_vm.editing.form.overview =
+                                      portfolio.overview)
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        (_vm.editing.form.overview = portfolio),
+                                        "overview",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _vm.editing.errors["overview"]
+                                  ? _c(
+                                      "div",
+                                      { staticClass: "invalid-feedback" },
+                                      [
+                                        _c("strong", [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.editing.errors["overview"][0]
+                                            )
+                                          )
+                                        ])
+                                      ]
+                                    )
+                                  : _vm._e()
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "form-group row" }, [
+                            _c("div", { staticClass: "col-md-6 offset-md-4" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-primary",
+                                  attrs: { type: "submit" }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                Save changes\n                            "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-secondary",
+                                  attrs: { type: "button" },
+                                  on: {
+                                    click: function($event) {
+                                      _vm.editing.id = null
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                Cancel\n                            "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _vm.editing.processing
+                                ? _c(
+                                    "div",
+                                    { staticClass: "my-1" },
+                                    [
+                                      _c("hollow-dots-spinner", {
+                                        attrs: {
+                                          "animation-duration": 1000,
+                                          "dot-size": 15,
+                                          "dots-num": 3,
+                                          color: "#ff1d5e"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                : _vm._e()
+                            ])
+                          ])
+                        ],
+                        1
+                      )
+                ],
+                2
+              ),
+              _vm._v(" "),
+              _vm.skillables.portfolio.identifier === portfolio.identifier
+                ? _c(
+                    "b-list-group",
+                    { attrs: { flush: "" } },
+                    [
+                      _c("b-list-group-item", [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "d-flex justify-content-between align-content-center"
+                          },
+                          [
+                            _c("h5", [
+                              _vm._v(_vm._s(portfolio.title) + " Skills")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "b-nav",
+                              [
+                                _c(
+                                  "b-nav-item",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "b-modal",
+                                        rawName: "v-b-modal",
+                                        value: "portfolio-skills-create-modal",
+                                        expression:
+                                          "'portfolio-skills-create-modal'"
+                                      }
+                                    ],
+                                    attrs: { href: "#" },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        _vm.skillables.active = true
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                Add new skill\n                            "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-nav-item",
+                                  {
+                                    attrs: { href: "#" },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        _vm.closeSkillables($event)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("i", { staticClass: "fa fa-close" }),
+                                    _vm._v(
+                                      " Close\n                            "
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(portfolio.skills, function(skillset) {
+                        return _c(
+                          "b-list-group-item",
+                          { key: skillset.id },
+                          [
+                            _vm.skillables.editing.id != skillset.id
+                              ? [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "d-flex justify-content-between align-content-center"
+                                    },
+                                    [
                                       _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "d-flex justify-content-between align-content-center"
-                                        },
+                                        "h5",
                                         [
-                                          _c(
-                                            "h5",
-                                            [
-                                              _vm._v(
-                                                "\n                                " +
-                                                  _vm._s(skillset.skill.name) +
-                                                  "\n                                "
-                                              ),
-                                              skillset.skill.ancestors.length
-                                                ? [
-                                                    _vm._v(
-                                                      "\n                                    (\n                                    "
-                                                    ),
-                                                    _vm._l(
-                                                      skillset.skill.ancestors,
-                                                      function(ancestor) {
-                                                        return skillset.skill
-                                                          .ancestors &&
+                                          _vm._v(
+                                            "\n                                " +
+                                              _vm._s(skillset.skill.name) +
+                                              "\n                                "
+                                          ),
+                                          skillset.skill.ancestors.length
+                                            ? [
+                                                _vm._v(
+                                                  "\n                                    (\n                                    "
+                                                ),
+                                                _vm._l(
+                                                  skillset.skill.ancestors,
+                                                  function(ancestor) {
+                                                    return skillset.skill
+                                                      .ancestors &&
+                                                      skillset.skill.ancestors
+                                                        .length > 1
+                                                      ? _c("span", [
+                                                          _vm._v(
+                                                            "\n                                    " +
+                                                              _vm._s(
+                                                                ancestor.name
+                                                              ) +
+                                                              " /\n                                "
+                                                          )
+                                                        ])
+                                                      : _vm._l(
                                                           skillset.skill
-                                                            .ancestors.length >
-                                                            1
-                                                          ? _c("span", [
+                                                            .ancestors,
+                                                          function(ancestor) {
+                                                            return _c("span", [
                                                               _vm._v(
                                                                 "\n                                    " +
                                                                   _vm._s(
                                                                     ancestor.name
                                                                   ) +
-                                                                  " /\n                                "
+                                                                  "\n                                "
                                                               )
                                                             ])
-                                                          : _vm._l(
-                                                              skillset.skill
-                                                                .ancestors,
-                                                              function(
-                                                                ancestor
-                                                              ) {
-                                                                return _c(
-                                                                  "span",
-                                                                  [
-                                                                    _vm._v(
-                                                                      "\n                                    " +
-                                                                        _vm._s(
-                                                                          ancestor.name
-                                                                        ) +
-                                                                        "\n                                "
-                                                                    )
-                                                                  ]
-                                                                )
-                                                              }
-                                                            )
-                                                      }
-                                                    ),
+                                                          }
+                                                        )
+                                                  }
+                                                ),
+                                                _vm._v(
+                                                  "\n                                    )\n                                "
+                                                )
+                                              ]
+                                            : _vm._e()
+                                        ],
+                                        2
+                                      ),
+                                      _vm._v(" "),
+                                      _vm.skillables.editing.id ==
+                                        skillset.id ||
+                                      _vm.skillables.deleting.id == skillset.id
+                                        ? _c(
+                                            "div",
+                                            [
+                                              _c("hollow-dots-spinner", {
+                                                attrs: {
+                                                  "animation-duration": 1000,
+                                                  "dot-size": 15,
+                                                  "dots-num": 3,
+                                                  color: "#ff1d5e"
+                                                }
+                                              }),
+                                              _vm._v(" "),
+                                              _vm.skillables.deleting.processing
+                                                ? _c("p", [
                                                     _vm._v(
-                                                      "\n                                    )\n                                "
+                                                      "\n                                    Deleting...\n                                "
+                                                    )
+                                                  ])
+                                                : _vm._e()
+                                            ],
+                                            1
+                                          )
+                                        : _c(
+                                            "b-nav",
+                                            [
+                                              _c(
+                                                "b-nav-item",
+                                                {
+                                                  attrs: { href: "#" },
+                                                  on: {
+                                                    click: function($event) {
+                                                      $event.preventDefault()
+                                                      _vm.editSkillables(
+                                                        portfolio,
+                                                        skillset
+                                                      )
+                                                    }
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                                    Edit\n                                "
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "b-nav-item",
+                                                {
+                                                  attrs: { href: "#" },
+                                                  on: {
+                                                    click: function($event) {
+                                                      $event.preventDefault()
+                                                      _vm.destroyPortfolioSkill(
+                                                        portfolio,
+                                                        skillset
+                                                      )
+                                                    }
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                                    Delete\n                                "
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("p", [
+                                    _vm._v(
+                                      "Level: " + _vm._s(skillset.level.name)
+                                    )
+                                  ])
+                                ]
+                              : _c(
+                                  "form",
+                                  {
+                                    attrs: { action: "#" },
+                                    on: {
+                                      submit: function($event) {
+                                        $event.preventDefault()
+                                        _vm.updatePortfolioSkill($event)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("h5", [
+                                      _vm._v(
+                                        "Editing " + _vm._s(skillset.skill.name)
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "form-group row",
+                                        class: {
+                                          "has-error":
+                                            _vm.skillables.errors["skill_id"]
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "label",
+                                          {
+                                            staticClass:
+                                              "control-label col-md-4",
+                                            attrs: { for: "edit_skill_id" }
+                                          },
+                                          [_vm._v("Skill")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("div", { staticClass: "col-md-6" }, [
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value: skillset.skill.name,
+                                                expression:
+                                                  "skillset.skill.name"
+                                              }
+                                            ],
+                                            staticClass:
+                                              "form-control-plaintext",
+                                            class: {
+                                              "is-invalid":
+                                                _vm.skillables.errors[
+                                                  "skill_id"
+                                                ]
+                                            },
+                                            attrs: {
+                                              type: "text",
+                                              readonly: "",
+                                              id: "edit_skill_id"
+                                            },
+                                            domProps: {
+                                              value: skillset.skill.name
+                                            },
+                                            on: {
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.$set(
+                                                  skillset.skill,
+                                                  "name",
+                                                  $event.target.value
+                                                )
+                                              }
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "model",
+                                                rawName: "v-model",
+                                                value:
+                                                  _vm.skillables.form.skill_id,
+                                                expression:
+                                                  "skillables.form.skill_id"
+                                              }
+                                            ],
+                                            attrs: { type: "hidden" },
+                                            domProps: {
+                                              value:
+                                                _vm.skillables.form.skill_id
+                                            },
+                                            on: {
+                                              input: function($event) {
+                                                if ($event.target.composing) {
+                                                  return
+                                                }
+                                                _vm.$set(
+                                                  _vm.skillables.form,
+                                                  "skill_id",
+                                                  $event.target.value
+                                                )
+                                              }
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _vm.skillables.errors["skill_id"]
+                                            ? _c(
+                                                "div",
+                                                {
+                                                  staticClass:
+                                                    "invalid-feedback"
+                                                },
+                                                [
+                                                  _c("strong", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        _vm.skillables.errors[
+                                                          "skill_id"
+                                                        ][0]
+                                                      )
+                                                    )
+                                                  ])
+                                                ]
+                                              )
+                                            : _vm._e()
+                                        ])
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "form-group row",
+                                        class: {
+                                          "has-error":
+                                            _vm.skillables.errors["level_id"]
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "label",
+                                          {
+                                            staticClass:
+                                              "control-label col-md-4",
+                                            attrs: { for: "edit_level_id" }
+                                          },
+                                          [_vm._v("Level")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("div", { staticClass: "col-md-4" }, [
+                                          _c(
+                                            "select",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "model",
+                                                  rawName: "v-model",
+                                                  value:
+                                                    _vm.skillables.form
+                                                      .level_id,
+                                                  expression:
+                                                    "skillables.form.level_id"
+                                                }
+                                              ],
+                                              staticClass:
+                                                "form-control custom-select",
+                                              class: {
+                                                "is-invalid":
+                                                  _vm.skillables.errors[
+                                                    "level_id"
+                                                  ]
+                                              },
+                                              attrs: { id: "edit_level_id" },
+                                              on: {
+                                                change: function($event) {
+                                                  var $$selectedVal = Array.prototype.filter
+                                                    .call(
+                                                      $event.target.options,
+                                                      function(o) {
+                                                        return o.selected
+                                                      }
+                                                    )
+                                                    .map(function(o) {
+                                                      var val =
+                                                        "_value" in o
+                                                          ? o._value
+                                                          : o.value
+                                                      return val
+                                                    })
+                                                  _vm.$set(
+                                                    _vm.skillables.form,
+                                                    "level_id",
+                                                    $event.target.multiple
+                                                      ? $$selectedVal
+                                                      : $$selectedVal[0]
+                                                  )
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "option",
+                                                { attrs: { value: "" } },
+                                                [_vm._v("-----------")]
+                                              ),
+                                              _vm._v(" "),
+                                              _vm._l(_vm.levels, function(
+                                                level
+                                              ) {
+                                                return _c(
+                                                  "option",
+                                                  {
+                                                    domProps: {
+                                                      value: level.id,
+                                                      selected:
+                                                        level.id ===
+                                                        skillset.level.id
+                                                    }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "\n                                        " +
+                                                        _vm._s(level.name) +
+                                                        "\n                                    "
                                                     )
                                                   ]
-                                                : _vm._e()
+                                                )
+                                              })
                                             ],
                                             2
                                           ),
                                           _vm._v(" "),
-                                          _vm.skillables.editing.id ==
-                                            skillset.id ||
-                                          _vm.skillables.deleting.id ==
-                                            skillset.id
+                                          _vm.skillables.errors["level_id"]
                                             ? _c(
                                                 "div",
-                                                [
-                                                  _c("hollow-dots-spinner", {
-                                                    attrs: {
-                                                      "animation-duration": 1000,
-                                                      "dot-size": 15,
-                                                      "dots-num": 3,
-                                                      color: "#ff1d5e"
-                                                    }
-                                                  }),
-                                                  _vm._v(" "),
-                                                  _vm.skillables.deleting
-                                                    .processing
-                                                    ? _c("p", [
-                                                        _vm._v(
-                                                          "\n                                    Deleting...\n                                "
-                                                        )
-                                                      ])
-                                                    : _vm._e()
-                                                ],
-                                                1
-                                              )
-                                            : _c(
-                                                "b-nav",
-                                                [
-                                                  _c(
-                                                    "b-nav-item",
-                                                    {
-                                                      attrs: { href: "#" },
-                                                      on: {
-                                                        click: function(
-                                                          $event
-                                                        ) {
-                                                          $event.preventDefault()
-                                                          _vm.editSkillables(
-                                                            portfolio,
-                                                            skillset
-                                                          )
-                                                        }
-                                                      }
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                    Edit\n                                "
-                                                      )
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "b-nav-item",
-                                                    {
-                                                      attrs: { href: "#" },
-                                                      on: {
-                                                        click: function(
-                                                          $event
-                                                        ) {
-                                                          $event.preventDefault()
-                                                          _vm.destroyPortfolioSkill(
-                                                            portfolio,
-                                                            skillset
-                                                          )
-                                                        }
-                                                      }
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                    Delete\n                                "
-                                                      )
-                                                    ]
-                                                  )
-                                                ],
-                                                1
-                                              )
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c("p", [
-                                        _vm._v(
-                                          "Level: " +
-                                            _vm._s(skillset.level.name)
-                                        )
-                                      ])
-                                    ]
-                                  : _c(
-                                      "form",
-                                      {
-                                        attrs: { action: "#" },
-                                        on: {
-                                          submit: function($event) {
-                                            $event.preventDefault()
-                                            _vm.updatePortfolioSkill($event)
-                                          }
-                                        }
-                                      },
-                                      [
-                                        _c("h5", [
-                                          _vm._v(
-                                            "Editing " +
-                                              _vm._s(skillset.skill.name)
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          {
-                                            staticClass: "form-group row",
-                                            class: {
-                                              "has-error":
-                                                _vm.skillables.errors[
-                                                  "skill_id"
-                                                ]
-                                            }
-                                          },
-                                          [
-                                            _c(
-                                              "label",
-                                              {
-                                                staticClass:
-                                                  "control-label col-md-4",
-                                                attrs: { for: "edit_skill_id" }
-                                              },
-                                              [_vm._v("Skill")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-6" },
-                                              [
-                                                _c("input", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        skillset.skill.name,
-                                                      expression:
-                                                        "skillset.skill.name"
-                                                    }
-                                                  ],
+                                                {
                                                   staticClass:
-                                                    "form-control-plaintext",
-                                                  class: {
-                                                    "is-invalid":
-                                                      _vm.skillables.errors[
-                                                        "skill_id"
-                                                      ]
-                                                  },
-                                                  attrs: {
-                                                    type: "text",
-                                                    readonly: "",
-                                                    id: "edit_skill_id"
-                                                  },
-                                                  domProps: {
-                                                    value: skillset.skill.name
-                                                  },
-                                                  on: {
-                                                    input: function($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.$set(
-                                                        skillset.skill,
-                                                        "name",
-                                                        $event.target.value
-                                                      )
-                                                    }
-                                                  }
-                                                }),
-                                                _vm._v(" "),
-                                                _c("input", {
-                                                  directives: [
-                                                    {
-                                                      name: "model",
-                                                      rawName: "v-model",
-                                                      value:
-                                                        _vm.skillables.form
-                                                          .skill_id,
-                                                      expression:
-                                                        "skillables.form.skill_id"
-                                                    }
-                                                  ],
-                                                  attrs: { type: "hidden" },
-                                                  domProps: {
-                                                    value:
-                                                      _vm.skillables.form
-                                                        .skill_id
-                                                  },
-                                                  on: {
-                                                    input: function($event) {
-                                                      if (
-                                                        $event.target.composing
-                                                      ) {
-                                                        return
-                                                      }
-                                                      _vm.$set(
-                                                        _vm.skillables.form,
-                                                        "skill_id",
-                                                        $event.target.value
-                                                      )
-                                                    }
-                                                  }
-                                                }),
-                                                _vm._v(" "),
-                                                _vm.skillables.errors[
-                                                  "skill_id"
-                                                ]
-                                                  ? _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "invalid-feedback"
-                                                      },
-                                                      [
-                                                        _c("strong", [
-                                                          _vm._v(
-                                                            _vm._s(
-                                                              _vm.skillables
-                                                                .errors[
-                                                                "skill_id"
-                                                              ][0]
-                                                            )
-                                                          )
-                                                        ])
-                                                      ]
-                                                    )
-                                                  : _vm._e()
-                                              ]
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          {
-                                            staticClass: "form-group row",
-                                            class: {
-                                              "has-error":
-                                                _vm.skillables.errors[
-                                                  "level_id"
-                                                ]
-                                            }
-                                          },
-                                          [
-                                            _c(
-                                              "label",
-                                              {
-                                                staticClass:
-                                                  "control-label col-md-4",
-                                                attrs: { for: "edit_level_id" }
-                                              },
-                                              [_vm._v("Level")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              { staticClass: "col-md-4" },
-                                              [
-                                                _c(
-                                                  "select",
-                                                  {
-                                                    directives: [
-                                                      {
-                                                        name: "model",
-                                                        rawName: "v-model",
-                                                        value:
-                                                          _vm.skillables.form
-                                                            .level_id,
-                                                        expression:
-                                                          "skillables.form.level_id"
-                                                      }
-                                                    ],
-                                                    staticClass:
-                                                      "form-control custom-select",
-                                                    class: {
-                                                      "is-invalid":
+                                                    "invalid-feedback"
+                                                },
+                                                [
+                                                  _c("strong", [
+                                                    _vm._v(
+                                                      _vm._s(
                                                         _vm.skillables.errors[
                                                           "level_id"
-                                                        ]
-                                                    },
-                                                    attrs: {
-                                                      id: "edit_level_id"
-                                                    },
-                                                    on: {
-                                                      change: function($event) {
-                                                        var $$selectedVal = Array.prototype.filter
-                                                          .call(
-                                                            $event.target
-                                                              .options,
-                                                            function(o) {
-                                                              return o.selected
-                                                            }
-                                                          )
-                                                          .map(function(o) {
-                                                            var val =
-                                                              "_value" in o
-                                                                ? o._value
-                                                                : o.value
-                                                            return val
-                                                          })
-                                                        _vm.$set(
-                                                          _vm.skillables.form,
-                                                          "level_id",
-                                                          $event.target.multiple
-                                                            ? $$selectedVal
-                                                            : $$selectedVal[0]
-                                                        )
-                                                      }
-                                                    }
-                                                  },
-                                                  [
-                                                    _c(
-                                                      "option",
-                                                      { attrs: { value: "" } },
-                                                      [_vm._v("-----------")]
-                                                    ),
-                                                    _vm._v(" "),
-                                                    _vm._l(_vm.levels, function(
-                                                      level
-                                                    ) {
-                                                      return _c(
-                                                        "option",
-                                                        {
-                                                          domProps: {
-                                                            value: level.id,
-                                                            selected:
-                                                              level.id ===
-                                                              skillset.level.id
-                                                          }
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "\n                                        " +
-                                                              _vm._s(
-                                                                level.name
-                                                              ) +
-                                                              "\n                                    "
-                                                          )
-                                                        ]
+                                                        ][0]
                                                       )
-                                                    })
-                                                  ],
-                                                  2
-                                                ),
-                                                _vm._v(" "),
-                                                _vm.skillables.errors[
-                                                  "level_id"
-                                                ]
-                                                  ? _c(
-                                                      "div",
-                                                      {
-                                                        staticClass:
-                                                          "invalid-feedback"
-                                                      },
-                                                      [
-                                                        _c("strong", [
-                                                          _vm._v(
-                                                            _vm._s(
-                                                              _vm.skillables
-                                                                .errors[
-                                                                "level_id"
-                                                              ][0]
-                                                            )
-                                                          )
-                                                        ])
-                                                      ]
                                                     )
-                                                  : _vm._e()
-                                              ]
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
+                                                  ])
+                                                ]
+                                              )
+                                            : _vm._e()
+                                        ])
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "form-group row" },
+                                      [
                                         _c(
                                           "div",
-                                          { staticClass: "form-group row" },
+                                          {
+                                            staticClass: "col-md-6 offset-md-4"
+                                          },
                                           [
                                             _c(
-                                              "div",
+                                              "button",
                                               {
-                                                staticClass:
-                                                  "col-md-6 offset-md-4"
+                                                staticClass: "btn btn-primary",
+                                                attrs: { type: "submit" }
                                               },
                                               [
-                                                _c(
-                                                  "button",
-                                                  {
-                                                    staticClass:
-                                                      "btn btn-primary",
-                                                    attrs: { type: "submit" }
-                                                  },
-                                                  [
-                                                    _vm._v(
-                                                      "\n                                    Save changes\n                                "
-                                                    )
-                                                  ]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "button",
-                                                  {
-                                                    staticClass:
-                                                      "btn btn-secondary",
-                                                    attrs: { type: "button" },
-                                                    on: {
-                                                      click:
-                                                        _vm.cancelSkillableEditing
-                                                    }
-                                                  },
-                                                  [
-                                                    _vm._v(
-                                                      "\n                                    Cancel\n                                "
-                                                    )
-                                                  ]
-                                                ),
-                                                _vm._v(" "),
-                                                _vm.skillables.editing
-                                                  .processing
-                                                  ? _c(
-                                                      "div",
-                                                      { staticClass: "my-1" },
-                                                      [
-                                                        _c(
-                                                          "hollow-dots-spinner",
-                                                          {
-                                                            attrs: {
-                                                              "animation-duration": 1000,
-                                                              "dot-size": 15,
-                                                              "dots-num": 3,
-                                                              color: "#ff1d5e"
-                                                            }
-                                                          }
-                                                        ),
-                                                        _vm._v(" "),
-                                                        _c("p", [
-                                                          _vm._v(
-                                                            "Please wait, saving changes..."
-                                                          )
-                                                        ])
-                                                      ],
-                                                      1
-                                                    )
-                                                  : _vm._e()
+                                                _vm._v(
+                                                  "\n                                    Save changes\n                                "
+                                                )
                                               ]
-                                            )
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "button",
+                                              {
+                                                staticClass:
+                                                  "btn btn-secondary",
+                                                attrs: { type: "button" },
+                                                on: {
+                                                  click:
+                                                    _vm.cancelSkillableEditing
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                    Cancel\n                                "
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _vm.skillables.editing.processing
+                                              ? _c(
+                                                  "div",
+                                                  { staticClass: "my-1" },
+                                                  [
+                                                    _c("hollow-dots-spinner", {
+                                                      attrs: {
+                                                        "animation-duration": 1000,
+                                                        "dot-size": 15,
+                                                        "dots-num": 3,
+                                                        color: "#ff1d5e"
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("p", [
+                                                      _vm._v(
+                                                        "Please wait, saving changes..."
+                                                      )
+                                                    ])
+                                                  ],
+                                                  1
+                                                )
+                                              : _vm._e()
                                           ]
                                         )
                                       ]
                                     )
-                              ],
-                              2
-                            )
-                          })
-                        ],
-                        2
-                      )
-                    : _vm._e()
-                ]
-              })
-            ],
-            2
-          )
-        : _vm._e(),
+                                  ]
+                                )
+                          ],
+                          2
+                        )
+                      })
+                    ],
+                    2
+                  )
+                : _vm._e()
+            ]
+          }),
+          _vm._v(" "),
+          !_vm.fetching && _vm.portfolios.length == 0
+            ? _c("b-list-group-item", [
+                _c("p", [
+                  _vm._v(
+                    "No portfolios found. Try refreshing to reload or add a new one."
+                  )
+                ])
+              ])
+            : _vm._e()
+        ],
+        2
+      ),
       _vm._v(" "),
       _c(
         "b-modal",

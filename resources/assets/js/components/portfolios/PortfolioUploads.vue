@@ -5,14 +5,24 @@
             Upload more images
         </label>
 
-        <div class="my-1" v-if="refreshButton || !uploads.length">
-            <p v-if="refreshButton">Mmmh! Looks like portfolio has no uploads.</p>
+        <div class="my-1">
+            <p v-if="uploads.length == 0">Mmmh! Looks like portfolio has no uploads.</p>
 
-            <p>
-                <b-button variant="link" @click="getPortfolioUploads">
-                    <i class="icon-refresh"></i> Refresh
-                </b-button> to load files already uploaded or drop files below to start uploading.
+            <p v-if="refreshButton">Can't see your uploaded files? Hit
+                <b-link @click="getPortfolioUploads">Refresh</b-link>
+                to reload them.
+
+                Or just drop files below to start uploading new ones.
             </p>
+            <div v-else>
+                <hollow-dots-spinner
+                        :animation-duration="1000"
+                        :dot-size="15"
+                        :dots-num="3"
+                        :color="'#ff1d5e'"
+                />
+                <p>Fetching uploaded files...</p>
+            </div>
         </div>
 
         <div class="mb-3">
@@ -20,7 +30,6 @@
                           id="portfolio-uploads-dropzone"
                           :destroyDropzone="false"
                           :options="dropzoneOptions"
-                          :include-styling="false"
                           @vdropzone-success="uploadSuccess"
                           @vdropzone-removed-file="destroy"></vue-dropzone>
         </div>
@@ -30,6 +39,7 @@
 <script>
     import vue2Dropzone from 'vue2-dropzone'
     import 'vue2-dropzone/dist/vue2Dropzone.min.css'
+    import {HollowDotsSpinner} from 'epic-spinners'
 
     export default {
         name: "portfolio-uploads",
@@ -38,19 +48,19 @@
             'portfolio'
         ],
         components: {
+            HollowDotsSpinner,
             vueDropzone: vue2Dropzone
         },
         data: function () {
             return {
                 uploads: [],
-                refreshButton: false,
+                refreshButton: true,
                 dropzoneOptions: {
                     url: this.endpoint,
                     createImageThumbnails: true,
-                    thumbnailWidth: 100, // px
-                    thumbnailHeight: 100,
+                    thumbnailWidth: 150, // px
+                    thumbnailHeight: 150,
                     addRemoveLinks: true,
-                    previewTemplate: this.template(),
                     dictDefaultMessage: "<i class='fa fa-cloud-upload'></i> Drop files here to upload",
                     headers: {
                         'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content
@@ -70,15 +80,39 @@
                 this.refreshButton = false
 
                 axios.get(this.endpoint).then((response) => {
-                    this.uploads = response.data.data
+                    var oldUploads = this.uploads
 
-                    this.addUploads(this.uploads)
+                    var newUploads = response.data.data
+
+                    var removeUploadIfExists = function (newUpload) {
+                        var exists = oldUploads.filter(function (oldUpload) {
+                            return newUpload.id == oldUpload.id
+                        })
+
+                        if (exists.length == 1) {
+                            _.unset(newUploads, newUploads.indexOf(newUpload))
+                        }
+                    }
+
+                    var pushToUploads = function(upload) {
+                        oldUploads.push(upload)
+                    }
+
+                    // filter new uploads
+                    newUploads = _.each(newUploads, removeUploadIfExists)
+
+                    // push new uploads to uploads array
+                    newUploads.forEach(pushToUploads)
+                    this.uploads = oldUploads
+
+                    // add new uploads to dropzone
+                    this.addUploads(newUploads)
 
                 }).catch((error) => {
-                    this.refreshButton = true
-
                     // log error to a file or webhook
                     console.log(error)
+                }).finally(() => {
+                    this.refreshButton = true
                 })
             },
             uploadSuccess(upload, response) {

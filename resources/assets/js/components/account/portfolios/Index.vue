@@ -170,7 +170,7 @@
                     </template>
 
                     <!-- Editing Form -->
-                    <form action="#" @submit.prevent="updatePortfolio" v-else>
+                    <form action="#" @submit.prevent="updatePortfolio(portfolio)" v-else>
                         <h4>Edit {{ portfolio.title }}</h4>
 
                         <!-- Image -->
@@ -554,18 +554,21 @@
                 this.store(this.portfolio).then((response) => {
 
                     // temporarily update ui
-                    this.portfolios.unshift(response.data.data)
+                    this.portfolios.push(response.data.data)
+
+                    // clear create form
+                    this.portfolio = null
+                    this.creating.form = {}
+                    this.creating.active = false
 
                     // refresh list of portfolio
                     this.getPortfolios().then(() => {
-                        this.portfolio = null
-                        this.creating.form = {}
-                        this.creating.active = false
+                        // optional: do something here
                     })
 
                     toastr.success('Portfolio successfully saved.')
                 }).catch((error) => {
-                    if (error.response.status === 422) {
+                    if (error.response && error.response.status === 422) {
                         this.creating.errors = error.response.data.errors
                     }
 
@@ -574,22 +577,25 @@
                     this.creating.processing = false
                 })
             },
-            updatePortfolio() {
+            updatePortfolio(portfolio) {
                 this.editing.errors = []
 
-                this.update(this.portfolio).then((response) => {
+                this.update(portfolio).then((response) => {
 
-                    // refresh list of portfolio
-                    this.getPortfolios().then(() => {
-                        this.editing.id = null
-                        this.editing.form = {}
-                    })
+                    var index = this.portfolios.indexOf(portfolio)
 
-                    toastr.success('Portfolio successfully updated.')
+                    this.portfolios['index'] = response.data.data
+
+                    toastr.success('Portfolio successfully updated.', portfolio.title)
+
+                    this.editing.id = null
+                    this.editing.form = {}
                 }).catch((error) => {
-                    if (error.response.status === 422) {
+                    if (error.response && error.response.status === 422) {
                         this.editing.errors = error.response.data.errors
                     }
+
+                    console.log(error)
 
                     toastr.error('Failed updating portfolio.', 'Whoops!')
                 }).finally(() => {

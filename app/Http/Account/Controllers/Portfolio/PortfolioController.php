@@ -74,14 +74,14 @@ class PortfolioController extends Controller
      *
      * @param UserPortfolioStoreRequest $request
      * @param  \Rims\Domain\Portfolios\Models\Portfolio $portfolio
-     * @return \Illuminate\Http\Response
+     * @return PortfolioResource
      */
     public function update(UserPortfolioStoreRequest $request, Portfolio $portfolio)
     {
         //update
         $portfolio->update($request->only(['title', 'overview_short', 'overview']));
 
-        return response()->json(null, 204);
+        return new PortfolioResource($portfolio);
     }
 
     /**

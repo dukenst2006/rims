@@ -107135,6 +107135,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 // remove file
                 this.$refs.portfolioDropzone.removeFile(upload);
 
+                // add to portfolio uploads
+                this.portfolio.uploads.push(response.data);
+
                 // add the custom file
                 this.addManually(response.data);
             }
@@ -107164,7 +107167,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             // delete if upload has id
             axios.delete(this.endpoint + '/' + upload.id).then(function (response) {
-                // do something here...
+                // remove upload from portfolio
+                _this2.removeFromPortfolio(upload);
             }).catch(function (error) {
                 console.log(upload);
 
@@ -107174,6 +107178,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 // log to file or webhook
                 console.log(error);
             });
+        },
+        removeFromPortfolio: function removeFromPortfolio(upload) {
+            this.portfolio.uploads = this.portfolio.uploads.filter(function (oldUpload) {
+                return oldUpload.id != upload.id;
+            });
+
+            this.uploads = this.portfolio.uploads;
         },
         removeAllUploads: function removeAllUploads() {
             this.$refs.portfolioDropzone.removeAllFiles();

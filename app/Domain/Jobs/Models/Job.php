@@ -133,6 +133,18 @@ class Job extends Model
             'approved' => true,
             'published_at' => Carbon::now()
         ]);
+
+        $this->approveCategories();
+    }
+
+    /**
+     * Approve job categories.
+     */
+    public function approveCategories()
+    {
+        $this->categories()->update([
+            'approved' => true
+        ]);
     }
 
     /**
@@ -146,6 +158,12 @@ class Job extends Model
             return $skill->skill->price;
         })->sum();
 
+        // if more than one category: cost should be based on categories
+        if ($this->categories->count() > 0) {
+            $cost = $this->categories->map(function ($category, $key) {
+                return $category->category->price;
+            })->sum();
+        }
 
         return $cost;
     }
@@ -181,6 +199,10 @@ class Job extends Model
         }
 
         if ($this->requirements->count() == 0) {
+            return false;
+        }
+
+        if ($this->categories->count() == 0) {
             return false;
         }
 
@@ -269,6 +291,16 @@ class Job extends Model
     {
         return $builder->whereNull('closed_at')
             ->orWhereDate('closed_at', '>', Carbon::now()->toDateTimeString());
+    }
+
+    /**
+     * Get job categories.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function categories()
+    {
+        return $this->hasMany(JobCategory::class);
     }
 
     /**

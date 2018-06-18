@@ -51,6 +51,15 @@ Route::group(['prefix' => '/company', 'as' => 'tenant.'], function () {
                     Route::resource('/checkout', 'JobCheckoutController')->only('index', 'store');
 
                     /**
+                     * Categories Routes
+                     */
+                    Route::resource('/categories', 'JobCategoryController', [
+                        'parameters' => [
+                            'categories' => 'jobCategory'
+                        ]
+                    ])->except('show', 'update');
+
+                    /**
                      * Requirements Routes
                      */
                     Route::resource('/requirements', 'JobRequirementController', [

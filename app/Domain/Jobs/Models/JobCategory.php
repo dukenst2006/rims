@@ -8,7 +8,8 @@ use Rims\Domain\Categories\Models\Category;
 class JobCategory extends Model
 {
     protected $fillable = [
-        'approved'
+        'approved',
+        'category_id'
     ];
 
     /**

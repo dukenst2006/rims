@@ -22,7 +22,7 @@ class JobIndexController extends Controller
             'area.ancestors',
             'education.education',
             'skills.skill.ancestors'
-        )->latestFirst()->finished()->get();
+        )->latestFirst()->finished()->paginate(5);
 
         return new JobCollection($jobs);
     }

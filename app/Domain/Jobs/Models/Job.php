@@ -260,6 +260,20 @@ class Job extends Model
     }
 
     /**
+     * Get query for incomplete or unfinished jobs.
+     *
+     * @param Builder $builder
+     * @param int $day
+     * @return Builder
+     */
+    public function scopeIncomplete(Builder $builder, $day = 1)
+    {
+        return $builder->withTrashed()
+            ->where('finished', '=', false)
+            ->whereDate('created_at', '<', Carbon::now()->subDays($day));
+    }
+
+    /**
      * Get query for live jobs.
      *
      * @param Builder $builder

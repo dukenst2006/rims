@@ -36,32 +36,32 @@ class ComposerServiceProvider extends ServiceProvider
             'account.twofactor.index'
         ], CountriesComposer::class);
 
-        //categories
-        View::composer([
-            'layouts.partials._navigation',
-            'jobs.*'
-        ], CategoriesComposer::class);
-
-        //education
-        View::composer([
-            'layouts.partials._navigation',
-            'jobs.*'
-        ], EducationComposer::class);
-
-        //levels
-        View::composer([
-            'jobs.*'
-        ], LevelsComposer::class);
-
-        //skills
-        View::composer([
-            'jobs.*'
-        ], SkillsComposer::class);
-
-        //languages
-        View::composer([
-            'jobs.*'
-        ], LanguagesComposer::class);
+//        //categories
+//        View::composer([
+//            'layouts.partials._navigation',
+//            'jobs.*'
+//        ], CategoriesComposer::class);
+//
+//        //education
+//        View::composer([
+//            'layouts.partials._navigation',
+//            'jobs.*'
+//        ], EducationComposer::class);
+//
+//        //levels
+//        View::composer([
+//            'jobs.*'
+//        ], LevelsComposer::class);
+//
+//        //skills
+//        View::composer([
+//            'jobs.*'
+//        ], SkillsComposer::class);
+//
+//        //languages
+//        View::composer([
+//            'jobs.*'
+//        ], LanguagesComposer::class);
 
         //areas
         View::composer('*', AreasComposer::class);

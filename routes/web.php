@@ -85,6 +85,17 @@ Route::get('/languages', 'Language\Controllers\LanguageController@index');
 Route::get('/jobs/filters', 'Job\Controllers\JobListingController@filters')->name('jobs.filters');
 
 /**
+ * Categories Routes
+ */
+Route::group(['namespace' => 'Category\Controllers'], function () {
+
+    /**
+     * Categories Route
+     */
+    Route::apiResource('/categories', 'CategoryController')->only('index', 'show');
+});
+
+/**
  * Home Routes
  */
 Route::group(['namespace' => 'Home\Controllers'], function () {

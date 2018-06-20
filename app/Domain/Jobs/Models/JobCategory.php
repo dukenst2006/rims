@@ -3,10 +3,13 @@
 namespace Rims\Domain\Jobs\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Rims\App\Traits\HasApprovals;
 use Rims\Domain\Categories\Models\Category;
 
 class JobCategory extends Model
 {
+    use HasApprovals;
+
     protected $fillable = [
         'approved',
         'category_id'

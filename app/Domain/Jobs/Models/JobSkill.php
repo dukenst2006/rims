@@ -3,13 +3,17 @@
 namespace Rims\Domain\Jobs\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Rims\App\Traits\HasApprovals;
 use Rims\Domain\Levels\Models\Level;
 use Rims\Domain\Skills\Models\Skill;
 
 class JobSkill extends Model
 {
+    use HasApprovals;
+
     protected $fillable = [
-        'details'
+        'details',
+        'approved'
     ];
 
     /**

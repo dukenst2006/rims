@@ -31,6 +31,7 @@ var VueScrollTo = require('vue-scrollto');
 Vue.use(VueScrollTo)
 
 import JobsIndex from './components/jobs/Index.vue';
+import TenantJobsIndex from './components/tenant/jobs/Index.vue'
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -39,12 +40,18 @@ import JobsIndex from './components/jobs/Index.vue';
  */
 
 Vue.component('jobs-index', JobsIndex);
+Vue.component('tenant-job-index', TenantJobsIndex);
 
 const routes = [
     {
         path: '/jobs/listings',
         name: 'jobs.index',
         component: JobsIndex
+    },
+    {
+        path: '/company/manage/jobs/index',
+        name: 'tenant.jobs.index',
+        component: TenantJobsIndex
     }
 ];
 
@@ -91,11 +98,6 @@ Vue.component(
 Vue.component(
     'avatar-upload',
     require('./components/account/avatar/AvatarUpload.vue')
-);
-
-Vue.component(
-    'tenant-job-index',
-    require('./components/tenant/jobs/Index.vue')
 );
 
 const app = new Vue({

@@ -19,11 +19,11 @@ class JobCheckoutController extends Controller
      */
     public function index(Job $job)
     {
-        if ($job->isPublished) {
+        if (!$job->isReadyForCheckout) {
             return back();
         }
 
-        $job->loadMissing('area.ancestors', 'skills.skill.ancestors');
+        $job->loadMissing('area.ancestors', 'categories.category.ancestors', 'skills.skill.ancestors');
 
         return view('tenant.jobs.checkout.index', compact('job'));
     }
@@ -38,38 +38,53 @@ class JobCheckoutController extends Controller
     public function store(Request $request, Job $job)
     {
         // redirect back if jo is published
-        if ($job->isPublished) {
+        if (!$job->IsReadyForCheckout) {
             return back();
         }
+
+        // default message
+        $message = "{$job->title} payment successful. Job is now live.";
 
         // Token is created using Checkout or Elements!
         // Get the payment token ID submitted by the form:
         $token = $request->token;
 
-        try {
-            $charge = Charge::create([
-                'amount' => $job->cost * 100,    // call function from job model
-                'currency' => config('settings.cashier.currency'),
-                'description' => 'Job listing payment',
-                'source' => $token,
-            ]);
-        } catch (Exception $exception) {
-            $message = $exception->getMessage();
+        if ($job->cost > 0) {
 
-            logger($message, $exception->getTrace());
+            try {
+                $charge = Charge::create([
+                    'amount' => $job->gatewayCost('stripe'),    // call function from job model
+                    'currency' => config('settings.cashier.currency'),
+                    'description' => 'Job listing payment',
+                    'source' => $token,
+                ]);
+            } catch (Exception $exception) {
+                $message = $exception->getMessage();
 
-            return back()->withError("Failed processing payment. Please try again!");
+                logger($message, $exception->getTrace());
+
+                return back()->withError("Failed processing payment. Please try again!");
+            }
+
+            //dispatch new sale
+            dispatch(new JobSaleCreate($job, $request->user()->email, $charge));
+
         }
 
-        // record sales
-        $request->session()->flash('charge', $charge);
+        // free and published message
+        if ($job->isPublished) {
+            $message = "Changes applied to '{$job->title}' successfully.";
+        }
 
-        //dispatch new sale
-        dispatch(new JobSaleCreate($job, $request->user()->email, $charge));
+        // paid and published message
+        if ($job->cost > 0 && $job->isPublished) {
+            $message = "'{$job->title}' payment successful. All changes applied.";
+        }
 
+        // publish job
         $job->publish();
 
         return redirect()->route('tenant.jobs.index')
-            ->withSuccess("Congratulations. {$job->title} payment successful. Job is now live.");
+            ->withSuccess("Congratulations. {$message}");
     }
 }

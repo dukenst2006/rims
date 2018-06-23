@@ -53,12 +53,18 @@
                 {{ csrf_field() }}
 
                 <div class="form-group"><!-- Output amount here -->
-                    <h4>Total: {{ config('settings.cashier.symbol') }} {{ $job->cost }}</h4>
+                    <h4>Total: {{ config('settings.cashier.symbol') }}{{ $job->cost }}</h4>
                 </div>
 
-                <button type="submit" class="btn btn-primary" id="job-checkout-pay">
-                    Pay with Card
-                </button>
+                @if($job->cost > 0)
+                    <button type="submit" class="btn btn-primary" id="job-checkout-pay">
+                        Pay with Card
+                    </button>
+                @else
+                    <button type="submit" class="btn btn-primary" id="job-checkout-free">
+                        Apply changes
+                    </button>
+                @endif
             </form>
         </div>
     </div>
@@ -90,8 +96,8 @@
             // Open Checkout with further options:
             handler.open({
                 name: '{{ config('app.name') }}',
-                description: 'Job listing payment',
-                amount: {{ ($job->cost * 100) }},
+                description: "Job listing payment-{{ $job->identifier }}",
+                amount: {{ $job->gatewayCost('stripe') }},
                 currency: '{{ config('settings.cashier.currency') }}',
                 key: '{{ config('services.stripe.key') }}',
                 email: '{{ auth()->user()->email }}'

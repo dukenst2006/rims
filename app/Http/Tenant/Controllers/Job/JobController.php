@@ -73,7 +73,12 @@ class JobController extends Controller
 
         $job->save();
 
-        return new JobResource($job->loadMissing('area.ancestors'));
+        return new JobResource($job->loadMissing('area.ancestors',
+            'education.education',
+            'skills.skill.ancestors',
+            'categories.category.ancestors',
+            'requirements')
+        );
     }
 
     /**
@@ -113,7 +118,12 @@ class JobController extends Controller
 
         $job->save();
 
-        return new JobResource($job->loadMissing('area.ancestors'));
+        return new JobResource($job->loadMissing('area.ancestors',
+            'education.education',
+            'skills.skill.ancestors',
+            'categories.category.ancestors',
+            'requirements')
+        );
     }
 
     /**

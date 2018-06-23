@@ -21,7 +21,9 @@ class JobIndexController extends Controller
         $jobs = Job::with(
             'area.ancestors',
             'education.education',
-            'skills.skill.ancestors'
+            'skills.skill.ancestors',
+            'categories.category.ancestors',
+            'requirements'
         )->latestFirst()->finished()->paginate(5);
 
         return new JobCollection($jobs);

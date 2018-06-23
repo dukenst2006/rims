@@ -40,7 +40,8 @@ class Job extends Model
     protected $appends = [
         'isPublished',
         'isReadyForCheckout',
-        'cost'
+        'cost',
+        'saleCost'
     ];
 
     /**
@@ -131,10 +132,21 @@ class Job extends Model
         $this->update([
             'live' => true,
             'approved' => true,
-            'published_at' => Carbon::now()
+            'published_at' => !$this->isPublished ? Carbon::now() : $this->published_at
         ]);
 
+        $this->approveSkills();
         $this->approveCategories();
+    }
+
+    /**
+     * Approve job skills.
+     */
+    public function approveSkills()
+    {
+        $this->skills()->unapproved()->update([
+            'approved' => true
+        ]);
     }
 
     /**
@@ -142,9 +154,19 @@ class Job extends Model
      */
     public function approveCategories()
     {
-        $this->categories()->update([
+        $this->categories()->unapproved()->update([
             'approved' => true
         ]);
+    }
+
+    public function gatewayCost($gateway = 'stripe')
+    {
+        switch ($gateway):
+            case 'stripe':
+                return $this->cost * 100;
+            default:
+                return $this->cost;
+        endswitch;
     }
 
     /**
@@ -154,18 +176,89 @@ class Job extends Model
      */
     public function getCostAttribute()
     {
-        $cost = $this->skills->map(function ($skill, $key) {
+
+        // get sales cost
+        $salesCost = $this->saleCost;
+
+        // get categories count
+        $categoriesCount = $this->categories->count();
+
+        // get unapproved skills count
+        $unapprovedSkillsCount = $this->skills->where('approved', false)->count();
+
+        // sum cost for unapproved skills
+        $unapprovedSkillsCost = $this->skills->where('approved', false)->map(function ($skill, $key) {
             return $skill->skill->price;
         })->sum();
 
-        // if more than one category: cost should be based on categories
-        if ($this->categories->count() > 0) {
-            $cost = $this->categories->map(function ($category, $key) {
-                return $category->category->price;
-            })->sum();
+        // get unapproved categories count
+        $unapprovedCategories = $this->categories->where('approved', false)->count();
+
+        // get unapproved categories cost
+        $unapprovedCategoriesCost = $this->categories->where('approved', false)->map(function ($category, $key) {
+            return $category->category->price;
+        })->sum();
+
+        // init cost
+        $cost = $unapprovedSkillsCost;
+
+        // check if job published
+        if ($this->isPublished) {
+
+            // check if job has unapproved categories
+            if ($unapprovedCategories > 0) {
+                $cost = $unapprovedCategoriesCost;
+            }
+
+            // check if job has unapproved skills and with no categories
+            if ($unapprovedSkillsCount > 0 && $categoriesCount == 0) {
+                $cost = $unapprovedSkillsCost;
+            }
+
+            // check if job has any payments
+            if ($salesCost > 0) {
+
+                if ($categoriesCount > 0) {
+
+                    // check if job has unapproved categories
+                    if ($unapprovedCategories > 0) {
+                        $cost = $unapprovedCategoriesCost;
+                    } else {
+                        $cost = 0;
+                    }
+                }
+            }
+
+        }
+
+        // check if job is not published
+        if (!$this->isPublished) {
+
+            // check if job has unapproved categories
+            if ($unapprovedCategories > 0) {
+                $cost = $unapprovedCategoriesCost;
+            }
+
+            // check if job has unapproved skills and with no categories
+            if ($unapprovedSkillsCount > 0 && $categoriesCount == 0) {
+                $cost = $unapprovedSkillsCost;
+            }
+
         }
 
         return $cost;
+    }
+
+    /**
+     * Return job sales cost.
+     *
+     * @return mixed
+     */
+    public function getSaleCostAttribute()
+    {
+        return $this->sales->map(function ($sale, $key) {
+            return $sale->sale_price;
+        })->sum();
     }
 
     /**
@@ -190,23 +283,43 @@ class Job extends Model
     public function getIsReadyForCheckoutAttribute()
     {
 
-        if ($this->education->count() == 0) {
-            return false;
+        // get categories count
+        $categoriesCount = $this->categories->count();
+
+        if ($this->isPublished) {   // checkout if published
+
+            if ($this->skills->where('approved', false)->count() > 0 && $categoriesCount) { // checkout if skills changed
+                return true;
+            }
+
+            if ($this->categories->where('approved', false)->count() > 0) { // checkout if categories changed
+                return true;
+            }
         }
 
-        if ($this->skills->count() == 0) {
-            return false;
+
+        if (!$this->isPublished) {   // checkout if not published
+            if ($this->education->count() == 0) {   // checkout if not published
+                return false;
+            }
+
+            if ($this->skills->count() == 0) {
+                return false;
+            }
+
+            if ($this->requirements->count() == 0) {
+                return false;
+            }
+
+            if ($this->categories->count() == 0) {
+                return false;
+            }
+
+            // checkout if not published and checkout requirements met
+            return true;
         }
 
-        if ($this->requirements->count() == 0) {
-            return false;
-        }
-
-        if ($this->categories->count() == 0) {
-            return false;
-        }
-
-        return true;
+        return false;
     }
 
     /**

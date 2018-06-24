@@ -9,7 +9,15 @@
                             <h4>{{ job.title }}</h4>
                         </b-link>
 
-                        <b-badge class="card-text">Job category</b-badge>
+                        <!-- Categories -->
+                        <p v-if="job.categories.length > 0">
+                            <template v-for="job_category in job.categories">
+                                <b-badge variant="primary" 
+                                         v-if="job_category.category.price > 0">
+                                    {{ job_category.category.name }}
+                                </b-badge>&nbsp;
+                            </template>
+                        </p>
                     </div>
                 </div>
 

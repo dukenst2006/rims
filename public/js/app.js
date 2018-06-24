@@ -90872,7 +90872,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -91008,6 +91008,41 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -91031,10 +91066,12 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
         return {
             jobs: [],
             meta: {},
+            categories: [],
             skills: [],
             education_levels: [],
             fetching: {
                 jobs: false,
+                categories: false,
                 skills: false,
                 education: false
             },
@@ -91088,6 +91125,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
         }
     },
     mounted: function mounted() {
+        this.getCategories();
         this.getSkills();
         this.getEducation();
         this.getJobs();
@@ -91118,30 +91156,45 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                 _this.fetching.jobs = false;
             });
         },
-        getSkills: function getSkills() {
+        getCategories: function getCategories() {
             var _this2 = this;
+
+            this.fetching.categories = true;
+
+            axios.get('/categories/jobs').then(function (response) {
+                _this2.categories = response.data.data;
+            }).catch(function (error) {
+                // log error to file or call webhook
+
+                console.log(error);
+            }).finally(function () {
+                _this2.fetching.categories = false;
+            });
+        },
+        getSkills: function getSkills() {
+            var _this3 = this;
 
             this.fetching.skills = true;
 
             axios.get('/skills').then(function (response) {
-                _this2.skills = response.data.data;
+                _this3.skills = response.data.data;
             }).catch(function (error) {
                 console.log(error.response.data);
             }).finally(function () {
-                _this2.fetching.skills = false;
+                _this3.fetching.skills = false;
             });
         },
         getEducation: function getEducation() {
-            var _this3 = this;
+            var _this4 = this;
 
             this.fetching.education = true;
 
             axios.get('/education').then(function (response) {
-                _this3.education_levels = response.data.data;
+                _this4.education_levels = response.data.data;
             }).catch(function (error) {
                 console.log(error.response.data);
             }).finally(function () {
-                _this3.fetching.education = false;
+                _this4.fetching.education = false;
             });
         },
         skillFilter: function skillFilter(values, id) {
@@ -91582,7 +91635,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -91593,6 +91646,14 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -91717,9 +91778,32 @@ var render = function() {
                     [_c("h4", [_vm._v(_vm._s(_vm.job.title))])]
                   ),
                   _vm._v(" "),
-                  _c("b-badge", { staticClass: "card-text" }, [
-                    _vm._v("Job category")
-                  ])
+                  _vm.job.categories.length > 0
+                    ? _c(
+                        "p",
+                        [
+                          _vm._l(_vm.job.categories, function(job_category) {
+                            return [
+                              job_category.category.price > 0
+                                ? _c(
+                                    "b-badge",
+                                    { attrs: { variant: "primary" } },
+                                    [
+                                      _vm._v(
+                                        "\n                                " +
+                                          _vm._s(job_category.category.name) +
+                                          "\n                            "
+                                      )
+                                    ]
+                                  )
+                                : _vm._e(),
+                              _vm._v(" \n                        ")
+                            ]
+                          })
+                        ],
+                        2
+                      )
+                    : _vm._e()
                 ],
                 1
               )
@@ -96057,6 +96141,107 @@ var render = function() {
               "template",
               { slot: "top" },
               [
+                _vm.categories.length > 0
+                  ? _c(
+                      "b-list-group",
+                      { staticClass: "mb-3" },
+                      [
+                        _c("b-list-group-item", [
+                          _vm._v(
+                            "\n                        Categories\n                    "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.categories, function(category) {
+                          return [
+                            category.children.length == 0
+                              ? _c(
+                                  "b-list-group-item",
+                                  {
+                                    attrs: {
+                                      button: "",
+                                      active:
+                                        _vm.filters.categories == category.slug
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        _vm.$root.$emit(
+                                          "filters-added",
+                                          "categories",
+                                          category.slug
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                            " +
+                                        _vm._s(category.name) +
+                                        "\n                        "
+                                    )
+                                  ]
+                                )
+                              : _vm._l(category.children, function(child) {
+                                  return _c(
+                                    "b-list-group-item",
+                                    {
+                                      key: "category-" + child.slug,
+                                      attrs: {
+                                        button: "",
+                                        active:
+                                          _vm.filters.categories == child.slug
+                                      },
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                          _vm.$root.$emit(
+                                            "filters-added",
+                                            "categories",
+                                            child.slug
+                                          )
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                " +
+                                          _vm._s(child.name) +
+                                          "\n                            "
+                                      )
+                                    ]
+                                  )
+                                })
+                          ]
+                        }),
+                        _vm._v(" "),
+                        _vm.filters.categories
+                          ? _c(
+                              "b-list-group-item",
+                              {
+                                attrs: { variant: "secondary", button: "" },
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    _vm.$root.$emit(
+                                      "filters-removed",
+                                      "categories"
+                                    )
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                        × Clear this filter\n                    "
+                                )
+                              ]
+                            )
+                          : _vm._e()
+                      ],
+                      2
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
                 _vm.education_levels.length > 0
                   ? _c(
                       "b-list-group",
@@ -96217,7 +96402,7 @@ var render = function() {
                 return _c("job", { key: job.identifier, attrs: { job: job } })
               }),
               _vm._v(" "),
-              _vm.jobs.length > 0
+              _vm.meta.current_page < _vm.meta.last_page
                 ? _c(
                     "div",
                     { staticClass: "my-1" },

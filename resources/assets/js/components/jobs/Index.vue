@@ -3,6 +3,41 @@
         <div class="col-md-3">
             <filters endpoint="/jobs/filters">
                 <template slot="top">
+                    <!-- Categories -->
+                    <b-list-group class="mb-3" v-if="categories.length > 0">
+                        <!--  v-if="map.style != 'undefined' && map.style === 'list'" -->
+                        <b-list-group-item>
+                            Categories
+                        </b-list-group-item>
+                        <template v-for="category in categories">
+                            <!-- Parent -->
+                            <b-list-group-item button
+                                               @click.prevent="$root.$emit('filters-added', 'categories', category.slug)"
+                                               :active="filters.categories == category.slug" 
+                                               v-if="category.children.length == 0">
+                                {{ category.name }}
+                            </b-list-group-item>
+
+                            <!-- Children -->
+                            <template v-else>
+                                <b-list-group-item button 
+                                                v-for="child in category.children" 
+                                                :key="'category-'+ child.slug" 
+                                                @click.prevent="$root.$emit('filters-added', 'categories', child.slug)" 
+                                                :active="filters.categories == child.slug">
+                                    {{ child.name }}
+                                </b-list-group-item>
+                            </template>
+                        </template>
+
+                        <b-list-group-item variant="secondary"
+                                           button
+                                           v-if="filters.categories"
+                                           @click.prevent="$root.$emit('filters-removed', 'categories')">
+                            &times; Clear this filter
+                        </b-list-group-item>
+                    </b-list-group><!-- /.list-group -->
+                    
                     <!-- Education -->
                     <b-list-group class="mb-3" v-if="education_levels.length > 0">
                         <!--  v-if="map.style != 'undefined' && map.style === 'list'" -->
@@ -67,7 +102,7 @@
             <div class="job-listings" v-else>
                 <job v-for="job in jobs" :job="job" :key="job.identifier"></job>
 
-                <div class="my-1" v-if="jobs.length > 0">
+                <div class="my-1" v-if="meta.current_page < meta.last_page">
                     <pagination :meta="meta"></pagination>
                 </div>
             </div>
@@ -100,10 +135,12 @@
             return {
                 jobs: [],
                 meta: {},
+                categories: [],
                 skills: [],
                 education_levels: [],
                 fetching: {
                     jobs: false,
+                    categories: false,
                     skills: false,
                     education: false
                 },
@@ -155,6 +192,7 @@
             }
         },
         mounted() {
+            this.getCategories()
             this.getSkills()
             this.getEducation()
             this.getJobs()
@@ -180,6 +218,19 @@
                     }
                 }).finally(() => {
                     this.fetching.jobs = false
+                })
+            },
+            getCategories() {
+                this.fetching.categories = true
+
+                axios.get('/categories/jobs').then((response) => {
+                    this.categories = response.data.data
+                }).catch((error) => {
+                    // log error to file or call webhook
+
+                    console.log(error)
+                }).finally(() => {
+                    this.fetching.categories = false
                 })
             },
             getSkills() {

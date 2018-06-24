@@ -24,6 +24,7 @@ class JobListingController extends Controller
             'area.ancestors',
             'education.education',
             'skills.skill.ancestors',
+            'categories.category.ancestors',
             'company'
         )->inArea($area)->filter($request)->finished()->live()->published()->isOpen()->paginate();
 

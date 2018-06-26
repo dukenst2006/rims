@@ -30,8 +30,21 @@
 // custom styles
 @import "mega_menu";
 @import "hover_menu";
+@import "timer";
 
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+// V-calendar component styles
+@import '~v-calendar/lib/v-calendar.min.css';
+
+
+// Flatpickr component themes
+@import '~flatpickr/dist/flatpickr.css';
+@import '~flatpickr/dist/themes/material_blue.css';
+
+.flatpickr-wrapper {
+   display: block;
 }

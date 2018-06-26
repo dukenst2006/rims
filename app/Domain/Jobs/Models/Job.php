@@ -41,7 +41,8 @@ class Job extends Model
         'isPublished',
         'isReadyForCheckout',
         'cost',
-        'saleCost'
+        'saleCost',
+        'isOpenForRestore'
     ];
 
     /**
@@ -269,6 +270,20 @@ class Job extends Model
     public function getIsPublishedAttribute()
     {
         if ($this->published_at == null) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * Return whether job is published.
+     *
+     * @return bool
+     */
+    public function getIsOpenForRestoreAttribute()
+    {
+        if (Carbon::now()->diffInDays($this->closed_at) == 7) {
             return false;
         }
 

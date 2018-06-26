@@ -46,6 +46,16 @@ Route::group(['prefix' => '/company', 'as' => 'tenant.'], function () {
                 Route::group(['prefix' => '/{job}'], function () {
 
                     /**
+                     * Job Deadline Store Route
+                     */
+                    Route::post('/deadline', 'JobDeadlineController@store');
+
+                    /**
+                     * Job Deadline Restore Route
+                     */
+                    Route::put('/deadline', 'JobDeadlineController@restore');
+
+                    /**
                      * Job Checkout Routes
                      */
                     Route::resource('/checkout', 'JobCheckoutController')->only('index', 'store');

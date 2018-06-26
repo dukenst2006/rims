@@ -53,45 +53,69 @@
 
                 <!-- Extra Options -->
                 <div class="d-flex justify-content-between align-content-center my-1">
-                    <div>
-                        <!-- Auto-update time every 60 seconds -->
-                        Posted
-                        <timeago :since="job.published_at" :auto-update="60"></timeago>
-                        by
+                    <b-nav>
+                        <b-nav-item v-for="skillset in job.skills" :key="skillset.id">
+                            <template v-for="ancestor in skillset.skill.ancestors"
+                                      v-if="skillset.skill.ancestors.length">
+                                <b-badge variant="light" class="lead">
+                                    {{ ancestor.name }}
+                                </b-badge>
+                            </template>
+                            <b-badge variant="light" class="lead">{{ skillset.skill.name }}</b-badge>
+                        </b-nav-item>
+                    </b-nav>
 
-                        <!-- Company -->
-                        <strong>
-                            {{ job.company.name }}
-                        </strong>
-                    </div>
-                    <div v-if="job.closed_at">
-                        Closes in
-                        <timeago :since="job.closed_at" :auto-update="60"></timeago>
+                    <div>
+                        <!-- Post time -->
+                        <p>
+                            Posted
+                            <timeago :since="job.published_at" :auto-update="60"></timeago>
+                            by
+
+                            <!-- Company -->
+                            <strong>
+                                {{ job.company.name }}
+                            </strong>
+                        </p>
+
+                        <!-- Deadline -->
+                        <div class="my-1" v-if="job.closed_at">
+                            <Timer :starttime="job.published_at"
+                                   :endtime="job.closed_at"
+                                   trans='{
+                                    "day":"d",
+                                    "hours":"h",
+                                    "minutes":"m",
+                                    "seconds":"s",
+                                    "expired":"Job application closed",
+                                    "running":"Job application deadline",
+                                    "upcoming":"Job application opens",
+                                    "status": {
+                                    "expired":"Closed",
+                                    "running":"Open",
+                                    "upcoming":"Opening time"
+                                    }}'></Timer>
+                        </div>
                     </div>
                 </div>
 
-                <b-nav class="my-1">
-                    <b-nav-item v-for="skillset in job.skills" :key="skillset.id">
-                        <template v-for="ancestor in skillset.skill.ancestors"
-                                  v-if="skillset.skill.ancestors.length">
-                            <b-badge variant="light" class="lead">
-                                {{ ancestor.name }}
-                            </b-badge>
-                        </template>
-                        <b-badge variant="light" class="lead">{{ skillset.skill.name }}</b-badge>
-                    </b-nav-item>
-                </b-nav>
+                <!-- todo: Apply button -->
             </div><!-- /.card-body -->
         </b-card><!-- /.card -->
     </div><!-- /.job-wrapper -->
 </template>
 
 <script>
+    import Timer from '../../../components/Timer'
+
     export default {
         name: "job",
         props: [
             'job'
-        ]
+        ],
+        components: {
+            Timer
+        }
     }
 </script>
 

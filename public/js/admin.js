@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 588);
+/******/ 	return __webpack_require__(__webpack_require__.s = 596);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -68002,14 +68002,22 @@ module.exports = function (encodedURI) {
 /* 585 */,
 /* 586 */,
 /* 587 */,
-/* 588 */
+/* 588 */,
+/* 589 */,
+/* 590 */,
+/* 591 */,
+/* 592 */,
+/* 593 */,
+/* 594 */,
+/* 595 */,
+/* 596 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(589);
+module.exports = __webpack_require__(597);
 
 
 /***/ }),
-/* 589 */
+/* 597 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -68040,7 +68048,7 @@ Vue.use(VueScrollTo);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('data-table', __webpack_require__(590));
+Vue.component('data-table', __webpack_require__(598));
 // Vue.component('tags-index', TagsIndex);
 
 var app = new Vue({
@@ -68048,18 +68056,18 @@ var app = new Vue({
 });
 
 // Core UI js
-__webpack_require__(593);
+__webpack_require__(601);
 
 /***/ }),
-/* 590 */
+/* 598 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(591)
+var __vue_script__ = __webpack_require__(599)
 /* template */
-var __vue_template__ = __webpack_require__(592)
+var __vue_template__ = __webpack_require__(600)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -68098,7 +68106,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 591 */
+/* 599 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68486,7 +68494,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 });
 
 /***/ }),
-/* 592 */
+/* 600 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -69447,7 +69455,7 @@ if (false) {
 }
 
 /***/ }),
-/* 593 */
+/* 601 */
 /***/ (function(module, exports) {
 
 /*****

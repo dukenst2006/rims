@@ -30,6 +30,14 @@ Vue.use(VueTimeago, {
 var VueScrollTo = require('vue-scrollto');
 Vue.use(VueScrollTo)
 
+import VCalendar from 'v-calendar';
+
+// Use v-calendar, v-date-picker & v-popover components
+Vue.use(VCalendar)
+
+import flatPickr from 'vue-flatpickr-component';
+Vue.component('flatPickr', flatPickr);
+
 import JobsIndex from './components/jobs/Index.vue';
 import TenantJobsIndex from './components/tenant/jobs/Index.vue'
 

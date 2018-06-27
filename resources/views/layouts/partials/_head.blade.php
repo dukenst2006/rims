@@ -11,3 +11,15 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 @yield('styles')
+
+<!-- Scripts -->
+<script>
+    window.Laravel = {!! json_encode([
+        'user' => [
+            'authenticated' => auth()->check(),
+            'id' => auth()->check() ? auth()->user()->id : null,
+            'name' => auth()->check() ? auth()->user()->name : null,
+            'username' => auth()->check() ? auth()->user()->username : null,
+        ]
+    ]) !!}
+</script>

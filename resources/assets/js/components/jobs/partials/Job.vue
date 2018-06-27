@@ -12,7 +12,7 @@
                         <!-- Categories -->
                         <p v-if="job.categories.length > 0">
                             <template v-for="job_category in job.categories">
-                                <b-badge variant="primary" 
+                                <b-badge class="py-1 px-2" variant="primary" 
                                          v-if="job_category.category.price > 0">
                                     {{ job_category.category.name }}
                                 </b-badge>&nbsp;
@@ -21,85 +21,92 @@
                     </div>
                 </div>
 
-                <!-- Overview Short -->
-                <p>{{ job.overview_short }}</p>
+                <div v-if="needsAuth">
+                    <p>
+                        You need to be signed in to view this job's details.
+                        <b-link href="/login">
+                            Login
+                        </b-link>
+                    </p>
+                </div>
+                <div v-else>
+                    <!-- Overview Short -->
+                    <p>{{ job.overview_short }}</p>
 
-                <!-- Salary -->
-                <p title="Salary"><i class="icon-credit-card"></i>
-                    <template v-if="job.salary_max == job.salary_min">
-                        {{ job.salary_min }}
-                    </template>
-                    <template v-else>
-                        {{ job.salary_min }} - {{ job.salary_max }}
-                    </template>
-                </p>
+                    <!-- Salary -->
+                    <p title="Salary"><i class="icon-credit-card"></i>
+                        <template v-if="job.salary_max == job.salary_min">
+                            {{ job.salary_min }}
+                        </template>
+                        <template v-else>
+                            {{ job.salary_min }} - {{ job.salary_max }}
+                        </template>
+                    </p>
 
-                <!-- Applicants -->
-                <p title="Applicants"><i class="icon-people"></i> {{ job.applicants }}</p>
+                    <!-- Applicants -->
+                    <p title="Applicants"><i class="icon-people"></i> {{ job.applicants }}</p>
 
-                <!-- Location -->
-                <p>
-                    <i class="icon-location-pin"></i>
-                    <span v-for="ancestor in job.area.ancestors" v-if="job.area.ancestors.length">
-                        {{ ancestor.name }},
-                    </span> {{ job.area.name }}
-                </p>
+                    <!-- Location -->
+                    <p>
+                        <i class="icon-location-pin"></i>
+                        <span v-for="ancestor in job.area.ancestors" v-if="job.area.ancestors.length">
+                            {{ ancestor.name }},
+                        </span> {{ job.area.name }}
+                    </p>
 
-                <!-- Site -->
-                <p>Job site: {{ job.on_location == false ? 'Remote / Off site' : 'On site'}}</p>
+                    <!-- Site -->
+                    <p>Job site: {{ job.on_location == false ? 'Remote / Off site' : 'On site'}}</p>
 
-                <!-- Type -->
-                <p>Type: {{ job.type == 'full-time' ? 'Full time' : 'Part time'}}</p>
+                    <!-- Type -->
+                    <p>Type: {{ job.type == 'full-time' ? 'Full time' : 'Part time'}}</p>
 
-                <!-- Extra Options -->
-                <div class="d-flex justify-content-between align-content-center my-1">
-                    <b-nav>
-                        <b-nav-item v-for="skillset in job.skills" :key="skillset.id">
-                            <template v-for="ancestor in skillset.skill.ancestors"
-                                      v-if="skillset.skill.ancestors.length">
-                                <b-badge variant="light" class="lead">
-                                    {{ ancestor.name }}
-                                </b-badge>
-                            </template>
-                            <b-badge variant="light" class="lead">{{ skillset.skill.name }}</b-badge>
-                        </b-nav-item>
-                    </b-nav>
+                    <!-- Extra Options -->
+                    <div class="d-flex justify-content-between align-content-center my-1">
+                        <div>
+                            <b-badge v-for="skillset in job.skills" 
+                                    :key="skillset.id" 
+                                    class="py-1 px-2" 
+                                    variant="light">
+                                {{ skillset.skill.name }}
+                            </b-badge>&nbsp;
+                        </div>
 
-                    <div>
-                        <!-- Post time -->
-                        <p>
-                            Posted
-                            <timeago :since="job.published_at" :auto-update="60"></timeago>
-                            by
+                        <div>
+                            <!-- Post time -->
+                            <p>
+                                Posted
+                                <timeago :since="job.published_at" :auto-update="60"></timeago>
+                                by
 
-                            <!-- Company -->
-                            <strong>
-                                {{ job.company.name }}
-                            </strong>
-                        </p>
+                                <!-- Company -->
+                                <strong>
+                                    {{ job.company.name }}
+                                </strong>
+                            </p>
 
-                        <!-- Deadline -->
-                        <div class="my-1" v-if="job.closed_at">
-                            <Timer :starttime="job.published_at"
-                                   :endtime="job.closed_at"
-                                   trans='{
-                                    "day":"d",
-                                    "hours":"h",
-                                    "minutes":"m",
-                                    "seconds":"s",
-                                    "expired":"Job application closed",
-                                    "running":"Job application deadline",
-                                    "upcoming":"Job application opens",
-                                    "status": {
-                                    "expired":"Closed",
-                                    "running":"Open",
-                                    "upcoming":"Opening time"
-                                    }}'></Timer>
+                            <!-- Deadline -->
+                            <div class="my-1" v-if="job.closed_at">
+                                <Timer :starttime="job.published_at"
+                                       :endtime="job.closed_at"
+                                       trans='{
+                                        "day":"d",
+                                        "hours":"h",
+                                        "minutes":"m",
+                                        "seconds":"s",
+                                        "expired":"Job application closed",
+                                        "running":"Job application deadline",
+                                        "upcoming":"Job application opens",
+                                        "status": {
+                                        "expired":"Closed",
+                                        "running":"Open",
+                                        "upcoming":"Opening time"
+                                        }}'></Timer>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- todo: Apply button -->
+                    <!-- todo: Apply button -->
+                </div>
             </div><!-- /.card-body -->
         </b-card><!-- /.card -->
     </div><!-- /.job-wrapper -->
@@ -115,6 +122,25 @@
         ],
         components: {
             Timer
+        },
+        data () {
+            return {
+                user: {
+                    authenticated: false
+                }
+            }
+        },
+        created: function () {
+            this.user = Laravel.user;
+        },
+        computed: {
+            needsAuth() {
+                if(this.job.isPremium && this.user.authenticated == false) {
+                    return true
+                }
+
+                return false
+            }
         }
     }
 </script>

@@ -42,7 +42,8 @@ class Job extends Model
         'isReadyForCheckout',
         'cost',
         'saleCost',
-        'isOpenForRestore'
+        'isOpenForRestore',
+        'isPremium'
     ];
 
     /**
@@ -160,6 +161,12 @@ class Job extends Model
         ]);
     }
 
+    /**
+     * Get payment gateway specific cost.
+     *
+     * @param string $gateway
+     * @return float|int|mixed
+     */
     public function gatewayCost($gateway = 'stripe')
     {
         switch ($gateway):
@@ -168,6 +175,25 @@ class Job extends Model
             default:
                 return $this->cost;
         endswitch;
+    }
+
+    /**
+     * Return if job is premium.
+     *
+     * @return mixed
+     */
+    public function getIsPremiumAttribute()
+    {
+        $categories = $this->categories()->whereHas('category', function (Builder $builder) {
+            return $builder->where('needs_auth', true);
+        })->count();
+
+
+        if ($categories == 0) {
+            return false;
+        }
+
+        return true;
     }
 
     /**

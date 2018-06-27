@@ -4,6 +4,8 @@ namespace Rims\App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Rims\App\Console\Commands\Role\AssignUserRoleCommand;
+use Rims\App\Console\Commands\Role\CreatePermissionCommand;
 
 class Kernel extends ConsoleKernel
 {
@@ -13,7 +15,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        AssignUserRoleCommand::class,
+        CreatePermissionCommand::class
     ];
 
     /**
@@ -24,8 +27,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+         $schedule->command('job:delete-incomplete')
+                  ->hourly();
     }
 
     /**

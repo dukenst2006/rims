@@ -20,13 +20,17 @@ class JobListingController extends Controller
      */
     public function index(Request $request, Area $area)
     {
-        $jobs = Job::withoutForTenants()->with(
+        $jobs = Job::withoutForTenants()->with([
             'area.ancestors',
             'education.education',
-            'skills.skill.ancestors',
-            'categories.category.ancestors',
+            'skills' => function ($query) {
+                $query->with('skill.ancestors')->where('approved', true);
+            },
+            'categories' => function ($query) {
+                $query->with('category.ancestors')->where('approved', true);
+            },
             'company'
-        )->inArea($area)->filter($request)->finished()->live()->published()->isOpen()->paginate();
+        ])->inArea($area)->filter($request)->finished()->live()->published()->isOpen()->paginate();
 
         return new JobCollection($jobs);
     }

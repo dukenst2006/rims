@@ -44,6 +44,7 @@
         "vue-strap": "github:wffranco/vue-strap",
         "vue-timeago": "^3.4.4",
         "vue2-dropzone": "^3.2.2",
-        "weekstart": "^1.0.0"
+        "weekstart": "^1.0.0",
+        "world-currencies": "0.0.8"
     }
 }

@@ -4,7 +4,7 @@
     <div class="container">
         <section class="job-header">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-9">
                     <h3>{{ $job->title }}</h3>
 
                     @if($job->isPremium && !auth()->check())
@@ -17,7 +17,7 @@
                         </p>
 
                         <p>
-                            <strong>Salary:</strong>
+                            <strong>Salary: {{ $job->currency }}</strong>
                             @if($job->salary_min == $job->salary_max)
                                 {{ $job->salary_min }}
                             @elseif($job->salary_min == 0 && $job->salary_max == 0)
@@ -46,14 +46,33 @@
                         <p>
                             <strong>Type:</strong> {{ $job->type == 'full-time' ? 'Full time' : 'Part time' }}
                         </p>
+
+                        <p>
+                            Posted
+                            <time>{{ $job->published_at->diffForHumans() }}</time>
+                            by <strong>{{ $job->company->name }}</strong>
+                        </p>
                     @endif
-                </div><!-- /.col-sm-12 -->
+                </div><!-- /.col-sm-9 -->
+
+                <div class="col-sm-3">
+                    <!-- Deadline -->
+                    <p>
+                        <strong>Deadline</strong>
+                        {{ $job->closed_at->diffForHumans() }}
+                    </p>
+
+                    <!-- Application -->
+                    <button type="button" class="btn btn-primary btn-block">
+                        Apply now
+                    </button>
+                </div><!-- /.col-sm-3 -->
             </div><!-- /.row -->
         </section><!-- /.job-header -->
 
         <section class="job-content my-3">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-sm-9">
                     @if($job->isPremium && !auth()->check())
                         <p>You need to be signed in to view this job's requirements and full details.
                             <a href="{{ route('login') }}">Login</a>
@@ -118,7 +137,7 @@
                             </article>
                         </div>
                     @endif
-                </div><!-- /.col-sm-8 -->
+                </div><!-- /.col-sm-9 -->
             </div><!-- /.row -->
         </section><!-- /.job-content -->
     </div><!-- /.container -->

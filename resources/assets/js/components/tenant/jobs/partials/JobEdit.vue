@@ -2,13 +2,13 @@
     <!-- Job Edit Form -->
     <b-form @submit.prevent="update">
         <div class="d-flex justify-content-between align-content-center">
-          <h4>Editing {{ job.title }}</h4>
-          
-          <aside>
-              <b-link @click.prevent="cancelEditing">
-                  Cancel
-              </b-link>
-          </aside>          
+            <h4>Editing {{ job.title }}</h4>
+
+            <aside>
+                <b-link @click.prevent="cancelEditing">
+                    Cancel
+                </b-link>
+            </aside>
         </div>
 
         <!-- Title -->
@@ -139,6 +139,26 @@
                       label-class="font-weight-bold pt-0"
                       class="mb-0">
 
+            <!-- Currency -->
+            <b-form-group horizontal
+                          breakpoint="md"
+                          description="* Salary payment currency"
+                          label="Currency"
+                          class="mb-0">
+                <b-form-select id="currency"
+                               v-model="editing.form.currency"
+                               class="mb-3">
+                    <template slot="first">
+                        <!-- this slot appears above the options from 'options' prop -->
+                        <option :value="null" disabled>-- Please select salary currency --</option>
+                    </template>
+                    <!-- these options will appear after the ones from 'options' prop -->
+                    <option :value="currency.cc" v-for="currency in currencies">
+                        {{ currency.cc }} ({{ currency.name }})
+                    </option>
+                </b-form-select>
+            </b-form-group>
+
             <!-- Min -->
             <b-form-group horizontal
                           description="The minimum job salary."
@@ -207,7 +227,8 @@
         props: [
             'endpoint',
             'job',
-            'areas'
+            'areas',
+            'currencies'
         ],
         components: {
             HollowDotsSpinner,
@@ -240,7 +261,7 @@
             edit(job) {
                 this.editing.id = job.id
                 this.editing.form = job
-            },cancelEditing() {
+            }, cancelEditing() {
                 this.$parent.editing.id = null
                 this.$parent.editing.form = []
             },

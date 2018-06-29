@@ -163,6 +163,26 @@
                                   label-class="font-weight-bold pt-0"
                                   class="mb-0">
 
+                        <!-- Currency -->
+                        <b-form-group horizontal
+                                      breakpoint="md"
+                                      description="* Salary payment currency"
+                                      label="Currency"
+                                      class="mb-0">
+                            <b-form-select id="currency"
+                                           v-model="creating.form.currency"
+                                           class="mb-3">
+                                <template slot="first">
+                                    <!-- this slot appears above the options from 'options' prop -->
+                                    <option :value="null" disabled>-- Please select salary currency --</option>
+                                </template>
+                                <!-- these options will appear after the ones from 'options' prop -->
+                                <option :value="currency.cc" v-for="currency in currencies">
+                                    {{ currency.cc }} ({{ currency.name }})
+                                </option>
+                            </b-form-select>
+                        </b-form-group>
+
                         <!-- Min -->
                         <b-form-group horizontal
                                       description="The minimum job salary."
@@ -209,7 +229,7 @@
                         <template v-else>
                             <!-- Save -->
                             <b-button type="submit" variant="primary">Save</b-button>
-                            
+
                             <!-- Cancel -->
                             <b-button type="button"
                                       variant="secondary"
@@ -227,10 +247,10 @@
         <b-card no-body class="mb-3" v-if="fetching.jobs">
             <div class="card-body">
                 <hollow-dots-spinner
-                    :animation-duration="1000"
-                    :dot-size="15"
-                    :dots-num="3"
-                    :color="'#ff1d5e'"/>
+                        :animation-duration="1000"
+                        :dot-size="15"
+                        :dots-num="3"
+                        :color="'#ff1d5e'"/>
 
                 <p>Fetching jobs...</p>
             </div>
@@ -253,14 +273,15 @@
             </div>
         </b-card>
 
-        <tenant-job v-for="job in jobs"  
-                    :endpoint="endpoint" 
-                    :job="job" 
+        <tenant-job v-for="job in jobs"
+                    :endpoint="endpoint"
+                    :job="job"
                     :key="'job_' + job.identifier"
-                    v-bind:areas="areas" 
-                    v-bind:education_levels="education_levels" 
-                    v-bind:skills="skills" 
-                    v-bind:categories="categories" 
+                    v-bind:areas="areas"
+                    v-bind:currencies="currencies"
+                    v-bind:education_levels="education_levels"
+                    v-bind:skills="skills"
+                    v-bind:categories="categories"
                     v-if="jobs.length > 0"></tenant-job>
 
         <div class="my-1" v-if="meta.current_page < meta.last_page">
@@ -298,10 +319,12 @@
                 meta: {},
                 areas: [],
                 categories: [],
+                currencies: [],
                 fetching: {
                     jobs: false,
                     areas: false,
                     categories: false,
+                    currencies: false,
                     education_levels: false,
                     skills: false,
                     languages: false,
@@ -344,6 +367,7 @@
         mounted() {
             this.getAreas()
             this.getJobs()
+            this.getCurrencies()
 
             toastr.options = {
                 closeOnHover: false,
@@ -356,7 +380,7 @@
 
             // emit or listen to events
             BusEvent.$on('tenant-job:updated', this.updateJob)
-                    .$on('tenant-job:deleted', this.removeJob)
+                .$on('tenant-job:deleted', this.removeJob)
         },
         methods: { // todo: add method to check if requirements added and ready for payment
             getJobs(page = this.$route.query.page, query = this.$route.query) {
@@ -439,6 +463,13 @@
                     console.log(error.response.data)
                 })
             },
+            getCurrencies() {
+                axios.get('/currencies').then((response) => {
+                    this.currencies = response.data.data
+                }).catch((error) => {
+                    console.log(error.response.data)
+                })
+            },
             create() {
                 // check if create form is active
                 if (this.creating.active) {
@@ -512,7 +543,7 @@
                 })
             },
             updateJob(newJob) {
-                var filtered = this.jobs.filter(function(job) {
+                var filtered = this.jobs.filter(function (job) {
                     return job.id == newJob.id
                 })
 

@@ -35,6 +35,7 @@
 
                     <!-- Salary -->
                     <p title="Salary"><i class="icon-credit-card"></i>
+                        {{ job.currency }}
                         <template v-if="job.salary_max == job.salary_min">
                             {{ job.salary_min }}
                         </template>

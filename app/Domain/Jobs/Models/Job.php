@@ -67,6 +67,7 @@ class Job extends Model
         'finished',
         'published_at',
         'closed_at',
+        'currency'
     ];
 
     /**

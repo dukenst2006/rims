@@ -94284,7 +94284,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -94297,6 +94297,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Timer__ = __webpack_require__(239);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Timer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Timer__);
+//
 //
 //
 //
@@ -94732,7 +94733,11 @@ var render = function() {
                   { attrs: { title: "Salary" } },
                   [
                     _c("i", { staticClass: "icon-credit-card" }),
-                    _vm._v(" "),
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(_vm.job.currency) +
+                        "\n                    "
+                    ),
                     _vm.job.salary_max == _vm.job.salary_min
                       ? [
                           _vm._v(
@@ -99436,7 +99441,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -99460,6 +99465,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pagination_Pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__pagination_Pagination__);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -99756,10 +99782,12 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
             meta: {},
             areas: [],
             categories: [],
+            currencies: [],
             fetching: {
                 jobs: false,
                 areas: false,
                 categories: false,
+                currencies: false,
                 education_levels: false,
                 skills: false,
                 languages: false,
@@ -99798,6 +99826,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     mounted: function mounted() {
         this.getAreas();
         this.getJobs();
+        this.getCurrencies();
 
         __WEBPACK_IMPORTED_MODULE_4_toastr___default.a.options = {
             closeOnHover: false,
@@ -99910,8 +99939,17 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                 console.log(error.response.data);
             });
         },
-        create: function create() {
+        getCurrencies: function getCurrencies() {
             var _this8 = this;
+
+            axios.get('/currencies').then(function (response) {
+                _this8.currencies = response.data.data;
+            }).catch(function (error) {
+                console.log(error.response.data);
+            });
+        },
+        create: function create() {
+            var _this9 = this;
 
             // check if create form is active
             if (this.creating.active) {
@@ -99919,13 +99957,13 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                 // delete initialised job
                 this.destroy(this.creating.job).then(function () {
                     // reset creating vars
-                    _this8.creating.job = null;
-                    _this8.creating.active = false;
+                    _this9.creating.job = null;
+                    _this9.creating.active = false;
                 }).catch(function (error) {
                     // log error to file or call webhook
                     console.log(error);
                 }).finally(function () {
-                    _this8.deleting.processing = false;
+                    _this9.deleting.processing = false;
                 });
 
                 return;
@@ -99938,25 +99976,25 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
             if (this.creating.start) {
                 axios.get(this.endpoint + '/create').then(function (response) {
                     // activate create form
-                    _this8.creating.active = true;
+                    _this9.creating.active = true;
 
                     // init job template
-                    _this8.creating.job = response.data.data;
+                    _this9.creating.job = response.data.data;
                 }).catch(function (error) {
                     // deactivate create form
-                    _this8.creating.active = false;
+                    _this9.creating.active = false;
 
                     __WEBPACK_IMPORTED_MODULE_4_toastr___default.a.error('Failed setting up job template. Please try again.', 'Whoops');
 
                     // log error to file or call webhook
                     console.log(error);
                 }).finally(function () {
-                    _this8.creating.start = false;
+                    _this9.creating.start = false;
                 });
             }
         },
         store: function store() {
-            var _this9 = this;
+            var _this10 = this;
 
             this.creating.processing = true;
 
@@ -99964,26 +100002,26 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                 var job = response.data.data;
 
                 // add job to jobs list
-                _this9.jobs.unshift(job);
+                _this10.jobs.unshift(job);
 
                 // reset create vars
-                _this9.creating.active = false;
-                _this9.creating.form = {};
-                _this9.creating.job = null;
+                _this10.creating.active = false;
+                _this10.creating.form = {};
+                _this10.creating.job = null;
 
                 // setup job for editing requirements
 
                 __WEBPACK_IMPORTED_MODULE_4_toastr___default.a.success('Job created successfully.', job.title);
             }).catch(function (error) {
                 if (error.response && error.response.status === 422) {
-                    _this9.creating.errors = error.response.data.errors;
+                    _this10.creating.errors = error.response.data.errors;
                 }
 
                 console.log(error);
 
                 __WEBPACK_IMPORTED_MODULE_4_toastr___default.a.error('Failed saving job. Please try again!', 'Whoops');
             }).finally(function () {
-                _this9.creating.processing = false;
+                _this10.creating.processing = false;
             });
         },
         updateJob: function updateJob(newJob) {
@@ -100187,7 +100225,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -100576,6 +100614,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -100591,7 +100631,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "tenant-job",
-    props: ['endpoint', 'job', 'areas', 'education_levels', 'skills', 'categories'],
+    props: ['endpoint', 'job', 'areas', 'education_levels', 'skills', 'categories', 'currencies'],
     components: {
         HollowDotsSpinner: __WEBPACK_IMPORTED_MODULE_2_epic_spinners__["a" /* HollowDotsSpinner */],
         TenantJobEdit: __WEBPACK_IMPORTED_MODULE_4__JobEdit___default.a,
@@ -101111,7 +101151,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -101326,6 +101366,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -101335,7 +101395,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "tenant-job-edit",
-    props: ['endpoint', 'job', 'areas'],
+    props: ['endpoint', 'job', 'areas', 'currencies'],
     components: {
         HollowDotsSpinner: __WEBPACK_IMPORTED_MODULE_3_epic_spinners__["a" /* HollowDotsSpinner */],
         AreasSelect: __WEBPACK_IMPORTED_MODULE_2__areas_partials_forms_AreasSelect___default.a
@@ -101433,7 +101493,7 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("\n              Cancel\n          ")]
+                [_vm._v("\n                Cancel\n            ")]
               )
             ],
             1
@@ -101741,6 +101801,58 @@ var render = function() {
           }
         },
         [
+          _c(
+            "b-form-group",
+            {
+              staticClass: "mb-0",
+              attrs: {
+                horizontal: "",
+                breakpoint: "md",
+                description: "* Salary payment currency",
+                label: "Currency"
+              }
+            },
+            [
+              _c(
+                "b-form-select",
+                {
+                  staticClass: "mb-3",
+                  attrs: { id: "currency" },
+                  model: {
+                    value: _vm.editing.form.currency,
+                    callback: function($$v) {
+                      _vm.$set(_vm.editing.form, "currency", $$v)
+                    },
+                    expression: "editing.form.currency"
+                  }
+                },
+                [
+                  _c("template", { slot: "first" }, [
+                    _c(
+                      "option",
+                      { attrs: { disabled: "" }, domProps: { value: null } },
+                      [_vm._v("-- Please select salary currency --")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.currencies, function(currency) {
+                    return _c("option", { domProps: { value: currency.cc } }, [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(currency.cc) +
+                          " (" +
+                          _vm._s(currency.name) +
+                          ")\n                "
+                      )
+                    ])
+                  })
+                ],
+                2
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
           _c(
             "b-form-group",
             {
@@ -107296,7 +107408,11 @@ var render = function() {
                       { attrs: { title: "Salary" } },
                       [
                         _c("i", { staticClass: "icon-credit-card" }),
-                        _vm._v(" "),
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(_vm.job.currency) +
+                            "\n                    "
+                        ),
                         _vm.job.salary_max == _vm.job.salary_min
                           ? [
                               _vm._v(
@@ -107670,7 +107786,8 @@ var render = function() {
                     attrs: {
                       endpoint: _vm.endpoint,
                       job: _vm.job,
-                      areas: _vm.areas
+                      areas: _vm.areas,
+                      currencies: _vm.currencies
                     }
                   })
                 : _vm._e()
@@ -108400,6 +108517,69 @@ var render = function() {
                         _c(
                           "b-form-group",
                           {
+                            staticClass: "mb-0",
+                            attrs: {
+                              horizontal: "",
+                              breakpoint: "md",
+                              description: "* Salary payment currency",
+                              label: "Currency"
+                            }
+                          },
+                          [
+                            _c(
+                              "b-form-select",
+                              {
+                                staticClass: "mb-3",
+                                attrs: { id: "currency" },
+                                model: {
+                                  value: _vm.creating.form.currency,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.creating.form, "currency", $$v)
+                                  },
+                                  expression: "creating.form.currency"
+                                }
+                              },
+                              [
+                                _c("template", { slot: "first" }, [
+                                  _c(
+                                    "option",
+                                    {
+                                      attrs: { disabled: "" },
+                                      domProps: { value: null }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "-- Please select salary currency --"
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _vm._l(_vm.currencies, function(currency) {
+                                  return _c(
+                                    "option",
+                                    { domProps: { value: currency.cc } },
+                                    [
+                                      _vm._v(
+                                        "\n                                " +
+                                          _vm._s(currency.cc) +
+                                          " (" +
+                                          _vm._s(currency.name) +
+                                          ")\n                            "
+                                      )
+                                    ]
+                                  )
+                                })
+                              ],
+                              2
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-form-group",
+                          {
                             attrs: {
                               horizontal: "",
                               description: "The minimum job salary.",
@@ -108643,6 +108823,7 @@ var render = function() {
                 endpoint: _vm.endpoint,
                 job: job,
                 areas: _vm.areas,
+                currencies: _vm.currencies,
                 education_levels: _vm.education_levels,
                 skills: _vm.skills,
                 categories: _vm.categories

@@ -86,6 +86,7 @@
 
                     <!-- Salary -->
                     <p title="Salary"><i class="icon-credit-card"></i>
+                        {{ job.currency }}
                         <template v-if="job.salary_max == job.salary_min">
                             {{ job.salary_min }}
                         </template>
@@ -240,6 +241,7 @@
                 <tenant-job-edit :endpoint="endpoint"
                                  :job="job"
                                  v-bind:areas="areas"
+                                 v-bind:currencies="currencies"
                                  v-if="areas.length > 0 && editing.id == job.id"></tenant-job-edit>
 
             </div><!-- /.card-body -->
@@ -314,10 +316,10 @@
 
             <b-form @submit.prevent="storeDeadline">
                 <b-form-group horizontal
-                            description="The job application deadline."
-                            label="Close at" 
-                            :state="deadlineState"
-                            :invalid-feedback="deadlineFeedback">
+                              description="The job application deadline."
+                              label="Close at"
+                              :state="deadlineState"
+                              :invalid-feedback="deadlineFeedback">
                     <div class="input-group mb-3">
                         <flat-pickr v-model="deadline.closed_at"
                                     :config="dateconfig"
@@ -340,7 +342,7 @@
                                         </span>
                                     </i>
                                 </button>
-                            </div>                                
+                            </div>
                         </div>
                     </div>
                 </b-form-group>
@@ -378,7 +380,8 @@
             'areas',
             'education_levels',
             'skills',
-            'categories'
+            'categories',
+            'currencies'
         ],
         components: {
             HollowDotsSpinner,
@@ -601,7 +604,7 @@
                 return _.round(cost, 2)
             },
             applicationDeadline() {
-                if(this.deadline.closed_at == null) {
+                if (this.deadline.closed_at == null) {
                     return null
                 }
 
@@ -757,7 +760,7 @@
                     toastr.success('Job deadline updated successfully.', this.job.title)
 
                     this.deadline.processing = false
-                    
+
                     this.$root.$emit('bv::hide::modal', this.job.identifier + '-deadline-modal')
                 }).catch((error) => {
                     if (error.response && error.response.status === 422) {

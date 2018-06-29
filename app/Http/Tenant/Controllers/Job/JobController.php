@@ -41,6 +41,7 @@ class JobController extends Controller
             'live' => false,
             'approved' => false,
             'finished' => false,
+            'currency' => 'USD'
         ]);
 
         return new JobResource($job);
@@ -62,7 +63,7 @@ class JobController extends Controller
             $request->only([
                 'title', 'overview_short', 'overview',
                 'applicants', 'type', 'on_location',
-                'salary_min', 'salary_max'
+                'salary_min', 'salary_max', 'currency'
             ])
         );
         $job->slug = SlugService::createSlug(Job::class, 'slug', $job->title);
@@ -108,7 +109,7 @@ class JobController extends Controller
             $request->only([
                 'title', 'overview_short', 'overview',
                 'applicants', 'type', 'on_location',
-                'salary_min', 'salary_max'
+                'salary_min', 'salary_max', 'currency'
             ])
         );
         $job->finished = true;

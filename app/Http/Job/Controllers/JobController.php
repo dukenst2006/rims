@@ -5,6 +5,7 @@ namespace Rims\Http\Job\Controllers;
 use Rims\Domain\Areas\Models\Area;
 use Illuminate\Http\Request;
 use Rims\App\Controllers\Controller;
+use Rims\Domain\Jobs\Models\Job;
 
 class JobController extends Controller
 {
@@ -22,11 +23,25 @@ class JobController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \Rims\Domain\Areas\Models\Area  $area
+     * @param Job $job
      * @return \Illuminate\Http\Response
      */
-    public function show(Area $area)
+    public function show(Job $job)
     {
-        //
+        // todo: add method to check if job is visible else throw 404
+
+        $job->load([
+            'area.ancestors',
+            'education.education',
+            'skills' => function ($query) {
+                $query->with('skill.ancestors')->where('approved', true);
+            },
+            'categories' => function ($query) {
+                $query->with('category.ancestors')->where('approved', true);
+            },
+            'company'
+        ]);
+
+        return view('jobs.show', compact('job'));
     }
 }

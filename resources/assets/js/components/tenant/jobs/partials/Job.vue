@@ -8,7 +8,9 @@
                         <aside>
                             <!-- Title -->
                             <h4>
-                                <b-link href="#">{{ job.title }}</b-link>
+                                <b-link :href="'/jobs/' + job.slug">
+                                    {{ job.title }}
+                                </b-link>
                             </h4>
 
                             <!-- Categories -->

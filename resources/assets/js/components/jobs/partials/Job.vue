@@ -5,7 +5,7 @@
                 <!-- Title -->
                 <div class="card-title">
                     <div class="d-flex justify-content-between align-content-center">
-                        <b-link href="#" @click.prevent>
+                        <b-link :href="'/jobs/' + job.slug">
                             <h4>{{ job.title }}</h4>
                         </b-link>
 

@@ -105,14 +105,27 @@ Route::group(['namespace' => 'Home\Controllers'], function () {
 });
 
 /**
- * Area Group Routes
+ * Jobs Routes
  */
-Route::group(['prefix' => '/{area}'], function () {
+Route::group(['namespace' => 'Job\Controllers'], function () {
 
     /**
-     * Jobs Routes
+     * Jobs Group Routes
      */
-    Route::group(['namespace' => 'Job\Controllers'], function () {
+    Route::group(['prefix' => '/jobs'], function () {
+
+        // todo: add job group routes; application routes, ratings, reviews
+
+        /**
+         * Job Show Route
+         */
+        Route::get('/{job}', 'JobController@show')->name('jobs.show');
+    });
+
+    /**
+     * Area Group Routes
+     */
+    Route::group(['prefix' => '/{area}'], function () {
 
         /**
          * Jobs Listings Route
@@ -120,9 +133,9 @@ Route::group(['prefix' => '/{area}'], function () {
         Route::get('/jobs/listings', 'JobListingController@index')->name('jobs.listings');
 
         /**
-         * Job Main Routes
+         * Job Index Route
          */
-        Route::resource('jobs', 'JobController')->only('index', 'show');
+        Route::get('/jobs', 'JobController@index')->name('jobs.index');
     });
 });
 

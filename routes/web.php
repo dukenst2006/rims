@@ -85,6 +85,11 @@ Route::get('/languages', 'Language\Controllers\LanguageController@index');
 Route::get('/jobs/filters', 'Job\Controllers\JobListingController@filters')->name('jobs.filters');
 
 /**
+ * Currencies Index Route
+ */
+Route::get('/currencies', 'Currency\Controllers\CurrencyController@index')->name('currencies.index');
+
+/**
  * Categories Routes
  */
 Route::group(['namespace' => 'Category\Controllers'], function () {
@@ -150,7 +155,7 @@ Route::group(['namespace' => 'Area\Controllers'], function () {
     Route::get('/areas/{area}', 'AreaController@change')->name('areas.change');
 
     /**
-     * Areas Index Routes
+     * Areas Index Route
      */
     Route::get('/areas', 'AreaController@index')->name('areas.index');
 });

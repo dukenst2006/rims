@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
          $this->call(LevelTableSeeder::class);
          $this->call(SkillTableSeeder::class);
          $this->call(LanguageTableSeeder::class);
+         $this->call(CurrencyTableSeeder::class);
     }
 }

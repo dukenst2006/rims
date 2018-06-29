@@ -8,6 +8,7 @@
 
 namespace Rims\Domain\Jobs\Filters;
 
+use Illuminate\Http\Request;
 use Rims\App\Filters\FiltersAbstract;
 use Rims\Domain\Categories\Filters\CategoriesFilter;
 use Rims\Domain\Education\Filters\EducationFilter;
@@ -33,6 +34,24 @@ class JobFilters extends FiltersAbstract
     protected $defaultFilters = [
         'published' => 'desc'
     ];
+
+    protected $withoutDefaultFilters = [
+        'deadline'
+    ];
+
+    /**
+     * FiltersAbstract constructor.
+     *
+     * @param Request $request
+     */
+    public function __construct(Request $request)
+    {
+        if ($request->hasAny($this->withoutDefaultFilters)) {
+            $this->defaultFilters = [];
+        }
+
+        parent::__construct($request);
+    }
 
     /**
      * Create project filters map.
@@ -80,8 +99,8 @@ class JobFilters extends FiltersAbstract
             ],
             'deadline' => [
                 'map' => [
-                    'desc' => 'Near',
-                    'asc' => 'Far'
+                    'asc' => 'Near',
+                    'desc' => 'Far'
                 ],
                 'heading' => 'Order by deadline',
                 'style' => 'list'

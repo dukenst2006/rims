@@ -63,9 +63,9 @@
                     </p>
 
                     <!-- Application -->
-                    <button type="button" class="btn btn-primary btn-block">
+                    <a href="{{ route('jobs.applications.index', $job) }}" class="btn btn-primary btn-block">
                         Apply now
-                    </button>
+                    </a>
                 </div><!-- /.col-sm-3 -->
             </div><!-- /.row -->
         </section><!-- /.job-header -->

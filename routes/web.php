@@ -112,19 +112,52 @@ Route::group(['namespace' => 'Home\Controllers'], function () {
 /**
  * Jobs Routes
  */
-Route::group(['namespace' => 'Job\Controllers'], function () {
+Route::group(['namespace' => 'Job\Controllers', 'as' => 'jobs.'], function () {
 
     /**
      * Jobs Group Routes
      */
     Route::group(['prefix' => '/jobs'], function () {
 
-        // todo: add job group routes; application routes, ratings, reviews
+        /**
+         * Jobs Group Routes
+         */
+        Route::group(['prefix' => '/{job}'], function () {
+
+            // todo: add job group routes; ratings, reviews
+
+            /**
+             * Job Application Group Routes
+             */
+            Route::group(['prefix' => '/applications'], function () {
+
+                // CV store route
+                Route::get('/{jobApplication}/cv', 'JobCVController@show')->name('applications.cv.show');
+
+                // CV store route
+                Route::post('/{jobApplication}/cv/store', 'JobCVController@store')->name('applications.cv.store');
+
+                // create route
+                Route::get('/{jobApplication}/create', 'JobApplicationController@create')->name('applications.create');
+
+                // store route
+                Route::post('/{jobApplication}/store', 'JobApplicationController@store')->name('applications.store');
+            });
+
+            /**
+             * Job Application Resource Routes
+             */
+            Route::resource('/applications', 'JobApplicationController', [
+                'parameters' => [
+                    'applications' => 'jobApplication'
+                ]
+            ])->except('create', 'store');
+        });
 
         /**
          * Job Show Route
          */
-        Route::get('/{job}', 'JobController@show')->name('jobs.show');
+        Route::get('/{job}', 'JobController@show')->name('show');
     });
 
     /**
@@ -135,12 +168,12 @@ Route::group(['namespace' => 'Job\Controllers'], function () {
         /**
          * Jobs Listings Route
          */
-        Route::get('/jobs/listings', 'JobListingController@index')->name('jobs.listings');
+        Route::get('/jobs/listings', 'JobListingController@index')->name('listings');
 
         /**
          * Job Index Route
          */
-        Route::get('/jobs', 'JobController@index')->name('jobs.index');
+        Route::get('/jobs', 'JobController@index')->name('index');
     });
 });
 

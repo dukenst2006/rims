@@ -108,6 +108,11 @@ Vue.component(
     require('./components/account/avatar/AvatarUpload.vue')
 );
 
+Vue.component(
+    'cv-upload',
+    require('./components/jobs/applications/CVUpload.vue')
+);
+
 const app = new Vue({
     el: '#app',
     router

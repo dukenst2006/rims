@@ -75,7 +75,7 @@
                                                preview-link="{{ $jobApplication->cvPath }}"></cv-upload>
 
                                     @if ($errors->has('cv'))
-                                        <div class="invalid-feedback">
+                                        <div class="invalid-feedback{{ $errors->has('cv') ? ' d-block' : '' }}">
                                             <strong>{{ $errors->first('cv') }}</strong>
                                         </div>
                                     @endif

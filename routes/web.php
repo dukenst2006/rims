@@ -129,7 +129,7 @@ Route::group(['namespace' => 'Job\Controllers', 'as' => 'jobs.'], function () {
             /**
              * Job Application Group Routes
              */
-            Route::group(['prefix' => '/applications'], function () {
+            Route::group(['prefix' => '/applications', 'middleware' => ['auth']], function () {
 
                 // CV store route
                 Route::get('/{jobApplication}/cv', 'JobCVController@show')->name('applications.cv.show');
@@ -151,7 +151,7 @@ Route::group(['namespace' => 'Job\Controllers', 'as' => 'jobs.'], function () {
                 'parameters' => [
                     'applications' => 'jobApplication'
                 ]
-            ])->except('create', 'store');
+            ])->except('create', 'store')->middleware(['auth']);
         });
 
         /**

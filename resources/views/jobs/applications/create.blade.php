@@ -94,7 +94,7 @@
                                     <textarea id="details"
                                               class="form-control{{ $errors->has('details') ? ' is-invalid' : '' }}"
                                               name="details" rows="6"
-                                              autofocus>{{ old('details', $jobApplication->details) }}</textarea>
+                                              autofocus>{{ old('details') }}</textarea>
 
                                     @if ($errors->has('details'))
                                         <div class="invalid-feedback">

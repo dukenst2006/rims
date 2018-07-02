@@ -58,7 +58,11 @@
                     </section>
                 </div>
                 <div class="col-sm-4">
-                    <p><strong>Submitted</strong> {{ $jobApplication->submitted_at->diffForHumans() }}</p>
+                    @if($jobApplication->submitted_at)
+                        <p><strong>Submitted</strong> {{ $jobApplication->submitted_at->diffForHumans() }}</p>
+                    @else
+                        <p>Application not yet submitted.</p>
+                    @endif
 
                     <div class="list-group mb-3">
                         <div class="list-group-item">

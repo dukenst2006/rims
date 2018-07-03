@@ -111045,7 +111045,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -111063,6 +111063,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_bootstrap_datetimepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue_bootstrap_datetimepicker__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_tempusdominus_bootstrap_4_build_css_tempusdominus_bootstrap_4_min_css__ = __webpack_require__(557);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_tempusdominus_bootstrap_4_build_css_tempusdominus_bootstrap_4_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_tempusdominus_bootstrap_4_build_css_tempusdominus_bootstrap_4_min_css__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -111465,7 +111480,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
                 __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.success('Record added successfully.');
             }).catch(function (error) {
-                if (error.response.status === 422) {
+                if (error.response && error.response.status === 422) {
                     _this3.creating.errors = error.response.data.errors;
                 }
 
@@ -111476,8 +111491,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         edit: function edit(school) {
             this.editing.errors = [];
-            this.editing.id = school.school.id;
-            this.editing.form = this.updateable;
+            this.editing.id = school.id;
         },
         update: function update() {
             var _this4 = this;
@@ -111485,14 +111499,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.editing.processing = true;
 
             axios.put(this.endpoint + '/' + this.editing.id, this.editing.form).then(function (response) {
-                _this4.getRecords().then(function () {
-                    _this4.editing.id = null;
-                    _this4.editing.form = {};
-                });
+                _this4.editing.id = null;
+                _this4.editing.form = {};
+
+                _this4.getRecords().then(function () {});
 
                 __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.success('Record updated successfully.');
             }).catch(function (error) {
-                if (error.response.status === 422) {
+                if (error.response && error.response.status === 422) {
                     _this4.editing.errors = error.response.data.errors;
                 }
 
@@ -111502,7 +111516,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
         },
         remove: function remove(school) {
-            this.deleting.id = school.school.id;
+            this.deleting.id = school.id;
             this.deleting.form.education_id = school.id;
 
             this.destroy();
@@ -111515,17 +111529,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             axios.delete(this.endpoint + '/' + this.deleting.id, this.deleting.form).then(function (response) {
                 _this5.getRecords().then(function () {
                     _this5.deleting.form = {};
+                }).catch(function (error) {
+                    __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.info('Hit refresh to fetch latest records.', 'Whoops!');
+                }).finally(function () {
+                    _this5.deleting.id = null;
                 });
 
                 __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.success('Record deleted successfully.');
             }).catch(function (error) {
-                if (error.response.status === 422) {
+                if (error.response && error.response.status === 422) {
                     _this5.deleting.errors = error.response.data.errors;
                 }
 
                 __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.error('Failed deleting record.', 'Whoops!');
             }).finally(function () {
-                _this5.deleting.id = null;
                 _this5.deleting.processing = false;
             });
         }
@@ -114640,24 +114657,43 @@ var render = function() {
             _c("h4", [_vm._v("My Education History")]),
             _vm._v(" "),
             _c(
-              "a",
-              {
-                staticClass: "pull-right ml-auto",
-                attrs: { href: "#" },
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    _vm.creating.active = !_vm.creating.active
-                  }
-                }
-              },
+              "aside",
               [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(_vm.creating.active ? "Cancel" : "Add new") +
-                    "\n                "
+                _c(
+                  "a",
+                  {
+                    staticClass: "mr-1",
+                    attrs: { href: "#" },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.creating.active = !_vm.creating.active
+                      }
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                        " +
+                        _vm._s(_vm.creating.active ? "Cancel" : "Add new") +
+                        "\n                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "b-link",
+                  {
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.getRecords($event)
+                      }
+                    }
+                  },
+                  [_vm._v("Refresh")]
                 )
-              ]
+              ],
+              1
             )
           ]
         )
@@ -115000,34 +115036,39 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("div", { staticClass: "form-group row" }, [
-                _c("div", { staticClass: "col-md-6 offset-md-4" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary",
-                      attrs: { type: "submit" }
-                    },
-                    [_vm._v("Save")]
-                  ),
-                  _vm._v(" "),
-                  _vm.creating.processing
-                    ? _c(
-                        "div",
-                        { staticClass: "my-1" },
-                        [
-                          _c("hollow-dots-spinner", {
-                            attrs: {
-                              "animation-duration": 1000,
-                              "dot-size": 15,
-                              "dots-num": 3,
-                              color: "#ff1d5e"
-                            }
-                          })
-                        ],
-                        1
-                      )
-                    : _vm._e()
-                ])
+                _c(
+                  "div",
+                  { staticClass: "col-md-6 offset-md-4" },
+                  [
+                    _vm.creating.processing
+                      ? _c(
+                          "div",
+                          { staticClass: "my-1" },
+                          [
+                            _c("hollow-dots-spinner", {
+                              attrs: {
+                                "animation-duration": 1000,
+                                "dot-size": 15,
+                                "dots-num": 3,
+                                color: "#ff1d5e"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      : [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-primary",
+                              attrs: { type: "submit" }
+                            },
+                            [_vm._v("Save")]
+                          )
+                        ]
+                  ],
+                  2
+                )
               ])
             ]
           )
@@ -115058,13 +115099,19 @@ var render = function() {
             )
           : _vm._e(),
         _vm._v(" "),
+        !_vm.fetching && _vm.schools.length == 0
+          ? _c("div", { staticClass: "list-group-item" }, [
+              _c("p", [_vm._v("No education history found.")])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
         _vm._l(_vm.schools, function(school) {
           return [
             _c(
               "div",
               { staticClass: "list-group-item" },
               [
-                school.school.id !== _vm.editing.id
+                school.id !== _vm.editing.id
                   ? [
                       _c(
                         "div",
@@ -115073,62 +115120,67 @@ var render = function() {
                             "d-flex justify-content-between content-align-center"
                         },
                         [
-                          _c("h4", [_vm._v(_vm._s(school.school.name))]),
+                          _c("h4", [_vm._v(_vm._s(school.name))]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "nav" }, [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "nav-link",
-                                attrs: { href: "#" },
-                                on: {
-                                  click: function($event) {
-                                    $event.preventDefault()
-                                    _vm.edit(school)
-                                  }
-                                }
-                              },
-                              [_vm._v("Edit")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "nav-link",
-                                attrs: { href: "#" },
-                                on: {
-                                  click: function($event) {
-                                    $event.preventDefault()
-                                    _vm.remove(school)
-                                  }
-                                }
-                              },
-                              [_vm._v("Delete")]
-                            )
-                          ])
+                          _vm.deleting.id != school.id
+                            ? _c("div", { staticClass: "nav" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "nav-link",
+                                    attrs: { href: "#" },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        _vm.edit(school)
+                                      }
+                                    }
+                                  },
+                                  [_vm._v("Edit")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "nav-link",
+                                    attrs: { href: "#" },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        _vm.remove(school)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                Delete\n                            "
+                                    )
+                                  ]
+                                )
+                              ])
+                            : _vm._e()
                         ]
                       ),
                       _vm._v(" "),
                       _c("p", { staticClass: "h5" }, [
-                        _vm._v("Level: " + _vm._s(school.name))
+                        _vm._v("Level: " + _vm._s(school.education.name))
                       ]),
                       _vm._v(" "),
                       _c("p", { staticClass: "lead" }, [
-                        _vm._v("Course: " + _vm._s(school.school.course))
+                        _vm._v("Course: " + _vm._s(school.course))
                       ]),
                       _vm._v(" "),
                       _c("p", [
                         _vm._v(
-                          _vm._s(school.school.started_at) +
+                          _vm._s(school.started_at) +
                             " - " +
-                            _vm._s(school.school.ended_at)
+                            _vm._s(school.ended_at)
                         )
                       ]),
                       _vm._v(" "),
                       (_vm.deleting.processing &&
-                        _vm.deleting.id == school.school.id) ||
-                      (_vm.status.processing &&
-                        _vm.status.id == school.school.id)
+                        _vm.deleting.id == school.id) ||
+                      (_vm.status.processing && _vm.status.id == school.id)
                         ? _c(
                             "div",
                             { staticClass: "my-1" },
@@ -115142,11 +115194,11 @@ var render = function() {
                                 }
                               }),
                               _vm._v(" "),
-                              _vm.deleting.id == school.school.id
+                              _vm.deleting.id == school.id
                                 ? _c("p", [_vm._v("Deleting...")])
                                 : _vm._e(),
                               _vm._v(" "),
-                              _vm.status.id == school.school.id
+                              _vm.status.id == school.id
                                 ? _c("p", [_vm._v("Updating status...")])
                                 : _vm._e()
                             ],
@@ -115180,9 +115232,7 @@ var render = function() {
                                 "label",
                                 {
                                   staticClass: "control-label col-md-4",
-                                  attrs: {
-                                    for: "education-" + school.school.id
-                                  }
+                                  attrs: { for: "education-" + school.id }
                                 },
                                 [
                                   _vm._v(
@@ -115199,10 +115249,10 @@ var render = function() {
                                       {
                                         name: "model",
                                         rawName: "v-model",
-                                        value: (_vm.updateable.education_id =
+                                        value: (_vm.editing.form.education_id =
                                           school.id),
                                         expression:
-                                          "updateable.education_id = school.id"
+                                          "editing.form.education_id = school.id"
                                       }
                                     ],
                                     staticClass: "form-control custom-select",
@@ -115210,9 +115260,7 @@ var render = function() {
                                       "is-invalid":
                                         _vm.editing.errors["education_id"]
                                     },
-                                    attrs: {
-                                      id: "education-" + school.school.id
-                                    },
+                                    attrs: { id: "education-" + school.id },
                                     on: {
                                       change: function($event) {
                                         var $$selectedVal = Array.prototype.filter
@@ -115227,7 +115275,7 @@ var render = function() {
                                             return val
                                           })
                                         _vm.$set(
-                                          (_vm.updateable.education_id = school),
+                                          (_vm.editing.form.education_id = school),
                                           "id",
                                           $event.target.multiple
                                             ? $$selectedVal
@@ -115295,7 +115343,7 @@ var render = function() {
                                 "label",
                                 {
                                   staticClass: "control-label col-md-4",
-                                  attrs: { for: "name-" + school.school.id }
+                                  attrs: { for: "name-" + school.id }
                                 },
                                 [
                                   _vm._v(
@@ -115310,10 +115358,10 @@ var render = function() {
                                     {
                                       name: "model",
                                       rawName: "v-model",
-                                      value: (_vm.updateable.name =
-                                        school.school.name),
+                                      value: (_vm.editing.form.name =
+                                        school.name),
                                       expression:
-                                        "updateable.name = school.school.name"
+                                        "editing.form.name = school.name"
                                     }
                                   ],
                                   staticClass: "form-control",
@@ -115322,12 +115370,11 @@ var render = function() {
                                   },
                                   attrs: {
                                     type: "text",
-                                    id: "name-" + school.school.id,
+                                    id: "name-" + school.id,
                                     placeholder: "name"
                                   },
                                   domProps: {
-                                    value: (_vm.updateable.name =
-                                      school.school.name)
+                                    value: (_vm.editing.form.name = school.name)
                                   },
                                   on: {
                                     input: function($event) {
@@ -115335,7 +115382,7 @@ var render = function() {
                                         return
                                       }
                                       _vm.$set(
-                                        (_vm.updateable.name = school.school),
+                                        (_vm.editing.form.name = school),
                                         "name",
                                         $event.target.value
                                       )
@@ -115375,7 +115422,7 @@ var render = function() {
                                 "label",
                                 {
                                   staticClass: "control-label col-md-4",
-                                  attrs: { for: "'course-' + school.school.id" }
+                                  attrs: { for: "'course-' + school.id" }
                                 },
                                 [
                                   _vm._v(
@@ -115390,10 +115437,10 @@ var render = function() {
                                     {
                                       name: "model",
                                       rawName: "v-model",
-                                      value: (_vm.updateable.course =
-                                        school.school.course),
+                                      value: (_vm.editing.form.course =
+                                        school.course),
                                       expression:
-                                        "updateable.course = school.school.course"
+                                        "editing.form.course = school.course"
                                     }
                                   ],
                                   staticClass: "form-control",
@@ -115402,12 +115449,12 @@ var render = function() {
                                   },
                                   attrs: {
                                     type: "text",
-                                    id: "'course-' + school.school.id",
+                                    id: "'course-' + school.id",
                                     placeholder: "course"
                                   },
                                   domProps: {
-                                    value: (_vm.updateable.course =
-                                      school.school.course)
+                                    value: (_vm.editing.form.course =
+                                      school.course)
                                   },
                                   on: {
                                     input: function($event) {
@@ -115415,7 +115462,7 @@ var render = function() {
                                         return
                                       }
                                       _vm.$set(
-                                        (_vm.updateable.course = school.school),
+                                        (_vm.editing.form.course = school),
                                         "course",
                                         $event.target.value
                                       )
@@ -115469,9 +115516,7 @@ var render = function() {
                                   "div",
                                   {
                                     staticClass: "input-group date datepicker",
-                                    attrs: {
-                                      id: "started_at-" + school.school.id
-                                    }
+                                    attrs: { id: "started_at-" + school.id }
                                   },
                                   [
                                     _c("date-picker", {
@@ -115481,18 +115526,17 @@ var render = function() {
                                       },
                                       attrs: { config: _vm.config },
                                       model: {
-                                        value: (_vm.updateable.started_at =
-                                          school.school.started_at),
+                                        value: (_vm.editing.form.started_at =
+                                          school.started_at),
                                         callback: function($$v) {
                                           _vm.$set(
-                                            (_vm.updateable.started_at =
-                                              school.school),
+                                            (_vm.editing.form.started_at = school),
                                             "started_at",
                                             $$v
                                           )
                                         },
                                         expression:
-                                          "updateable.started_at = school.school.started_at"
+                                          "editing.form.started_at = school.started_at"
                                       }
                                     }),
                                     _vm._v(" "),
@@ -115535,9 +115579,7 @@ var render = function() {
                                 "label",
                                 {
                                   staticClass: "control-label col-md-4",
-                                  attrs: {
-                                    for: "'ended_at-' + school.school.id"
-                                  }
+                                  attrs: { for: "'ended_at-' + school.id" }
                                 },
                                 [
                                   _vm._v(
@@ -115551,9 +115593,7 @@ var render = function() {
                                   "div",
                                   {
                                     staticClass: "input-group",
-                                    attrs: {
-                                      id: "ended_at-" + school.school.id
-                                    }
+                                    attrs: { id: "ended_at-" + school.id }
                                   },
                                   [
                                     _c("date-picker", {
@@ -115563,18 +115603,17 @@ var render = function() {
                                       },
                                       attrs: { config: _vm.config },
                                       model: {
-                                        value: (_vm.updateable.ended_at =
-                                          school.school.ended_at),
+                                        value: (_vm.editing.form.ended_at =
+                                          school.ended_at),
                                         callback: function($$v) {
                                           _vm.$set(
-                                            (_vm.updateable.ended_at =
-                                              school.school),
+                                            (_vm.editing.form.ended_at = school),
                                             "ended_at",
                                             $$v
                                           )
                                         },
                                         expression:
-                                          "updateable.ended_at = school.school.ended_at"
+                                          "editing.form.ended_at = school.ended_at"
                                       }
                                     }),
                                     _vm._v(" "),
@@ -115605,60 +115644,67 @@ var render = function() {
                           ),
                           _vm._v(" "),
                           _c("div", { staticClass: "form-group row" }, [
-                            _c("div", { staticClass: "col-md-6 offset-md-4" }, [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-primary",
-                                  attrs: { type: "submit" }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    Save changes\n                                "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-secondary",
-                                  attrs: { type: "button" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.editing.id = null
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                    Cancel\n                                "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _vm.editing.processing
-                                ? _c(
-                                    "div",
-                                    { staticClass: "my-1" },
-                                    [
-                                      _c("hollow-dots-spinner", {
-                                        attrs: {
-                                          "animation-duration": 1000,
-                                          "dot-size": 15,
-                                          "dots-num": 3,
-                                          color: "#ff1d5e"
-                                        }
-                                      }),
+                            _c(
+                              "div",
+                              { staticClass: "col-md-6 offset-md-4" },
+                              [
+                                _vm.editing.processing
+                                  ? _c(
+                                      "div",
+                                      { staticClass: "my-1" },
+                                      [
+                                        _c("hollow-dots-spinner", {
+                                          attrs: {
+                                            "animation-duration": 1000,
+                                            "dot-size": 15,
+                                            "dots-num": 3,
+                                            color: "#ff1d5e"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("p", [
+                                          _vm._v(
+                                            "Please wait, saving changes..."
+                                          )
+                                        ])
+                                      ],
+                                      1
+                                    )
+                                  : [
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass: "btn btn-primary",
+                                          attrs: { type: "submit" }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                        Save changes\n                                    "
+                                          )
+                                        ]
+                                      ),
                                       _vm._v(" "),
-                                      _c("p", [
-                                        _vm._v("Please wait, saving changes...")
-                                      ])
-                                    ],
-                                    1
-                                  )
-                                : _vm._e()
-                            ])
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass: "btn btn-secondary",
+                                          attrs: { type: "button" },
+                                          on: {
+                                            click: function($event) {
+                                              _vm.editing.id = null
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                        Cancel\n                                    "
+                                          )
+                                        ]
+                                      )
+                                    ]
+                              ],
+                              2
+                            )
                           ])
                         ]
                       )

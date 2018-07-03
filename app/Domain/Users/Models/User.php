@@ -13,8 +13,6 @@ use Rims\App\Traits\Eloquent\Roles\HasPermissions;
 use Rims\App\Traits\Eloquent\Roles\HasRoles;
 use Rims\App\Traits\Eloquent\Subscriptions\HasSubscriptions;
 use Rims\Domain\Company\Models\Company;
-use Rims\Domain\Education\Models\Education;
-use Rims\Domain\Languages\Models\Language;
 use Rims\Domain\Portfolios\Models\Portfolio;
 use Rims\Domain\Subscriptions\Models\Plan;
 use Rims\Domain\Teams\Models\Team;
@@ -241,14 +239,11 @@ class User extends Authenticatable
     /**
      * Get schools that user belongs to.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function schools()
     {
-        return $this->belongsToMany(Education::class, 'user_education')
-            ->as('school')
-            ->withTimestamps()
-            ->withPivot('id', 'name', 'course', 'speciality', 'started_at', 'ended_at');
+        return $this->hasMany(UserEducation::class);
     }
 
     /**

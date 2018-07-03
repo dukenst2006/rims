@@ -17,9 +17,9 @@ class UserEducationIndexController extends Controller
      */
     public function index(Request $request)
     {
-        $schools = $request->user()->schools()
-            ->orderByPivot('started_at')
-            ->orderByPivot('ended_at')
+        $schools = $request->user()->schools()->with('education')
+            ->orderBy('started_at', 'asc')
+            ->orderBy('ended_at', 'asc')
             ->get();
 
         return new SchoolCollection($schools);

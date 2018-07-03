@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Rims\App\Controllers\Controller;
 use Rims\Domain\Account\Requests\UserEducationStoreRequest;
 use Rims\Domain\Education\Models\Education;
+use Rims\Domain\Users\Models\UserEducation;
 use Rims\Domain\Users\Resources\SchoolResource;
 
 class UserEducationController extends Controller
@@ -30,7 +31,12 @@ class UserEducationController extends Controller
     {
         $education = Education::find($request->education_id);
 
-        $request->user()->schools()->save($education, $request->only('name', 'course', 'started_at', 'ended_at'));
+        $userEducation = new UserEducation();
+        $userEducation->fill($request->only('name', 'course', 'started_at', 'ended_at'));
+
+        $userEducation->user()->associate($request->user());
+        $userEducation->education()->associate($education);
+        $userEducation->save();
 
         return response()->json(null, 204);
     }
@@ -39,16 +45,13 @@ class UserEducationController extends Controller
      * Update the specified resource in storage.
      *
      * @param UserEducationStoreRequest $request
-     * @param  int $id
+     * @param UserEducation $userEducation
      * @return \Illuminate\Http\Response
      */
-    public function update(UserEducationStoreRequest $request, $id)
+    public function update(UserEducationStoreRequest $request, UserEducation $userEducation)
     {
-        $request->user()->schools()->wherePivot('id', $id)
-            ->updateExistingPivot(
-                $request->education_id,
-                $request->only('name', 'course', 'started_at', 'ended_at')
-            );
+        $userEducation->fill($request->only('name', 'course', 'started_at', 'ended_at'));
+        $userEducation->save();
 
         return response()->json(null, 204);
     }
@@ -57,12 +60,13 @@ class UserEducationController extends Controller
      * Remove the specified resource from storage.
      *
      * @param Request $request
-     * @param  int $id
+     * @param UserEducation $userEducation
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
-    public function destroy(Request $request, $id)
+    public function destroy(Request $request, UserEducation $userEducation)
     {
-        $request->user()->schools()->wherePivot('id', $id)->detach($request->education_id);
+        $userEducation->delete();
 
         return response()->json(null, 204);
     }

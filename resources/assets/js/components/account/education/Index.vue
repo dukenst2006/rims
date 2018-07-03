@@ -5,9 +5,13 @@
                 <div class="d-flex justify-content-between align-content-center">
                     <h4>My Education History</h4>
 
-                    <a href="#" class="pull-right ml-auto" @click.prevent="creating.active = !creating.active">
-                        {{ creating.active ? 'Cancel' : 'Add new' }}
-                    </a>
+                    <aside>
+                        <a href="#" class="mr-1" @click.prevent="creating.active = !creating.active">
+                            {{ creating.active ? 'Cancel' : 'Add new' }}
+                        </a>
+
+                        <b-link @click.prevent="getRecords">Refresh</b-link>
+                    </aside>
                 </div>
             </div>
 
@@ -115,8 +119,6 @@
 
                 <div class="form-group row">
                     <div class="col-md-6 offset-md-4">
-                        <button type="submit" class="btn btn-primary">Save</button>
-
                         <!-- Spinner -->
                         <div class="my-1" v-if="creating.processing">
                             <hollow-dots-spinner
@@ -126,6 +128,10 @@
                                     :color="'#ff1d5e'"
                             />
                         </div>
+
+                        <template v-else>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </template>
                     </div>
                 </div>
             </form>
@@ -142,25 +148,31 @@
                 <p>Fetching...</p>
             </div>
 
+            <div class="list-group-item" v-if="!fetching && schools.length == 0">
+                <p>No education history found.</p>
+            </div>
+
             <template v-for="school in schools">
                 <div class="list-group-item">
                     <!-- Item Content -->
-                    <template v-if="school.school.id !== editing.id">
+                    <template v-if="school.id !== editing.id">
                         <div class="d-flex justify-content-between content-align-center">
-                            <h4>{{ school.school.name }}</h4>
+                            <h4>{{ school.name }}</h4>
 
-                            <div class="nav">
+                            <div class="nav" v-if="deleting.id != school.id">
                                 <a href="#" class="nav-link" @click.prevent="edit(school)">Edit</a>
-                                <a href="#" class="nav-link" @click.prevent="remove(school)">Delete</a>
+                                <a href="#" class="nav-link" @click.prevent="remove(school)">
+                                    Delete
+                                </a>
                             </div>
                         </div>
-                        <p class="h5">Level: {{ school.name }}</p>
-                        <p class="lead">Course: {{ school.school.course }}</p>
-                        <p>{{ school.school.started_at }} - {{ school.school.ended_at }}</p>
+                        <p class="h5">Level: {{ school.education.name }}</p>
+                        <p class="lead">Course: {{ school.course }}</p>
+                        <p>{{ school.started_at }} - {{ school.ended_at }}</p>
 
                         <!-- Spinner -->
                         <div class="my-1"
-                             v-if="deleting.processing && deleting.id == school.school.id || status.processing && status.id == school.school.id">
+                             v-if="deleting.processing && deleting.id == school.id || status.processing && status.id == school.id">
                             <hollow-dots-spinner
                                     :animation-duration="1000"
                                     :dot-size="15"
@@ -168,9 +180,9 @@
                                     :color="'#ff1d5e'"
                             />
 
-                            <p v-if="deleting.id == school.school.id">Deleting...</p>
+                            <p v-if="deleting.id == school.id">Deleting...</p>
 
-                            <p v-if="status.id == school.school.id">Updating status...</p>
+                            <p v-if="status.id == school.id">Updating status...</p>
                         </div>
                     </template>
 
@@ -178,13 +190,13 @@
                     <template v-else>
                         <form action="#" @submit.prevent="update">
                             <div class="form-group row" :class="{ 'has-error': editing.errors['education_id']  }">
-                                <label :for="'education-' + school.school.id" class="control-label col-md-4">
+                                <label :for="'education-' + school.id" class="control-label col-md-4">
                                     Education level
                                 </label>
                                 <div class="col-md-6">
-                                    <select :id="'education-' + school.school.id" class="form-control custom-select"
+                                    <select :id="'education-' + school.id" class="form-control custom-select"
                                             :class="{ 'is-invalid': editing.errors['education_id']  }"
-                                            v-model="updateable.education_id = school.id">
+                                            v-model="editing.form.education_id = school.id">
                                         <option value="">---------</option>
                                         <option :value="level.id" v-for="level in levels"
                                                 :selected="level.id === school.id">
@@ -199,14 +211,14 @@
                             </div><!-- /.form-group -->
 
                             <div class="form-group row" :class="{ 'has-error': editing.errors['name']  }">
-                                <label :for="'name-' + school.school.id" class="control-label col-md-4">Institution
+                                <label :for="'name-' + school.id" class="control-label col-md-4">Institution
                                     name</label>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control"
                                            :class="{ 'is-invalid': editing.errors['name']  }"
-                                           :id="'name-' + school.school.id"
+                                           :id="'name-' + school.id"
                                            placeholder="name"
-                                           v-model="updateable.name = school.school.name">
+                                           v-model="editing.form.name = school.name">
 
                                     <div class="invalid-feedback" v-if="editing.errors['name']">
                                         <strong>{{ editing.errors['name'][0] }}</strong>
@@ -215,15 +227,15 @@
                             </div><!-- /.form-group -->
 
                             <div class="form-group row" :class="{ 'has-error': editing.errors['course']  }">
-                                <label for="'course-' + school.school.id" class="control-label col-md-4">
+                                <label for="'course-' + school.id" class="control-label col-md-4">
                                     What did you study (course)?
                                 </label>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control"
                                            :class="{ 'is-invalid': editing.errors['course']  }"
-                                           id="'course-' + school.school.id"
+                                           id="'course-' + school.id"
                                            placeholder="course"
-                                           v-model="updateable.course = school.school.course">
+                                           v-model="editing.form.course = school.course">
 
                                     <div class="invalid-feedback" v-if="editing.errors['course']">
                                         <strong>{{ editing.errors['course'][0] }}</strong>
@@ -236,11 +248,11 @@
                                     When did you join? (started at)
                                 </label>
                                 <div class="col-md-6">
-                                    <div class="input-group date datepicker" :id="'started_at-' + school.school.id">
+                                    <div class="input-group date datepicker" :id="'started_at-' + school.id">
                                         <date-picker
                                                 :config="config"
                                                 :class="{ 'is-invalid': editing.errors['started_at']  }"
-                                                v-model="updateable.started_at = school.school.started_at"></date-picker>
+                                                v-model="editing.form.started_at = school.started_at"></date-picker>
 
                                         <div class="input-group-append">
                                             <span class="input-group-text"><i class="icon-calendar"></i></span>
@@ -254,15 +266,15 @@
                             </div><!-- /.form-group -->
 
                             <div class="form-group row" :class="{ 'has-error': editing.errors['ended_at']  }">
-                                <label for="'ended_at-' + school.school.id" class="control-label col-md-4">
+                                <label for="'ended_at-' + school.id" class="control-label col-md-4">
                                     When did you graduate? (ended at)
                                 </label>
                                 <div class="col-md-6">
-                                    <div class="input-group" :id="'ended_at-' + school.school.id">
+                                    <div class="input-group" :id="'ended_at-' + school.id">
                                         <date-picker
                                                 :config="config"
                                                 :class="{ 'is-invalid': editing.errors['ended_at']  }"
-                                                v-model="updateable.ended_at = school.school.ended_at"></date-picker>
+                                                v-model="editing.form.ended_at = school.ended_at"></date-picker>
 
                                         <div class="input-group-append">
                                             <span class="input-group-text"><i class="icon-calendar"></i></span>
@@ -277,12 +289,6 @@
 
                             <div class="form-group row">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        Save changes
-                                    </button>
-                                    <button type="button" class="btn btn-secondary" @click="editing.id = null">
-                                        Cancel
-                                    </button>
 
                                     <!-- Spinner -->
                                     <div class="my-1" v-if="editing.processing">
@@ -294,6 +300,15 @@
                                         />
                                         <p>Please wait, saving changes...</p>
                                     </div>
+
+                                    <template v-else>
+                                        <button type="submit" class="btn btn-primary">
+                                            Save changes
+                                        </button>
+                                        <button type="button" class="btn btn-secondary" @click="editing.id = null">
+                                            Cancel
+                                        </button>
+                                    </template>
                                 </div>
                             </div><!-- /.form-group -->
                         </form>
@@ -395,7 +410,7 @@
 
                     toastr.success('Record added successfully.')
                 }).catch((error) => {
-                    if (error.response.status === 422) {
+                    if (error.response && error.response.status === 422) {
                         this.creating.errors = error.response.data.errors
                     }
 
@@ -406,21 +421,21 @@
             },
             edit(school) {
                 this.editing.errors = []
-                this.editing.id = school.school.id
-                this.editing.form = this.updateable
+                this.editing.id = school.id
             },
             update() {
                 this.editing.processing = true
 
                 axios.put(this.endpoint + '/' + this.editing.id, this.editing.form).then((response) => {
+                    this.editing.id = null
+                    this.editing.form = {}
+
                     this.getRecords().then(() => {
-                        this.editing.id = null
-                        this.editing.form = {}
                     })
 
                     toastr.success('Record updated successfully.')
                 }).catch((error) => {
-                    if (error.response.status === 422) {
+                    if (error.response && error.response.status === 422) {
                         this.editing.errors = error.response.data.errors
                     }
 
@@ -430,7 +445,7 @@
                 })
             },
             remove(school) {
-                this.deleting.id = school.school.id
+                this.deleting.id = school.id
                 this.deleting.form.education_id = school.id
 
                 this.destroy()
@@ -441,17 +456,20 @@
                 axios.delete(this.endpoint + '/' + this.deleting.id, this.deleting.form).then((response) => {
                     this.getRecords().then(() => {
                         this.deleting.form = {}
+                    }).catch((error) => {
+                        toastr.info('Hit refresh to fetch latest records.', 'Whoops!')
+                    }).finally(() => {
+                        this.deleting.id = null
                     })
 
                     toastr.success('Record deleted successfully.')
                 }).catch((error) => {
-                    if (error.response.status === 422) {
+                    if (error.response && error.response.status === 422) {
                         this.deleting.errors = error.response.data.errors
                     }
 
                     toastr.error('Failed deleting record.', 'Whoops!')
                 }).finally(() => {
-                    this.deleting.id = null
                     this.deleting.processing = false
                 })
             }

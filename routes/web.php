@@ -267,7 +267,11 @@ Route::group(['prefix' => '/account', 'middleware' => ['auth'], 'namespace' => '
     /**
      * Education Resource Routes
      */
-    Route::resource('/education', 'UserEducationController');
+    Route::resource('/education', 'UserEducationController', [
+        'parameters' => [
+            'education' => 'userEducation'
+        ]
+    ]);
 
     /**
      * Skills Routes

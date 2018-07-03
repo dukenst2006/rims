@@ -3,13 +3,10 @@
 namespace Rims\Domain\Education\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Rims\App\Traits\Eloquent\Ordering\PivotOrderableTrait;
 use Rims\Domain\Users\Models\User;
 
 class Education extends Model
 {
-    use PivotOrderableTrait;
-
     protected $fillable = [
         'name',
         'slug',
@@ -31,9 +28,6 @@ class Education extends Model
      */
     public function users()
     {
-        return $this->belongsToMany(User::class, 'user_education')
-            ->using(UserEducation::class)
-            ->withTimestamps()
-            ->withPivot('name', 'course', 'speciality', 'started_at', 'ended_at');
+        return $this->hasMany(User::class);
     }
 }

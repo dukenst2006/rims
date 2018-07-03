@@ -78,7 +78,7 @@ class JobApplicationController extends Controller
      */
     public function show(Job $job, JobApplication $jobApplication)
     {
-        $jobApplication->load('user', 'user.skills.skill', 'user.schools');
+        $jobApplication->load('user', 'user.skills.skill', 'user.schools.education');
 
         return view('jobs.applications.show', compact('job', 'jobApplication'));
     }

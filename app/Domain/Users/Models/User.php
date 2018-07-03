@@ -102,6 +102,10 @@ class User extends Authenticatable
      */
     public function getAvatarAttribute($value)
     {
+        if ($value == null) {
+            return null;
+        }
+
         return Storage::url("users/{$this->id}/avatars/{$value}");
     }
 

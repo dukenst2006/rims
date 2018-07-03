@@ -7,8 +7,9 @@
                 <div class="col-sm-12">
                     <div class="align-content-center">
                         <div class="my-2">
-                            <img src="{{ asset('img/avatars/default_avatar.png') }}"
-                                 alt="{{ $jobApplication->user->name }} avatar" class="rounded-circle mx-auto d-block">
+                            <img src="{{ $jobApplication->user->avatar ?: asset('img/avatars/default_avatar.png') }}"
+                                 alt="{{ $jobApplication->user->name }} avatar"
+                                 class="rounded-circle mx-auto d-block">
                         </div>
                         <h3 class="text-center">
                             {{ $jobApplication->user->name }}

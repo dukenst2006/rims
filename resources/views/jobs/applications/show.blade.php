@@ -83,12 +83,14 @@
                             <div class="list-group-item">
                                 <div class="d-flex justify-content-between align-content-center">
                                     <div>
-                                        <p class="h5">School</p>
-                                        <p>Course of study</p>
-                                        <p>Achievement / level</p>
+                                        <p class="h5">{{ $school->name }}</p>
+                                        <p>{{ $school->course }}</p>
+                                        <p>{{ $school->education->name }}</p>
                                     </div>
                                     <aside>
-                                        <time>year</time>
+                                        <time>{{ $school->enrollmentYear }}</time>
+                                        <span> &ndash; </span>
+                                        <time>{{ $school->graduationYear }}</time>
                                     </aside>
                                 </div>
                             </div>

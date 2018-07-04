@@ -2,6 +2,8 @@
 
 namespace Rims\Domain\Jobs\Models;
 
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
@@ -111,6 +113,58 @@ class JobApplication extends Model
         }
 
         return true;
+    }
+
+    /**
+     * Scope query for accepted job applications.
+     *
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeAccepted(Builder $builder)
+    {
+        return $builder->whereNotNull('submitted_at')
+            ->whereNotNull('accepted_at')
+            ->whereNull('rejected_at');
+    }
+
+    /**
+     * Scope query for rejected job applications.
+     *
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeRejected(Builder $builder)
+    {
+        return $builder->whereNotNull('submitted_at')
+            ->whereNotNull('rejected_at')
+            ->whereNull('accepted_at');
+    }
+
+    /**
+     * Scope query for pending (awaiting reply) job applications.
+     *
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopePending(Builder $builder)
+    {
+        return $builder->whereNotNull('submitted_at')
+            ->whereNull('accepted_at')
+            ->whereNull('rejected_at');
+    }
+
+    /**
+     * Scope query for incomplete or unfinished job applications.
+     *
+     * @param Builder $builder
+     * @param int $day
+     * @return Builder
+     */
+    public function scopeIncomplete(Builder $builder, $day = 14)
+    {
+        return $builder->where('finished', '=', false)
+            ->whereDate('created_at', '>=', Carbon::now()->subDays($day));
     }
 
     /**

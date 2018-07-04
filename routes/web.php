@@ -258,6 +258,26 @@ Route::group(['prefix' => '/account', 'middleware' => ['auth'], 'namespace' => '
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
     /**
+     * Jobs Routes
+     */
+    Route::group(['prefix' => '/jobs', 'namespace' => 'Job', 'as' => 'jobs.'], function () {
+
+        /**
+         * Job Applications Routes
+         */
+        Route::group(['prefix' => '/applications', 'as' => 'applications.'], function () {
+
+            Route::get('/incomplete', 'JobIncompleteApplicationController@index')->name('incomplete.index');
+
+            Route::get('/pending', 'JobPendingApplicationController@index')->name('pending.index');
+
+            Route::get('/accepted', 'JobAcceptedApplicationController@index')->name('accepted.index');
+
+            Route::get('/rejected', 'JobRejectedApplicationController@index')->name('rejected.index');
+        });
+    });
+
+    /**
      * Education Routes
      */
     Route::get('/education/index', 'UserEducationIndexController@index');

@@ -13,6 +13,7 @@ use Rims\App\Traits\Eloquent\Roles\HasPermissions;
 use Rims\App\Traits\Eloquent\Roles\HasRoles;
 use Rims\App\Traits\Eloquent\Subscriptions\HasSubscriptions;
 use Rims\Domain\Company\Models\Company;
+use Rims\Domain\Jobs\Models\JobApplication;
 use Rims\Domain\Portfolios\Models\Portfolio;
 use Rims\Domain\Subscriptions\Models\Plan;
 use Rims\Domain\Teams\Models\Team;
@@ -156,6 +157,16 @@ class User extends Authenticatable
     public function isTheSameAs(User $user)
     {
         return $this->id === $user->id;
+    }
+
+    /**
+     * Get job applications owned by user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function jobApplications()
+    {
+        return $this->hasMany(JobApplication::class);
     }
 
     /**

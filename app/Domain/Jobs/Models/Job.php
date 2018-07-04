@@ -43,7 +43,8 @@ class Job extends Model
         'cost',
         'saleCost',
         'isOpenForRestore',
-        'isPremium'
+        'isPremium',
+        'isPastDeadline'
     ];
 
     /**
@@ -176,6 +177,20 @@ class Job extends Model
             default:
                 return $this->cost;
         endswitch;
+    }
+
+    /**
+     * Return if job is past deadline.
+     *
+     * @return bool
+     */
+    public function getIsPastDeadlineAttribute()
+    {
+        if (Carbon::now()->diffInDays($this->closed_at) <= 0) {
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -460,6 +475,16 @@ class Job extends Model
     {
         return $builder->whereNull('closed_at')
             ->orWhereDate('closed_at', '>', Carbon::now()->toDateTimeString());
+    }
+
+    /**
+     * Get job applications.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function applications()
+    {
+        return $this->hasMany(JobApplication::class);
     }
 
     /**

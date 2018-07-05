@@ -109,6 +109,11 @@
                                 Pending
                             </a>
 
+                            <!-- Drafts -->
+                            <a class="dropdown-item" href="{{ route('account.jobs.applications.drafts.index') }}">
+                                Drafts
+                            </a>
+
                             <!-- Rejected -->
                             <a class="dropdown-item" href="{{ route('account.jobs.applications.rejected.index') }}">
                                 Rejected

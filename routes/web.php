@@ -269,6 +269,8 @@ Route::group(['prefix' => '/account', 'middleware' => ['auth'], 'namespace' => '
 
             Route::get('/incomplete', 'JobIncompleteApplicationController@index')->name('incomplete.index');
 
+            Route::get('/drafts', 'JobDraftApplicationController@index')->name('drafts.index');
+
             Route::get('/pending', 'JobPendingApplicationController@index')->name('pending.index');
 
             Route::get('/accepted', 'JobAcceptedApplicationController@index')->name('accepted.index');

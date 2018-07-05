@@ -19,55 +19,24 @@
                     </a>
                 </li>
 
-                @auth
-                    <li class="nav-item dropdown"><!-- My Companies -->
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            My Companies <span class="caret"></span>
-                        </a>
+                {{--@auth--}}
+                {{--<!-- Projects -->--}}
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link{{ return_if(on_page('tenant.projects.index'), ' active') }}"--}}
+                {{--href="{{ route('tenant.projects.index') }}">--}}
+                {{--Projects--}}
+                {{--</a>--}}
+                {{--</li>--}}
+                {{--@endauth--}}
 
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            @if($user_companies->count())
-                                @foreach($user_companies as $company)
-                                    <a class="dropdown-item" href="{{ route('tenant.switch', $company) }}">
-                                        {{ $company->name }}
-                                    </a>
-                                @endforeach
-                            @else
-                                <span class="dropdown-item">
-                              No companies found.
-                            </span>
-                            @endif
-                            <div class="dropdown-divider"></div>
-                            <!-- Create New Company Link -->
-                            <a class="dropdown-item" href="{{ route('account.companies.create') }}">
-                                New company
-                            </a>
-
-                            <!-- View All Link -->
-                            <a class="dropdown-item" href="{{ route('account.companies.index') }}">
-                                View all
-                            </a>
-                        </div>
-                    </li>
-
-                    <!-- Projects -->
-                    <li class="nav-item">
-                        <a class="nav-link{{ return_if(on_page('tenant.projects.index'), ' active') }}"
-                           href="{{ route('tenant.projects.index') }}">
-                            Projects
-                        </a>
-                    </li>
-                @endauth
-
-                @notsubscribed
-                <li class="nav-item">
-                    <a class="nav-link{{ return_if(on_page('plans.index'), ' active') }}"
-                       href="{{ route('plans.index') }}">
-                        Pricing
-                    </a>
-                </li>
-                @endnotsubscribed
+                {{--@notsubscribed--}}
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link{{ return_if(on_page('plans.index'), ' active') }}"--}}
+                {{--href="{{ route('plans.index') }}">--}}
+                {{--Pricing--}}
+                {{--</a>--}}
+                {{--</li>--}}
+                {{--@endnotsubscribed--}}
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -92,9 +61,68 @@
                         </a>
                     </li>
                 @else
+                    <li class="nav-item dropdown"><!-- My Companies -->
+                        <a id="navbarCompaniesDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My Companies <span class="caret"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarCompaniesDropdown">
+                            @if($user_companies->count())
+                                @foreach($user_companies as $company)
+                                    <a class="dropdown-item" href="{{ route('tenant.switch', $company) }}">
+                                        {{ $company->name }}
+                                    </a>
+                                @endforeach
+                            @else
+                                <span class="dropdown-item">
+                              No companies found.
+                            </span>
+                            @endif
+                            <div class="dropdown-divider"></div>
+                            <!-- Create New Company Link -->
+                            <a class="dropdown-item" href="{{ route('account.companies.create') }}">
+                                New company
+                            </a>
+
+                            <!-- View All Link -->
+                            <a class="dropdown-item" href="{{ route('account.companies.index') }}">
+                                View all
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown"><!-- My Job Applications -->
+                        <a id="navbarJobApplicationsDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                           title="My Job Applications">
+                            <i class="icon-rocket"></i> My Job Applications <span class="caret"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarJobApplicationsDropdown">
+                            <!-- Accepted -->
+                            <a class="dropdown-item" href="{{ route('account.jobs.applications.accepted.index') }}">
+                                Accepted
+                            </a>
+
+                            <!-- Pending -->
+                            <a class="dropdown-item" href="{{ route('account.jobs.applications.pending.index') }}">
+                                Pending
+                            </a>
+
+                            <!-- Rejected -->
+                            <a class="dropdown-item" href="{{ route('account.jobs.applications.rejected.index') }}">
+                                Rejected
+                            </a>
+
+                            <!-- Incomplete -->
+                            <a class="dropdown-item" href="{{ route('account.jobs.applications.incomplete.index') }}">
+                                Incomplete
+                            </a>
+                        </div>
+                    </li>
                     <li class="nav-item"><!-- My Portfolios -->
                         <a class="nav-link" href="{{ route('account.portfolios.index') }}">
-                            <i class="icon-layers"></i> My Portfolios
+                            <i class="icon-layers"></i> My Portfolio
                         </a>
                     </li>
                     <li class="nav-item"><!-- My Dashboard -->

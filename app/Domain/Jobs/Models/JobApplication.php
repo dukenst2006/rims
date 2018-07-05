@@ -149,9 +149,20 @@ class JobApplication extends Model
      */
     public function scopePending(Builder $builder)
     {
-        return $builder->whereNotNull('submitted_at')
-            ->whereNull('accepted_at')
-            ->whereNull('rejected_at');
+        return $builder->where('finished', '=', true)
+            ->whereNotNull('submitted_at');
+    }
+
+    /**
+     * Scope query for drafted (awaiting submission) job applications.
+     *
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeDrafted(Builder $builder)
+    {
+        return $builder->where('finished', '=', true)
+            ->whereNull('submitted_at');
     }
 
     /**

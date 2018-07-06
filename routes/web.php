@@ -129,23 +129,35 @@ Route::group(['namespace' => 'Job\Controllers', 'as' => 'jobs.'], function () {
             /**
              * Job Application Group Routes
              */
-            Route::group(['prefix' => '/applications', 'middleware' => ['auth']], function () {
+            Route::group(['prefix' => '/applications', 'middleware' => ['auth'], 'as' => 'applications.'], function () {
 
-                // CV store route
-                Route::get('/{jobApplication}/cv', 'JobCVController@show')->name('applications.cv.show');
+                /**
+                 * Application Group Routes
+                 */
+                Route::group(['prefix' => '/{jobApplication}'], function () {
 
-                // CV store route
-                Route::post('/{jobApplication}/cv/store', 'JobCVController@store')->name('applications.cv.store');
+                    // cancel route
+                    Route::post('/cancel', 'JobApplicationCancelController@store')->name('cancel');
 
-                // create route
-                Route::get('/{jobApplication}/create', 'JobApplicationController@create')->name('applications.create');
+                    // decline route
+                    Route::post('/decline', 'JobApplicationDeclineController@store')->name('decline');
 
-                // store route
-                Route::post('/{jobApplication}/store', 'JobApplicationController@store')->name('applications.store');
+                    // CV store route
+                    Route::get('/cv', 'JobCVController@show')->name('cv.show');
+
+                    // CV store route
+                    Route::post('/cv/store', 'JobCVController@store')->name('cv.store');
+
+                    // create route
+                    Route::get('/create', 'JobApplicationController@create')->name('create');
+
+                    // store route
+                    Route::post('/store', 'JobApplicationController@store')->name('store');
+                });
             });
 
             /**
-             * Job Application Resource Routes
+             * Job Applications Resource Routes
              */
             Route::resource('/applications', 'JobApplicationController', [
                 'parameters' => [
@@ -276,6 +288,7 @@ Route::group(['prefix' => '/account', 'middleware' => ['auth'], 'namespace' => '
             Route::get('/accepted', 'JobAcceptedApplicationController@index')->name('accepted.index');
 
             Route::get('/rejected', 'JobRejectedApplicationController@index')->name('rejected.index');
+
         });
     });
 

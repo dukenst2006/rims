@@ -72,7 +72,7 @@
                                     <cv-upload send-as="file"
                                                endpoint="{{ route('jobs.applications.cv.store', [$job, $jobApplication]) }}"
                                                current-cv="{{ $jobApplication->cv }}"
-                                               preview-link="{{ $jobApplication->cvPath }}"></cv-upload>
+                                               preview-link="{{ route('jobs.applications.cv.show', [$job, $jobApplication]) }}"></cv-upload>
 
                                     @if ($errors->has('cv'))
                                         <div class="invalid-feedback{{ $errors->has('cv') ? ' d-block' : '' }}">

@@ -1,11 +1,10 @@
 @extends('account.dashboard.layouts.default')
 
 @section('dashboard.content')
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title">Rejected Job Applications</h4>
-        </div>
-    </div>
+    <header>
+        <h4>Rejected Job Applications</h4>
+    </header>
+    <hr>
 
     <section class="my-3">
         @forelse($applications as $jobApplication)

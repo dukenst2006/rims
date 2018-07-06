@@ -2,7 +2,7 @@
 
 @section('dashboard.content')
     <header>
-        <h4 class="card-title">Draft Job Applications</h4>
+        <h4>Draft Job Applications</h4>
         <p>Drafts applications of jobs you are interested in.</p>
     </header>
     <hr>

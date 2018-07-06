@@ -20,13 +20,17 @@ class JobApplication extends Model
         'finished',
         'submitted_at',
         'accepted_at',
-        'rejected_at'
+        'rejected_at',
+        'cancelled_at',
+        'declined_at'
     ];
 
     protected $dates = [
         'submitted_at',
         'accepted_at',
-        'rejected_at'
+        'rejected_at',
+        'cancelled_at',
+        'declined_at'
     ];
 
     protected $appends = [
@@ -116,6 +120,17 @@ class JobApplication extends Model
     }
 
     /**
+     * Scope query for finished job applications.
+     *
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeFinished(Builder $builder)
+    {
+        return $builder->where('finished', '=', true);
+    }
+
+    /**
      * Scope query for accepted job applications.
      *
      * @param Builder $builder
@@ -123,7 +138,8 @@ class JobApplication extends Model
      */
     public function scopeAccepted(Builder $builder)
     {
-        return $builder->whereNotNull('submitted_at')
+        return $builder->finished()
+            ->whereNotNull('submitted_at')
             ->whereNotNull('accepted_at')
             ->whereNull('rejected_at');
     }
@@ -136,7 +152,8 @@ class JobApplication extends Model
      */
     public function scopeRejected(Builder $builder)
     {
-        return $builder->whereNotNull('submitted_at')
+        return $builder->finished()
+            ->whereNotNull('submitted_at')
             ->whereNotNull('rejected_at')
             ->whereNull('accepted_at');
     }
@@ -149,8 +166,10 @@ class JobApplication extends Model
      */
     public function scopePending(Builder $builder)
     {
-        return $builder->where('finished', '=', true)
-            ->whereNotNull('submitted_at');
+        return $builder->finished()
+            ->whereNotNull('submitted_at')
+            ->whereNull('accepted_at')
+            ->whereNull('rejected_at');
     }
 
     /**
@@ -161,7 +180,7 @@ class JobApplication extends Model
      */
     public function scopeDrafted(Builder $builder)
     {
-        return $builder->where('finished', '=', true)
+        return $builder->finished()
             ->whereNull('submitted_at');
     }
 

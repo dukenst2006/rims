@@ -62,10 +62,13 @@
                         {{ $job->closed_at->diffForHumans() }}
                     </p>
 
-                    <!-- Application -->
-                    <a href="{{ route('jobs.applications.index', $job) }}" class="btn btn-primary btn-block">
-                        Apply now
-                    </a>
+                    @if(!$job->isPastDeadline)
+                        <p><!-- Application -->
+                            <a href="{{ route('jobs.applications.index', $job) }}" class="btn btn-primary btn-block">
+                                Apply now
+                            </a>
+                        </p>
+                    @endif
                 </div><!-- /.col-sm-3 -->
             </div><!-- /.row -->
         </section><!-- /.job-header -->

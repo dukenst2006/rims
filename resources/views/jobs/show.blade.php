@@ -18,10 +18,10 @@
 
                         <p>
                             <strong>Salary: {{ $job->currency }}</strong>
-                            @if($job->salary_min == $job->salary_max)
-                                {{ $job->salary_min }}
-                            @elseif($job->salary_min == 0 && $job->salary_max == 0)
+                            @if($job->salary_min == 0 && $job->salary_max == 0)
                                 Confidential
+                            @elseif($job->salary_min == $job->salary_max)
+                                {{ $job->salary_min }}
                             @else
                                 {{ $job->salary_min }} - {{ $job->salary_max }}
                             @endif

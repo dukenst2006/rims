@@ -28,8 +28,67 @@
         <section class="job-portfolio-content py-4">
             <div class="row">
                 <div class="col-sm-8">
+                    <section class="mb-4">
+                        <h3>Job summary</h3>
+
+                        <article>
+                            <div class="d-flex justify-content-between align-content-center">
+                                <div>
+                                    <h4>{{ $job->title }}</h4>
+
+                                    <p>
+                                        <strong>Salary: {{ $job->currency }}</strong>
+                                        @if($job->salary_min == $job->salary_max)
+                                            {{ $job->salary_min }}
+                                        @elseif($job->salary_min == 0 && $job->salary_max == 0)
+                                            Confidential
+                                        @else
+                                            {{ $job->salary_min }} - {{ $job->salary_max }}
+                                        @endif
+                                    </p>
+
+                                </div>
+
+                                <aside>
+                                    <p>
+                                        <strong>Deadline</strong> {{ $job->closed_at->diffForHumans() }}
+                                    </p>
+
+                                    <!-- View job link -->
+                                    <p>
+                                        <a href="{{ route('jobs.show', $job) }}">View Job</a>
+                                    </p>
+
+                                    <!-- todo: add link to return to company applications -->
+                                </aside>
+                            </div>
+
+                            <section class="collapse" id="collapseJobSummary">
+                                <p>{{ $job->overview }}</p>
+
+                                <p>
+                                    <strong>Work site:</strong>
+                                    {{ $job->on_location == false ? 'Remote / Off site' : 'On site' }}
+                                </p>
+
+                                <p>
+                                    <strong>Type:</strong> {{ $job->type == 'full-time' ? 'Full time' : 'Part time' }}
+                                </p>
+
+                                <p>
+                                    <strong>Posted</strong> {{ $job->published_at->diffForHumans() }}
+                                </p>
+                            </section>
+
+                            <a id="toggleJobSummary" data-toggle="collapse" href="#collapseJobSummary" role="button"
+                               aria-expanded="false" aria-controls="collapseJobSummary">
+                                Show summary...
+                            </a>
+                        </article>
+                    </section>
+
                     <section class="my-2">
-                        <h3>Portfolio</h3>
+                        <h4>Portfolio</h4>
 
                         <div class="my-2 py-2">
                             <p class="lead">
@@ -40,7 +99,7 @@
                     </section>
 
                     <section class="my-2 py-2">
-                        <h3>User's bid</h3>
+                        <h4>User's bid</h4>
 
                         {{ $jobApplication->details }}
                     </section>
@@ -49,12 +108,24 @@
                         <!-- todo: Show review & rating + accept or reject status -->
 
                         @if($jobApplication->accepted_at)
-                            <p class="lead">Congratulations! Your application has been accepted.</p>
+                            @if($jobApplication->declined_at)
+                                <p class="lead">
+                                    Your application was accepted; But you have declined this job opportunity.
+                                </p>
+                            @else
+                                <p class="lead">Congratulations! Your application has been accepted.</p>
+                            @endif
                         @elseif($jobApplication->rejected_at)
                             <p class="lead">Sorry, your application has been rejected.</p>
+                        @elseif($jobApplication->cancelled_at)
+                            <p class="lead">
+                                You have cancelled your job application. You will no longer be listed among the
+                                applicants.
+                            </p>
                         @else
-                            <p class="lead">Thank you for applying. We will notify you when your application has been
-                                reviewed.</p>
+                            <p class="lead">
+                                Thank you for applying. We will notify you when your application has been reviewed.
+                            </p>
                         @endif
                     </section>
                 </div>
@@ -109,4 +180,16 @@
             </div>
         </section>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $('#collapseJobSummary').on('hidden.bs.collapse', function () {
+            $('#toggleJobSummary').text('Show summary...')
+        })
+
+        $('#collapseJobSummary').on('shown.bs.collapse', function () {
+            $('#toggleJobSummary').text('Hide summary')
+        })
+    </script>
 @endsection

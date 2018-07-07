@@ -186,11 +186,7 @@ class Job extends Model
      */
     public function getIsPastDeadlineAttribute()
     {
-        if (Carbon::now()->diffInDays($this->closed_at) <= 0) {
-            return true;
-        }
-
-        return false;
+        return $this->closed_at->isPast();
     }
 
     /**

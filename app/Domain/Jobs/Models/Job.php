@@ -186,7 +186,7 @@ class Job extends Model
      */
     public function getIsPastDeadlineAttribute()
     {
-        return $this->closed_at->isPast();
+        return optional($this->closed_at)->isPast();
     }
 
     /**

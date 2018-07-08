@@ -86,8 +86,12 @@
 
                     <!-- Salary -->
                     <p title="Salary"><i class="icon-credit-card"></i>
-                        {{ job.currency }}
-                        <template v-if="job.salary_max == job.salary_min">
+                        <strong v-if="!job.salaryIsConfidential">{{ job.currency }}</strong>
+
+                        <template v-if="job.salaryIsConfidential">
+                            Confidential
+                        </template>
+                        <template v-else-if="job.salary_max == job.salary_min">
                             {{ job.salary_min }}
                         </template>
                         <template v-else>
@@ -223,7 +227,7 @@
                                     </b-link>
                                 </p>
 
-                                <div v-else>
+                                <div v-else-if="deadline.processing">
                                     <hollow-dots-spinner
                                             :animation-duration="1000"
                                             :dot-size="15"

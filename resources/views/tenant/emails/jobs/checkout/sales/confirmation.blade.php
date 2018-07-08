@@ -7,7 +7,7 @@ Congratulations. Your payment for ***{{ $sale->job->title }}*** was successful.
 
 The job is now live.
 
-@component('mail::button', ['url' => route('jobs.show', [$sale->job->area, $sale->job])])
+@component('mail::button', ['url' => route('jobs.show', $sale->job)])
 View Job
 @endcomponent
 

@@ -44,7 +44,8 @@ class Job extends Model
         'saleCost',
         'isOpenForRestore',
         'isPremium',
-        'isPastDeadline'
+        'isPastDeadline',
+        'salaryIsConfidential'
     ];
 
     /**
@@ -177,6 +178,20 @@ class Job extends Model
             default:
                 return $this->cost;
         endswitch;
+    }
+
+    /**
+     * Return if job salary is confidential.
+     *
+     * @return bool
+     */
+    public function getSalaryIsConfidentialAttribute()
+    {
+        if ($this->salary_min == 0 && $this->salary_max == 0) {
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -321,7 +336,7 @@ class Job extends Model
      */
     public function getIsOpenForRestoreAttribute()
     {
-        if (Carbon::now()->diffInDays($this->closed_at) == 7) {
+        if ($this->isPastDeadline && Carbon::now()->diffInDays($this->closed_at) == 7) {
             return false;
         }
 

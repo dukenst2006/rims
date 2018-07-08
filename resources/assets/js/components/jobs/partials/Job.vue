@@ -40,7 +40,7 @@
                         <template v-if="job.salaryIsConfidential">
                             Confidential
                         </template>
-                        <template v-if="job.salary_max == job.salary_min">
+                        <template v-else-if="job.salary_max == job.salary_min">
                             {{ job.salary_min }}
                         </template>
                         <template v-else>

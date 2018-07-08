@@ -94750,25 +94750,23 @@ var render = function() {
                             "\n                        Confidential\n                    "
                           )
                         ]
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.job.salary_max == _vm.job.salary_min
-                      ? [
-                          _vm._v(
-                            "\n                        " +
-                              _vm._s(_vm.job.salary_min) +
-                              "\n                    "
-                          )
-                        ]
-                      : [
-                          _vm._v(
-                            "\n                        " +
-                              _vm._s(_vm.job.salary_min) +
-                              " - " +
-                              _vm._s(_vm.job.salary_max) +
-                              "\n                    "
-                          )
-                        ]
+                      : _vm.job.salary_max == _vm.job.salary_min
+                        ? [
+                            _vm._v(
+                              "\n                        " +
+                                _vm._s(_vm.job.salary_min) +
+                                "\n                    "
+                            )
+                          ]
+                        : [
+                            _vm._v(
+                              "\n                        " +
+                                _vm._s(_vm.job.salary_min) +
+                                " - " +
+                                _vm._s(_vm.job.salary_max) +
+                                "\n                    "
+                            )
+                          ]
                   ],
                   2
                 ),

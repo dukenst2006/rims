@@ -112,6 +112,7 @@
                     {{ $jobApplication->details }}
                 </section>
 
+                <!-- Rating, reviews and admin options -->
                 <section class="job-portfolio-footer py-4">
                     <!-- todo: Show review & rating + accept or reject status -->
 
@@ -122,17 +123,117 @@
                             </p>
                         @else
                             <p class="lead">Congratulations! For accepting an applicant.</p>
+
+                            <div class="d-flex justify-content-between align-content-end my-1">
+                                <aside>
+                                    <p>Found a more preferable candidate?</p>
+
+                                    <a href="{{ route('tenant.jobs.applications.accept.update', [$job, $jobApplication]) }}"
+                                       class="btn btn-danger"
+                                       onclick="event.preventDefault(); document.getElementById('reject-accepted-applicant-form').submit()">
+                                        Reject applicant
+                                    </a>
+                                </aside>
+                                <div>
+                                    <p>Or still want to look at more candidates?</p>
+                                    <a href="{{ route('tenant.jobs.applications.accept.destroy', [$job, $jobApplication]) }}"
+                                       class="btn btn-success"
+                                       onclick="event.preventDefault(); document.getElementById('reconsider-accepted-applicant-form').submit()">
+                                        Reconsider applicant
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Reject accepted applicant -->
+                            <form method="POST"
+                                  action="{{ route('tenant.jobs.applications.accept.update', [$job, $jobApplication]) }}"
+                                  id="reject-accepted-applicant-form" style="display: none">
+                                @csrf
+                                @method('PUT')
+                            </form>
+
+                            <!-- Reconsider accepted applicant -->
+                            <form method="POST"
+                                  action="{{ route('tenant.jobs.applications.accept.destroy', [$job, $jobApplication]) }}"
+                                  id="reconsider-accepted-applicant-form" style="display: none">
+                                @csrf
+                                @method('DELETE')
+                            </form>
                         @endif
                     @elseif($jobApplication->rejected_at)
                         <p class="lead">You have rejected this applicant.</p>
+
+                        <div class="d-flex justify-content-between align-content-end my-1">
+                            <aside>
+                                <p>Changed your mind?</p>
+                                <a href="{{ route('tenant.jobs.applications.reject.update', [$job, $jobApplication]) }}"
+                                   class="btn btn-primary"
+                                   onclick="event.preventDefault(); document.getElementById('accept-rejected-applicant-form').submit()">
+                                    Accept applicant
+                                </a>
+                            </aside>
+
+                            <div>
+                                <p>Want to leave applicant for further consideration?</p>
+
+                                <a href="{{ route('tenant.jobs.applications.reject.destroy', [$job, $jobApplication]) }}"
+                                   class="btn btn-success"
+                                   onclick="event.preventDefault(); document.getElementById('reconsider-rejected-applicant-form').submit()">
+                                    Reconsider applicant
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Accept rejected applicant -->
+                        <form method="POST"
+                              action="{{ route('tenant.jobs.applications.reject.update', [$job, $jobApplication]) }}"
+                              id="accept-rejected-applicant-form" style="display: none">
+                            @csrf
+                            @method('PUT')
+                        </form>
+
+                        <!-- Reconsider rejected applicant -->
+                        <form method="POST"
+                              action="{{ route('tenant.jobs.applications.reject.destroy', [$job, $jobApplication]) }}"
+                              id="reconsider-rejected-applicant-form" style="display: none">
+                            @csrf
+                            @method('DELETE')
+                        </form>
                     @elseif($jobApplication->cancelled_at)
                         <p class="lead">
                             This applicant has cancelled their bid.
                         </p>
                     @else
                         <p class="lead">
-                            Please review this application and send feedback to user.
+                            Please review this application and send feedback to applicant.
                         </p>
+
+                        <div class="d-flex justify-content-between align-content-end my-1">
+                            <a href="{{ route('tenant.jobs.applications.reject.store', [$job, $jobApplication]) }}"
+                               class="btn btn-danger"
+                               onclick="event.preventDefault(); document.getElementById('reject-applicant-form').submit()">
+                                Reject applicant
+                            </a>
+                            <a href="{{ route('tenant.jobs.applications.accept.store', [$job, $jobApplication]) }}"
+                               class="btn btn-primary"
+                               onclick="event.preventDefault(); document.getElementById('accept-applicant-form').submit()">
+                                Accept applicant
+                            </a>
+                        </div>
+
+                        <!-- Accept applicant -->
+                        <form method="POST"
+                              action="{{ route('tenant.jobs.applications.accept.store', [$job, $jobApplication]) }}"
+                              id="accept-applicant-form" style="display: none">
+                            @csrf
+                        </form>
+
+                        <!-- Reject applicant -->
+                        <form method="POST"
+                              action="{{ route('tenant.jobs.applications.reject.store', [$job, $jobApplication]) }}"
+                              id="reject-applicant-form" style="display: none">
+                            @csrf
+                        </form>
                     @endif
                 </section>
             </div>

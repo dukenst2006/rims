@@ -46,6 +46,48 @@ Route::group(['prefix' => '/company', 'as' => 'tenant.'], function () {
                 Route::group(['prefix' => '/{job}'], function () {
 
                     /**
+                     * Job Applications Group Routes
+                     */
+                    Route::group(['prefix' => 'applications', 'as' => 'applications.'], function () {
+
+                        /**
+                         * Job Application Group Routes
+                         */
+                        Route::group(['prefix' => '{jobApplication}'], function () {
+
+                            /**
+                             * Job Reject Store Route
+                             */
+                            Route::post('/reject/store', 'JobApplicationRejectController@store')->name('reject.store');
+
+                            /**
+                             * Job Reject Update Route
+                             */
+                            Route::put('/reject/update', 'JobApplicationRejectController@update')->name('reject.update');
+
+                            /**
+                             * Job Reject Destroy Route
+                             */
+                            Route::delete('/reject/destroy', 'JobApplicationRejectController@destroy')->name('reject.destroy');
+
+                            /**
+                             * Job Accept Store Route
+                             */
+                            Route::post('/accept/store', 'JobApplicationAcceptController@store')->name('accept.store');
+
+                            /**
+                             * Job Accept Update Route
+                             */
+                            Route::put('/accept/update', 'JobApplicationAcceptController@update')->name('accept.update');
+
+                            /**
+                             * Job Accept Destroy Route
+                             */
+                            Route::delete('/accept/destroy', 'JobApplicationAcceptController@destroy')->name('accept.destroy');
+                        });
+                    });
+
+                    /**
                      * Job Applications Resource Routes
                      */
                     Route::apiResource('/applications', 'JobApplicationController', [

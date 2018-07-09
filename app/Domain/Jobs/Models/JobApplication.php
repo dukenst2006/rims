@@ -159,6 +159,28 @@ class JobApplication extends Model
     }
 
     /**
+     * Scope query for submitted job applications.
+     *
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeSubmitted(Builder $builder)
+    {
+        return $builder->finished()->whereNotNull('submitted_at');
+    }
+
+    /**
+     * Scope query for not cancelled job applications.
+     *
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeIsNotCancelled(Builder $builder)
+    {
+        return $builder->finished()->whereNull('cancelled_at');
+    }
+
+    /**
      * Scope query for pending (awaiting reply) job applications.
      *
      * @param Builder $builder

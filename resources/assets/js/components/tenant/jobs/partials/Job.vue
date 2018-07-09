@@ -46,38 +46,40 @@
                                 <b-nav-item @click.prevent="deleteJob(job)">Delete</b-nav-item>
                             </template>
 
-                            <!-- More options dropdown -->
-                            <b-nav-item-dropdown right no-caret v-if="job.isPublished">
-                                <template slot="button-content">
-                                    <i class="icon-options"></i>
-                                    <span class="sr-only">Options</span>
-                                </template>
+                            <template v-if="job.isPublished">
+                                <!-- Applications -->
+                                <b-nav-item :href="this.endpoint + '/' + job.slug + '/applications'">
+                                    Applicants
+                                    <b-badge variant="primary"></b-badge>
+                                </b-nav-item>
 
-                                <b-dropdown-item @click.prevent="toggleStatus(job)">
-                                    {{ job.live == true ? 'Disable' : 'Make live' }}
-                                </b-dropdown-item>
+                                <!-- More options dropdown -->
+                                <b-nav-item-dropdown right no-caret>
+                                    <template slot="button-content">
+                                        <i class="icon-options"></i>
+                                        <span class="sr-only">Options</span>
+                                    </template>
 
-                                <!-- Live -->
-                                <template v-if="job.live == true">
-                                    <!-- Applications -->
-                                    <b-dropdown-item>
-                                        Applications
-                                        <b-badge variant="primary"></b-badge>
+                                    <b-dropdown-item @click.prevent="toggleStatus(job)">
+                                        {{ job.live == true ? 'Disable' : 'Make live' }}
                                     </b-dropdown-item>
 
-                                    <!-- Set deadline -->
-                                    <b-dropdown-item v-b-modal="job.identifier + '-deadline-modal'"
-                                                     v-if="job.isPublished && job.closed_at == null">
-                                        Set deadline
-                                    </b-dropdown-item>
+                                    <!-- Live -->
+                                    <template v-if="job.live == true">
+                                        <!-- Set deadline -->
+                                        <b-dropdown-item v-b-modal="job.identifier + '-deadline-modal'"
+                                                         v-if="job.isPublished && job.closed_at == null">
+                                            Set deadline
+                                        </b-dropdown-item>
 
-                                    <!-- Reset deadline -->
-                                    <b-dropdown-item v-else-if="job.isOpenForRestore"
-                                                     @click="restoreDeadline">
-                                        Reset deadline
-                                    </b-dropdown-item>
-                                </template>
-                            </b-nav-item-dropdown><!-- /.dropdown -->
+                                        <!-- Reset deadline -->
+                                        <b-dropdown-item v-else-if="job.isOpenForRestore"
+                                                         @click="restoreDeadline">
+                                            Reset deadline
+                                        </b-dropdown-item>
+                                    </template>
+                                </b-nav-item-dropdown><!-- /.dropdown -->
+                            </template>
                         </b-nav>
                     </div>
 

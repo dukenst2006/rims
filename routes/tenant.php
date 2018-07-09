@@ -46,6 +46,15 @@ Route::group(['prefix' => '/company', 'as' => 'tenant.'], function () {
                 Route::group(['prefix' => '/{job}'], function () {
 
                     /**
+                     * Job Applications Resource Routes
+                     */
+                    Route::apiResource('/applications', 'JobApplicationController', [
+                        'parameters' => [
+                            'applications' => 'jobApplication'
+                        ]
+                    ])->only('index', 'show');
+
+                    /**
                      * Job Deadline Store Route
                      */
                     Route::post('/deadline', 'JobDeadlineController@store');

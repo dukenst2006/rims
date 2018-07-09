@@ -100237,7 +100237,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -100267,6 +100267,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__JobCategories___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__JobCategories__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_Timer__ = __webpack_require__(240);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_Timer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_Timer__);
+//
+//
 //
 //
 //
@@ -107305,110 +107307,123 @@ var render = function() {
                                   : _vm._e(),
                                 _vm._v(" "),
                                 _vm.job.isPublished
-                                  ? _c(
-                                      "b-nav-item-dropdown",
-                                      { attrs: { right: "", "no-caret": "" } },
-                                      [
-                                        _c(
-                                          "template",
-                                          { slot: "button-content" },
-                                          [
-                                            _c("i", {
-                                              staticClass: "icon-options"
-                                            }),
-                                            _vm._v(" "),
-                                            _c(
-                                              "span",
-                                              { staticClass: "sr-only" },
-                                              [_vm._v("Options")]
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "b-dropdown-item",
-                                          {
-                                            on: {
-                                              click: function($event) {
-                                                $event.preventDefault()
-                                                _vm.toggleStatus(_vm.job)
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                " +
-                                                _vm._s(
-                                                  _vm.job.live == true
-                                                    ? "Disable"
-                                                    : "Make live"
-                                                ) +
-                                                "\n                            "
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _vm.job.live == true
-                                          ? [
-                                              _c(
-                                                "b-dropdown-item",
-                                                [
-                                                  _vm._v(
-                                                    "\n                                    Applications\n                                    "
-                                                  ),
-                                                  _c("b-badge", {
-                                                    attrs: {
-                                                      variant: "primary"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
+                                  ? [
+                                      _c(
+                                        "b-nav-item",
+                                        {
+                                          attrs: {
+                                            href:
+                                              this.endpoint +
+                                              "/" +
+                                              _vm.job.slug +
+                                              "/applications"
+                                          }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                Applicants\n                                "
+                                          ),
+                                          _c("b-badge", {
+                                            attrs: { variant: "primary" }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "b-nav-item-dropdown",
+                                        {
+                                          attrs: { right: "", "no-caret": "" }
+                                        },
+                                        [
+                                          _c(
+                                            "template",
+                                            { slot: "button-content" },
+                                            [
+                                              _c("i", {
+                                                staticClass: "icon-options"
+                                              }),
                                               _vm._v(" "),
-                                              _vm.job.isPublished &&
-                                              _vm.job.closed_at == null
-                                                ? _c(
-                                                    "b-dropdown-item",
-                                                    {
-                                                      directives: [
-                                                        {
-                                                          name: "b-modal",
-                                                          rawName: "v-b-modal",
-                                                          value:
-                                                            _vm.job.identifier +
-                                                            "-deadline-modal",
-                                                          expression:
-                                                            "job.identifier + '-deadline-modal'"
-                                                        }
-                                                      ]
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                    Set deadline\n                                "
-                                                      )
-                                                    ]
-                                                  )
-                                                : _vm.job.isOpenForRestore
+                                              _c(
+                                                "span",
+                                                { staticClass: "sr-only" },
+                                                [_vm._v("Options")]
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "b-dropdown-item",
+                                            {
+                                              on: {
+                                                click: function($event) {
+                                                  $event.preventDefault()
+                                                  _vm.toggleStatus(_vm.job)
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                                    " +
+                                                  _vm._s(
+                                                    _vm.job.live == true
+                                                      ? "Disable"
+                                                      : "Make live"
+                                                  ) +
+                                                  "\n                                "
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _vm.job.live == true
+                                            ? [
+                                                _vm.job.isPublished &&
+                                                _vm.job.closed_at == null
                                                   ? _c(
                                                       "b-dropdown-item",
                                                       {
-                                                        on: {
-                                                          click:
-                                                            _vm.restoreDeadline
-                                                        }
+                                                        directives: [
+                                                          {
+                                                            name: "b-modal",
+                                                            rawName:
+                                                              "v-b-modal",
+                                                            value:
+                                                              _vm.job
+                                                                .identifier +
+                                                              "-deadline-modal",
+                                                            expression:
+                                                              "job.identifier + '-deadline-modal'"
+                                                          }
+                                                        ]
                                                       },
                                                       [
                                                         _vm._v(
-                                                          "\n                                    Reset deadline\n                                "
+                                                          "\n                                        Set deadline\n                                    "
                                                         )
                                                       ]
                                                     )
-                                                  : _vm._e()
-                                            ]
-                                          : _vm._e()
-                                      ],
-                                      2
-                                    )
+                                                  : _vm.job.isOpenForRestore
+                                                    ? _c(
+                                                        "b-dropdown-item",
+                                                        {
+                                                          on: {
+                                                            click:
+                                                              _vm.restoreDeadline
+                                                          }
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "\n                                        Reset deadline\n                                    "
+                                                          )
+                                                        ]
+                                                      )
+                                                    : _vm._e()
+                                              ]
+                                            : _vm._e()
+                                        ],
+                                        2
+                                      )
+                                    ]
                                   : _vm._e()
                               ],
                               2

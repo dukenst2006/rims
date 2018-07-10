@@ -4,7 +4,8 @@ namespace Rims\Domain\Company\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Rims\App\Tenant\Traits\IsTenant;
-use Rims\Domain\Project\Models\Project;
+use Rims\Domain\Jobs\Models\Job;
+use Rims\Domain\Jobs\Models\JobApplication;
 
 class Company extends Model
 {
@@ -18,12 +19,12 @@ class Company extends Model
     ];
 
     /**
-     * Get projects owned by company.
-     * 
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * Get all jobs applications for the company.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough
      */
-    public function projects()
+    public function applications()
     {
-        return $this->hasMany(Project::class);
+        return $this->hasManyThrough(JobApplication::class, Job::class);
     }
 }

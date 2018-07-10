@@ -7,7 +7,7 @@
     </header>
     <hr>
 
-    <section class="my-3">
+    <section class="accordion my-3" id="accordionApplicants">
         @forelse($applications as $jobApplication)
             <div class="card mb-3">
                 <div class="card-body">
@@ -50,7 +50,7 @@
                     <article class="mb-1" id="job-collapse-{{ $jobApplication->id }}">
                         <!-- collapse -->
                         <section class="collapse collapseJobSummary"
-                                 id="collapseJobSummary-{{ $jobApplication->id }}">
+                                 id="collapseJobSummary-{{ $jobApplication->id }}" data-parent="#accordionApplicants">
                             <p>{{ $jobApplication->job->overview }}</p>
 
                             <p>

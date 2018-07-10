@@ -7,8 +7,8 @@
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">
-            Applications
+        <a href="{{ route('tenant.applicants.index') }}" class="nav-link">
+            Applicants
         </a>
     </li>
     <li class="nav-item">

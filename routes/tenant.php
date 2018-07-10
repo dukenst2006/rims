@@ -26,6 +26,11 @@ Route::group(['prefix' => '/company', 'as' => 'tenant.'], function () {
         Route::group(['namespace' => 'Job'], function () {
 
             /**
+             * Applicants Routes
+             */
+            Route::get('/applicants', 'JobApplicantController@index')->name('applicants.index');
+
+            /**
              * Jobs Group Routes
              */
             Route::group(['prefix' => '/jobs', 'as' => 'jobs.'], function () {

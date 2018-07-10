@@ -127,7 +127,7 @@ class JobApplication extends Model
      */
     public function scopeFinished(Builder $builder)
     {
-        return $builder->where('finished', '=', true);
+        return $builder->where("{$this->getTable()}.finished", '=', true);
     }
 
     /**

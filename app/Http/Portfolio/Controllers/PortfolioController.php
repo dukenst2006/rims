@@ -19,7 +19,7 @@ class PortfolioController extends Controller
     {
         $user->load('skills.skill');
 
-        $portfolios = $user->portfolios()->orderByDesc('created_at')->paginate();
+        $portfolios = $user->portfolios()->finished()->isLive()->orderByDesc('created_at')->paginate();
 
         return view('portfolios.index', compact('user', 'portfolios'));
     }
@@ -33,6 +33,6 @@ class PortfolioController extends Controller
      */
     public function show(User $user, Portfolio $portfolio)
     {
-        //
+        return view('portfolios.show', compact('user', 'portfolio'));
     }
 }

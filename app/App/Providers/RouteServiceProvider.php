@@ -5,6 +5,7 @@ namespace Rims\App\Providers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Rims\Domain\Users\Models\ConfirmationToken;
+use Rims\Domain\Users\Models\User;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,9 @@ class RouteServiceProvider extends ServiceProvider
         parent::boot();
 
         Route::model('confirmation_token', ConfirmationToken::class);
+        Route::bind('username', function ($value) {
+            return User::where('username', $value)->firstOrFail();
+        });
     }
 
     /**

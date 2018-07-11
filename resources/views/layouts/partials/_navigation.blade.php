@@ -75,9 +75,9 @@
                                     </a>
                                 @endforeach
                             @else
-                                <span class="dropdown-item">
-                              No companies found.
-                            </span>
+                                <div class="dropdown-item">
+                                    No companies found.
+                                </div>
                             @endif
                             <div class="dropdown-divider"></div>
                             <!-- Create New Company Link -->
@@ -125,10 +125,22 @@
                             </a>
                         </div>
                     </li>
-                    <li class="nav-item"><!-- My Portfolios -->
-                        <a class="nav-link" href="{{ route('account.portfolios.index') }}">
-                            <i class="icon-layers"></i> My Portfolio
+                    <li class="nav-item dropdown"><!-- My Portfolios -->
+                        <a id="navbarPortfolioDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="My Portfolio">
+                            <i class="icon-layers"></i> My Portfolio <span class="caret"></span>
                         </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarPortfolioDropdown">
+                            <!-- View portfolio -->
+                            <a class="dropdown-item" href="{{ route('portfolio.index', auth()->user()->username) }}">
+                                View Portfolio
+                            </a>
+
+                            <!-- Manage portfolio -->
+                            <a class="dropdown-item" href="{{ route('account.portfolios.index') }}">
+                                Manage Portfolio
+                            </a>
+                        </div>
                     </li>
                     <li class="nav-item"><!-- My Dashboard -->
                         <a class="nav-link{{ return_if(on_page('account.dashboard'), ' active') }}"

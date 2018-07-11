@@ -190,6 +190,23 @@ Route::group(['namespace' => 'Job\Controllers', 'as' => 'jobs.'], function () {
 });
 
 /**
+ * User Group Routes
+ */
+Route::group(['prefix' => '/{username}'], function () {
+
+    /**
+     * Portfolio Namespace Routes
+     */
+    Route::group(['namespace' => 'Portfolio\Controllers'], function () {
+
+        /**
+         * Portfolio Resource Route
+         */
+        Route::apiResource('/portfolio', 'PortfolioController')->except('index', 'show');
+    });
+});
+
+/**
  * Areas Routes
  */
 Route::group(['namespace' => 'Area\Controllers'], function () {

@@ -37,6 +37,19 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+// portfolio card columns
+.portfolios {
+
+  .card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 3;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 4;
+    }
+  }
+}
+
 // V-calendar component styles
 @import '~v-calendar/lib/v-calendar.min.css';
 

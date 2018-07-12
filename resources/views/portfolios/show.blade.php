@@ -4,10 +4,38 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <!-- Image -->
-                <img src="{{ $portfolio->image }}"
-                     alt="image"
-                     class="card-img-top">
+                <!-- Uploads Carousel -->
+                <div class="align-content-center mb-3">
+                    <div id="uploadsCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#uploadsCarousel" data-slide-to="0" class="active"></li>
+                            @foreach($uploads as $upload)
+                                <li data-target="#uploadsCarousel" data-slide-to="{{ $upload->id }}"></li>
+                            @endforeach
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="{{ $portfolio->image }}" alt="portfolio image">
+                            </div>
+                            @foreach($uploads as $upload)
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{ $upload->fullPath }}"
+                                         alt="{{ $upload->id }} screenshot">
+                                </div>
+                            @endforeach
+                        </div>
+                        <a class="carousel-control-prev" href="#uploadsCarousel" role="button"
+                           data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#uploadsCarousel" role="button"
+                           data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
 
                 <!-- Summary -->
                 <div class="py-1 mt-2 mb-1">
@@ -34,6 +62,34 @@
                     <hr>
                     {{ $portfolio->overview }}
                 </div>
+
+                @if($previousPortfolio != null || $nextPortfolio != null)
+                    <footer class="my-1">
+                        <div class="d-flex justify-content-between align-content-center">
+                            {{-- Previous Portfolio Link --}}
+                            <div class="py-1">
+                                @if ($previousPortfolio != null)
+                                    <a class="btn btn-link"
+                                       href="{{ route('portfolio.show', [$user->username, $previousPortfolio]) }}"
+                                       rel="prev">
+                                        &laquo; {{ $previousPortfolio->title }}
+                                    </a>
+                                @endif
+                            </div>
+
+                            {{-- Next Portfolio Link --}}
+                            <div class="py-1">
+                                @if ($nextPortfolio != null)
+                                    <a class="btn btn-link"
+                                       href="{{ route('portfolio.show', [$user->username, $nextPortfolio]) }}"
+                                       rel="next">
+                                        {{ $nextPortfolio->title }} &raquo;
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </footer>
+                @endif
             </div><!-- /.col-sm-8 -->
             <div class="col-sm-4">
                 <div class="align-content-between">

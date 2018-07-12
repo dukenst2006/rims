@@ -12,7 +12,7 @@ class PortfolioController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param  \Rims\Domain\Users\Models\User  $user
+     * @param  \Rims\Domain\Users\Models\User $user
      * @return \Illuminate\Http\Response
      */
     public function index(User $user)
@@ -27,12 +27,24 @@ class PortfolioController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \Rims\Domain\Users\Models\User  $user
-     * @param  \Rims\Domain\Portfolios\Models\Portfolio  $portfolio
+     * @param  \Rims\Domain\Users\Models\User $user
+     * @param  \Rims\Domain\Portfolios\Models\Portfolio $portfolio
      * @return \Illuminate\Http\Response
      */
     public function show(User $user, Portfolio $portfolio)
     {
-        return view('portfolios.show', compact('user', 'portfolio'));
+        $uploads = $portfolio->uploads()->get();
+
+        $previousPortfolio = $user->portfolios()->finished()->isLive()
+            ->where('id', '<', $portfolio->id)
+            ->orderByDesc('created_at')->first();
+
+        $nextPortfolio = $user->portfolios()->finished()->isLive()
+            ->where('id', '>', $portfolio->id)
+            ->orderByDesc('created_at')->first();
+
+        return view('portfolios.show',
+            compact('user', 'portfolio', 'uploads', 'previousPortfolio', 'nextPortfolio')
+        );
     }
 }

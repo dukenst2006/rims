@@ -113,7 +113,7 @@ class Job extends Model
     {
         return [
             'slug' => [
-                'source' => 'title',
+                'source' => ['jobTimestamp', 'title'],
                 'includeTrashed' => true,
             ]
         ];
@@ -178,6 +178,16 @@ class Job extends Model
             default:
                 return $this->cost;
         endswitch;
+    }
+
+    /**
+     * Return if job timestamp.
+     *
+     * @return bool
+     */
+    public function getJobTimestampAttribute()
+    {
+        return Carbon::now()->timestamp;
     }
 
     /**

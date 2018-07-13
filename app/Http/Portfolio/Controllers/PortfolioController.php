@@ -35,11 +35,11 @@ class PortfolioController extends Controller
     {
         $uploads = $portfolio->uploads()->get();
 
-        $previousPortfolio = $user->portfolios()->finished()->isLive()
+        $nextPortfolio = $user->portfolios()->finished()->isLive()
             ->where('id', '<', $portfolio->id)
             ->orderByDesc('created_at')->first();
 
-        $nextPortfolio = $user->portfolios()->finished()->isLive()
+        $previousPortfolio = $user->portfolios()->finished()->isLive()
             ->where('id', '>', $portfolio->id)
             ->orderByDesc('created_at')->first();
 

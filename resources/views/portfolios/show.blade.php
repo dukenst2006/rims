@@ -4,6 +4,25 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
+                <!-- Summary -->
+                <div class="py-1 mb-2">
+                    <!-- Title -->
+                    <h3>
+                        {{ $portfolio->title }}
+                    </h3>
+
+                    <!-- Short overview -->
+                    <p>
+                        {{ $portfolio->overview_short }}
+                    </p>
+
+                    <!-- Last updated -->
+                    <p>
+                        Last updated
+                        <span class="text-muted">{{ $portfolio->updated_at->diffForHumans() }}</span>
+                    </p>
+                </div>
+
                 <!-- Uploads Carousel -->
                 <div class="align-content-center mb-3">
                     <div id="uploadsCarousel" class="carousel slide" data-ride="carousel">
@@ -35,25 +54,6 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                </div>
-
-                <!-- Summary -->
-                <div class="py-1 mt-2 mb-1">
-                    <!-- Title -->
-                    <h3>
-                        {{ $portfolio->title }}
-                    </h3>
-
-                    <!-- Short overview -->
-                    <p>
-                        {{ $portfolio->overview_short }}
-                    </p>
-
-                    <!-- Last updated -->
-                    <p>
-                        Last updated
-                        <span class="text-muted">{{ $portfolio->updated_at->diffForHumans() }}</span>
-                    </p>
                 </div>
 
                 <!-- Details -->
@@ -98,10 +98,10 @@
                              alt="{{ $user->name }} avatar"
                              class="rounded-circle mx-auto d-block">
                     </div>
-                    <h3>
+                    <h3 class="text-center">
                         {{ $user->name }}
                     </h3>
-                    <p>
+                    <p class="text-center">
                         @foreach($user->skills as $skillset)
                             <span class="badge badge-dark py-2 px-2 h4 rounded-0 mx-1">
                                     {{ $skillset->skill->name }}

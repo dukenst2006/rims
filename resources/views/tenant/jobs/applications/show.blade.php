@@ -46,11 +46,12 @@
                                 </p>
 
                                 <p>
-                                    <strong>Salary: {{ $job->currency }}</strong>
-                                    @if($job->salary_min == $job->salary_max)
-                                        {{ $job->salary_min }}
-                                    @elseif($job->salary_min == 0 && $job->salary_max == 0)
+                                    <strong>Salary: {{ !$job->salaryIsConfidential ? $job->currency : null }}</strong>
+
+                                    @if($job->salaryIsConfidential)
                                         Confidential
+                                    @elseif($job->salary_min == $job->salary_max)
+                                        {{ $job->salary_min }}
                                     @else
                                         {{ $job->salary_min }} - {{ $job->salary_max }}
                                     @endif
@@ -99,8 +100,10 @@
 
                     <div class="my-2 py-2">
                         <p class="lead">
-                            <a href="#" class="btn btn-primary">Go here</a>
-                            to view <strong>{{ $jobApplication->user->name }}'s</strong> full portfolio.
+                            <a href="{{ route('portfolio.index', $jobApplication->user->username) }}"
+                               class="btn btn-primary">
+                                Go here
+                            </a> to view <strong>{{ $jobApplication->user->name }}'s</strong> full portfolio.
                         </p>
                     </div>
                 </section>

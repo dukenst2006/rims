@@ -13,6 +13,8 @@ class Category extends Model
         'name',
         'slug',
         'usable',
+        'price',
+        'needs_auth'
     ];
 
     /**

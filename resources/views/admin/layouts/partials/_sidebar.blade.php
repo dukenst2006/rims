@@ -1,4 +1,23 @@
 @section('sidebar')
+    <li class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#">
+            <i class="icon-link"></i> Categories
+        </a>
+        <ul class="nav-dropdown-items">
+            <li class="nav-item">
+                <a class="nav-link{{ return_if(on_page('admin.categories.create'), ' active') }}"
+                   href="{{ route('admin.categories.create') }}">
+                    <i class="icon-plus"></i> Add Category
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link{{ return_if(on_page('admin.categories.index'), ' active') }}"
+                   href="{{ route('admin.categories.index') }}">
+                    <i class="icon-link"></i> Categories
+                </a>
+            </li>
+        </ul>
+    </li>
     <li class="nav-title">USERS & ACCESS CONTROL</li>
     <!-- Users -->
     <li class="nav-item nav-dropdown">

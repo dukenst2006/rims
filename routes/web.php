@@ -643,6 +643,28 @@ Route::group(['prefix' => '/admin', 'namespace' => 'Admin\Controllers', 'as' => 
         Route::get('/dashboard', 'AdminDashboardController@index')->name('dashboard');
 
         /**
+         * Category Namespace Routes
+         */
+        Route::group(['namespace' => 'Category'], function () {
+
+            /**
+             * Categories Group Routes
+             */
+            Route::group(['prefix' => '/categories', 'as' => 'categories.'], function () {
+
+                /**
+                 * Toggle Category Status Route
+                 */
+                Route::put('/{category}/status', 'CategoryStatusController@update')->name('status');
+            });
+
+            /**
+             * Categories Resource Routes
+             */
+            Route::resource('/categories', 'CategoryController');
+        });
+
+        /**
          * User Namespace Routes
          */
         Route::group(['namespace' => 'User'], function () {

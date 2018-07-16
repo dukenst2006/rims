@@ -18,6 +18,25 @@
             </li>
         </ul>
     </li>
+    <li class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#">
+            <i class="icon-map"></i> Areas
+        </a>
+        <ul class="nav-dropdown-items">
+            <li class="nav-item">
+                <a class="nav-link{{ return_if(on_page('admin.areas.create'), ' active') }}"
+                   href="{{ route('admin.areas.create') }}">
+                    <i class="icon-plus"></i> Add Area
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link{{ return_if(on_page('admin.areas.index'), ' active') }}"
+                   href="{{ route('admin.areas.index') }}">
+                    <i class="icon-map"></i> Areas
+                </a>
+            </li>
+        </ul>
+    </li>
     <li class="nav-title">USERS & ACCESS CONTROL</li>
     <!-- Users -->
     <li class="nav-item nav-dropdown">

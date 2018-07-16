@@ -665,6 +665,28 @@ Route::group(['prefix' => '/admin', 'namespace' => 'Admin\Controllers', 'as' => 
         });
 
         /**
+         * Area Namespace Routes
+         */
+        Route::group(['namespace' => 'Area'], function () {
+
+            /**
+             * Areas Group Routes
+             */
+            Route::group(['prefix' => '/areas', 'as' => 'areas.'], function () {
+
+                /**
+                 * Toggle Area Status Route
+                 */
+                Route::put('/{area}/status', 'AreaStatusController@update')->name('status');
+            });
+
+            /**
+             * Areas Resource Routes
+             */
+            Route::resource('/areas', 'AreaController');
+        });
+
+        /**
          * User Namespace Routes
          */
         Route::group(['namespace' => 'User'], function () {

@@ -64,7 +64,11 @@ class ComposerServiceProvider extends ServiceProvider
 //        ], LanguagesComposer::class);
 
         //areas
-        View::composer('*', AreasComposer::class);
+        View::composer([
+            'layouts.partials._head',
+            'layouts.partials._navigation',
+            'home.*'
+        ], AreasComposer::class);
 
         //user companies
         View::composer('*', UserCompaniesComposer::class);

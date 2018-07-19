@@ -687,6 +687,28 @@ Route::group(['prefix' => '/admin', 'namespace' => 'Admin\Controllers', 'as' => 
         });
 
         /**
+         * Currency Namespace Routes
+         */
+        Route::group(['namespace' => 'Currency'], function () {
+
+            /**
+             * Areas Group Routes
+             */
+            Route::group(['prefix' => '/currencies', 'as' => 'currencies.'], function () {
+
+                /**
+                 * Toggle Currency Status Route
+                 */
+                Route::put('/{currency}/status', 'CurrencyStatusController@update')->name('status');
+            });
+
+            /**
+             * Areas Resource Routes
+             */
+            Route::resource('/currencies', 'CurrencyController');
+        });
+
+        /**
          * User Namespace Routes
          */
         Route::group(['namespace' => 'User'], function () {

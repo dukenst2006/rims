@@ -37,6 +37,25 @@
             </li>
         </ul>
     </li>
+    <li class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#">
+            <i class="fa fa-money"></i> Currencies
+        </a>
+        <ul class="nav-dropdown-items">
+            <li class="nav-item">
+                <a class="nav-link{{ return_if(on_page('admin.currencies.create'), ' active') }}"
+                   href="{{ route('admin.currencies.create') }}">
+                    <i class="icon-plus"></i> Add Currency
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link{{ return_if(on_page('admin.currencies.index'), ' active') }}"
+                   href="{{ route('admin.currencies.index') }}">
+                    <i class="fa fa-money"></i> Currencies
+                </a>
+            </li>
+        </ul>
+    </li>
     <li class="nav-title">USERS & ACCESS CONTROL</li>
     <!-- Users -->
     <li class="nav-item nav-dropdown">

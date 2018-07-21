@@ -22,6 +22,11 @@ class TenantSwitchController extends Controller
             $company
         ));
 
+        if (session()->has('success')) {
+            return redirect()->route('tenant.dashboard')
+                ->withSuccess(session('success'));
+        }
+
         return redirect()->route('tenant.dashboard');
     }
 }

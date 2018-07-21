@@ -45,7 +45,7 @@ class CompanyController extends Controller
 
         $request->user()->companies()->syncWithoutDetaching($company->id);
 
-        return redirect()->route('tenant.dashboard', $company)
+        return redirect()->route('tenant.switch', $company)
             ->withSuccess('Company created successfully.');
     }
 }

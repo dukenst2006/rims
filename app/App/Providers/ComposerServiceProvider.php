@@ -67,6 +67,7 @@ class ComposerServiceProvider extends ServiceProvider
         View::composer([
             'layouts.partials._head',
             'layouts.partials._navigation',
+            'jobs.*',
             'home.*'
         ], AreasComposer::class);
 

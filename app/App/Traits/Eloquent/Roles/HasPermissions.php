@@ -9,6 +9,7 @@
 namespace Rims\App\Traits\Eloquent\Roles;
 
 
+use Carbon\Carbon;
 use Rims\Domain\Users\Models\Permission;
 
 trait HasPermissions
@@ -35,7 +36,7 @@ trait HasPermissions
         foreach ($permission->roles as $role) {
             $children = $role->children->pluck('slug')->push($role->slug);
 
-            if ($this->roles->where('roleable.expires_at', null)->whereIn('slug', $children)->count()) {
+            if ($this->roles()->whereNull('expires_at')->orWhere('expires_at', '>', Carbon::now())->whereIn('slug', $children)->count()) {
                 return true;
             }
         }

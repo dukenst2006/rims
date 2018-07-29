@@ -20,7 +20,7 @@ class RoleUsersDisableController extends Controller
      */
     public function revokeUsersAccess(Request $request, Role $role)
     {
-        $this->authorize('delete', User::class);
+        $this->authorize('delete', $request->user());
 
         $users = $role->users()
             ->whereNull('expires_at')

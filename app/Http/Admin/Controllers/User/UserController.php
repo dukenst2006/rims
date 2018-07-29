@@ -17,7 +17,7 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $this->authorize('create', User::class);
+        $this->authorize('create', $request->user());
 
         $users = User::filter($request)->paginate();
 
@@ -29,9 +29,9 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        $this->authorize('create', User::class);
+        $this->authorize('create', $request->user());
     }
 
     /**
@@ -42,7 +42,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $this->authorize('create', User::class);
+        $this->authorize('create', $request->user());
     }
 
     /**
@@ -51,9 +51,9 @@ class UserController extends Controller
      * @param  \Rims\Domain\Users\Models\User $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Request $request, User $user)
     {
-        $this->authorize('view', $user);
+        $this->authorize('view', $request->user());
     }
 
     /**
@@ -62,9 +62,9 @@ class UserController extends Controller
      * @param  \Rims\Domain\Users\Models\User $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Request $request, User $user)
     {
-        $this->authorize('update', $user);
+        $this->authorize('update', $request->user());
     }
 
     /**
@@ -76,17 +76,28 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $this->authorize('update', $user);
+        $this->authorize('update', $request->user());
     }
 
     /**
      * Remove the specified resource from storage.
      *
+     * @param Request $request
      * @param  \Rims\Domain\Users\Models\User $user
      * @return \Illuminate\Http\Response
+     * @throws \Exception
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function destroy(User $user)
+    public function destroy(Request $request, User $user)
     {
-        $this->authorize('delete', $user);
+        $this->authorize('delete', $request->user());
+
+        try {
+            $user->delete();
+        } catch (\Exception $e) {
+            return back()->withError("Failed deleting {$user->name} account.");
+        }
+
+        return back()->withSuccess("{$user->name} account deleted.");
     }
 }

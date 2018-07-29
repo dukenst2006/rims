@@ -13,13 +13,14 @@ class UserRoleController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param Request $request
      * @param  \Rims\Domain\Users\Models\User $user
      * @return \Illuminate\Http\Response
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function index(User $user)
+    public function index(Request $request, User $user)
     {
-        $this->authorize('touch', User::class);
+        $this->authorize('touch', $request->user());
 
         $roles = $user->roles()
             ->orderByPivot('created_at')
@@ -39,7 +40,7 @@ class UserRoleController extends Controller
      */
     public function store(Request $request, User $user)
     {
-        $this->authorize('touch', User::class);
+        $this->authorize('touch', $request->user());
 
         $expires = null;
 
@@ -65,7 +66,7 @@ class UserRoleController extends Controller
      */
     public function update(Request $request, User $user, Role $role)
     {
-        $this->authorize('touch', User::class);
+        $this->authorize('touch', $request->user());
 
         $updated = $user->updateRole($role, $request->expires_at);
 
@@ -79,14 +80,15 @@ class UserRoleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param Request $request
      * @param  \Rims\Domain\Users\Models\User $user
      * @param  \Rims\Domain\Users\Models\Role $role
      * @return \Illuminate\Http\Response
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function destroy(User $user, Role $role)
+    public function destroy(Request $request, User $user, Role $role)
     {
-        $this->authorize('delete', User::class);
+        $this->authorize('delete', $request->user());
 
         $updated = $user->updateRole($role, Carbon::now());
 

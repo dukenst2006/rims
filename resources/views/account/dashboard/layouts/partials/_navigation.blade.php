@@ -17,12 +17,12 @@
             My Skills
         </a>
     </li>
-    <li class="nav-item">
-        <a href="{{ route('account.languages.index') }}"
-           class="nav-link{{ return_if(on_page('account.languages.index'), ' active') }}">
-            My Languages
-        </a>
-    </li>
+    {{--<li class="nav-item">--}}
+        {{--<a href="{{ route('account.languages.index') }}"--}}
+           {{--class="nav-link{{ return_if(on_page('account.languages.index'), ' active') }}">--}}
+            {{--My Languages--}}
+        {{--</a>--}}
+    {{--</li>--}}
     <li class="nav-item">
         <a href="{{ route('account.portfolios.index') }}"
            class="nav-link{{ return_if(on_page('account.portfolios.index'), ' active') }}">
